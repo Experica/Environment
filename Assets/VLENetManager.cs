@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class VLEnvPlayer : MonoBehaviour {
+public class VLENetManager : NetworkManager {
 
 	// Use this for initialization
 	void Start () {
