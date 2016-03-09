@@ -10,11 +10,11 @@ public class NetBehaviorBase : NetworkBehaviour
     [SyncVar(hook = "OnPosition")]
     public Vector3 position = new Vector3();
     [SyncVar(hook = "OnOri")]
-    public float width = 1;
-    [SyncVar(hook = "OnLength")]
     public float ori = 0;
-    [SyncVar(hook = "OnWidth")]
+    [SyncVar(hook = "OnLength")]
     public float length = 1;
+    [SyncVar(hook = "OnWidth")]
+    public float width = 1;
     [SyncVar(hook = "OnHeight")]
     public float height = 1;
     [SyncVar(hook = "OnColor")]
