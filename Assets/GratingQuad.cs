@@ -19,7 +19,7 @@ public class GratingQuad : NetBehaviorBase
     [SyncVar(hook ="OnMaskType")]
     public int masktype;
     [SyncVar(hook ="OnIsDrifting")]
-    public bool isdrifting;
+    public bool isdrifting=true;
 
 
     public virtual void OnSpatialFreq(float sf)
@@ -77,9 +77,10 @@ public class GratingQuad : NetBehaviorBase
         isdrifting = i;
     }
 
+
     // Use this for initialization
     void Start () {
-
+	
 	}
 	
 	// Update is called once per frame

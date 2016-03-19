@@ -35,6 +35,10 @@ public class NetBehaviorBase : NetworkBehaviour
     public float height = 1;
     [SyncVar(hook = "OnColor")]
     public Color color = new Color();
+    [SyncVar(hook ="OnBgColor")]
+    public Color bgcolor = new Color();
+    [SyncVar(hook ="OnTime")]
+    public float time=-1000000;
 
     public Timer t = new Timer();
 
@@ -83,4 +87,14 @@ public class NetBehaviorBase : NetworkBehaviour
         color = c;
     }
 
+    public virtual void OnBgColor(Color c)
+    {
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().backgroundColor = c;
+        bgcolor = c;
+    }
+
+    public virtual void OnTime(float time)
+    {
+        t.ReStart();
+    }
 }

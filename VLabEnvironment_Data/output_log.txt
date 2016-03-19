@@ -14,29 +14,25 @@ Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\U
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.049 seconds
+- Completed reload, in  0.077 seconds
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.056926 ms
+UnloadTime: 0.622376 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1ec4 -> priority: 1 
+  Thread -> id: 1878 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.387245 ms
+UnloadTime: 0.248115 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 205.
-Total: 0.172985 ms (FindLiveObjects: 0.012985 ms CreateObjectMapping: 0.007420 ms MarkObjects: 0.136811 ms  DeleteObjects: 0.009275 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 202.
+Total: 0.298202 ms (FindLiveObjects: 0.112695 ms CreateObjectMapping: 0.012521 ms MarkObjects: 0.161391 ms  DeleteObjects: 0.007420 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.427476 ms
+UnloadTime: 0.484173 ms
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 188.
-Total: 0.308405 ms (FindLiveObjects: 0.013913 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.244869 ms  DeleteObjects: 0.037101 ms)
+Total: 0.173449 ms (FindLiveObjects: 0.006956 ms CreateObjectMapping: 0.004637 ms MarkObjects: 0.144231 ms  DeleteObjects: 0.017159 ms)
 
