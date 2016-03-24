@@ -14,25 +14,25 @@ Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\U
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.077 seconds
+- Completed reload, in  0.104 seconds
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.622376 ms
+UnloadTime: 6.530321 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1878 -> priority: 1 
+  Thread -> id: 1714 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.248115 ms
+UnloadTime: 0.379362 ms
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 202.
-Total: 0.298202 ms (FindLiveObjects: 0.112695 ms CreateObjectMapping: 0.012521 ms MarkObjects: 0.161391 ms  DeleteObjects: 0.007420 ms)
+Total: 0.142376 ms (FindLiveObjects: 0.009275 ms CreateObjectMapping: 0.008347 ms MarkObjects: 0.108521 ms  DeleteObjects: 0.010666 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.484173 ms
+UnloadTime: 0.356637 ms
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 188.
-Total: 0.173449 ms (FindLiveObjects: 0.006956 ms CreateObjectMapping: 0.004637 ms MarkObjects: 0.144231 ms  DeleteObjects: 0.017159 ms)
+Total: 0.148869 ms (FindLiveObjects: 0.010202 ms CreateObjectMapping: 0.005565 ms MarkObjects: 0.116405 ms  DeleteObjects: 0.016695 ms)
 
