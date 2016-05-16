@@ -18,9 +18,21 @@ Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\U
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll into Unity Child Domain
-- Completed reload, in  0.229 seconds
+- Completed reload, in  0.255 seconds
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.017510 ms
+NetworkManager created singleton (DontDestroyOnLoad)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2084 -> priority: 1 
+NetworkManager destroyed
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+

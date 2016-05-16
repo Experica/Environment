@@ -51,7 +51,7 @@ PlayerSettings:
   resizableWindow: 1
   useMacAppStoreValidation: 0
   gpuSkinning: 1
-  graphicsJobs: 1
+  graphicsJobs: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -173,12 +173,13 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 0}
+  resolutionDialogBanner: {fileID: 2800000, guid: 94020f1825fa85548ab487f640a54790,
+    type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: b498362c412297d469584278b64e624d, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
