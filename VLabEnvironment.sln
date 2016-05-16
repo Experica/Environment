@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLabEnvironment.CSharp.Plugins", "VLabEnvironment.CSharp.Plugins.csproj", "{A0242D5E-B9B9-4339-3CBA-4505B2C58D04}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLabEnvironment.CSharp", "VLabEnvironment.CSharp.csproj", "{DC1500AC-F65B-7205-D2AD-A1AB222135FA}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0242D5E-B9B9-4339-3CBA-4505B2C58D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0242D5E-B9B9-4339-3CBA-4505B2C58D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0242D5E-B9B9-4339-3CBA-4505B2C58D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0242D5E-B9B9-4339-3CBA-4505B2C58D04}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC1500AC-F65B-7205-D2AD-A1AB222135FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC1500AC-F65B-7205-D2AD-A1AB222135FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC1500AC-F65B-7205-D2AD-A1AB222135FA}.Release|Any CPU.ActiveCfg = Release|Any CPU

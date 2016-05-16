@@ -1,4 +1,4 @@
-Initialize engine version: 5.4.0b11 (323b0238353b)
+Initialize engine version: 5.4.0b17 (a34abf3bb95e)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -8,31 +8,19 @@ Direct3D:
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.102 seconds
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll into Unity Child Domain
+- Completed reload, in  0.229 seconds
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-UnloadTime: 1.211361 ms
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1dec -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.282898 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 201.
-Total: 0.178550 ms (FindLiveObjects: 0.014840 ms CreateObjectMapping: 0.025043 ms MarkObjects: 0.131710 ms  DeleteObjects: 0.006028 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.444289 ms
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 187.
-Total: 0.157681 ms (FindLiveObjects: 0.007884 ms CreateObjectMapping: 0.006028 ms MarkObjects: 0.122434 ms  DeleteObjects: 0.020405 ms)
-

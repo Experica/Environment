@@ -1,0 +1,5 @@
+isautoconn: true
+autoconntimeout: 10
+serveraddress: localhost
+ishideuiwhenconnect: true
+ishidecursorwhenconnect: true
