@@ -1,4 +1,4 @@
-isautoconn: false
+isautoconn: true
 autoconntimeout: 10
 serveraddress: localhost
 ishideuiwhenconnect: true
