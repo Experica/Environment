@@ -2,7 +2,7 @@
 // VLENetManager.cs is part of the VLAB project.
 // Copyright (c) 2016 All Rights Reserved
 // Li Alex Zhang fff008@gmail.com
-// 5-16-2016
+// 5-21-2016
 // --------------------------------------------------------------
 
 using UnityEngine;
@@ -23,9 +23,14 @@ namespace VLabEnvironment
         {
             if (LogFilter.logDebug)
             {
-                UnityEngine.Debug.Log("Send PeerInfo Message.");
+                UnityEngine.Debug.Log("Send PeerType Message.");
             }
-            client.Send(VLMsgType.PeerInfo, new IntegerMessage((int)VLPeerType.VLabEnvironment));
+            client.Send(VLMsgType.PeerType, new IntegerMessage((int)VLPeerType.VLabEnvironment));
+            if (LogFilter.logDebug)
+            {
+                UnityEngine.Debug.Log("Send AspectRatio Message.");
+            }
+            client.Send(VLMsgType.AspectRatio, new FloatMessage(uicontroller.GetAspectRatio()));
 
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
             QualitySettings.antiAliasing = 4;
