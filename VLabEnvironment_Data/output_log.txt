@@ -18,44 +18,17 @@ Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\U
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll (this message is harmless)
 Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll into Unity Child Domain
-- Completed reload, in  0.261 seconds
+- Completed reload, in  0.268 seconds
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.820869 ms
+UnloadTime: 0.954898 ms
 NetworkManager created singleton (DontDestroyOnLoad)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1afc -> priority: 1 
-<RI.Hid> Failed to create device file:
- 2 The system cannot find the file specified.
-
-0x00007FF7DCA3992F (VLabEnvironment) RegisterModule_CloudWebServices
-0x00007FF7DCA3B55B (VLabEnvironment) RegisterModule_CloudWebServices
-0x00007FF7DC6902B6 (VLabEnvironment) DebugStringToFile
-0x00007FF7DC68E835 (VLabEnvironment) printf_console
-0x00007FF7DC68EBFC (VLabEnvironment) DebugStringToFile
-0x00007FF7DC647E6D (VLabEnvironment) PlatformThread::Join
-0x00007FF7DC6490A8 (VLabEnvironment) PlatformThread::Join
-0x00007FF7DC649A59 (VLabEnvironment) PlatformThread::Join
-0x00007FF7DC4824B2 (VLabEnvironment) operator new
-0x00007FF7DC67A612 (VLabEnvironment) PlayerMainWndProc
-0x00007FF93FEC1169 (USER32) DispatchMessageW
-0x00007FF93FEC0EE2 (USER32) DispatchMessageW
-0x00007FF93FEB3FA2 (USER32) LoadBitmapW
-0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
-0x00007FF93FEE2134 (USER32) Ordinal2559
-0x00007FF93FECCA3C (USER32) PeekMessageW
-0x00007FF93FECC8A0 (USER32) PeekMessageA
-0x00007FF7DC67A785 (VLabEnvironment) PlayerMainWndProc
-0x00007FF7DC67DB5E (VLabEnvironment) PlayerWinMain
-0x00007FF7DCB2ACF8 (VLabEnvironment) RectT<int>::GetRight
-0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
- 
-(Filename:  Line: 54)
-
+  Thread -> id: 1874 -> priority: 1 
 Client created version Current
 RegisterHandler id:32 handler:OnClientConnectInternal
 RegisterHandler id:33 handler:OnClientDisconnectInternal
@@ -80,43 +53,1060 @@ RegisterHandlerSafe id:42 handler:OnAnimationTriggerClientMessage
 RegisterHandlerSafe id:14 handler:OnCRC
 RegisterHandlerSafe id:17 handler:OnFragment
 Client Connect: localhost:8888
-NetworkManager StopClient
-Shutting down client -1
-ClientChangeScene newSceneName:Welcomeback networkSceneName:
+Client event: host=0 event=ConnectEvent error=0
+Client connected
+NetworkManager:OnClientConnectInternal
+Send PeerType Message.
+Send AspectRatio Message.
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Showroom networkSceneName:
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.317217 ms
+UnloadTime: 0.377507 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 394.
-Total: 0.297739 ms (FindLiveObjects: 0.014840 ms CreateObjectMapping: 0.013913 ms MarkObjects: 0.258782 ms  DeleteObjects: 0.006028 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 401.
+Total: 0.492985 ms (FindLiveObjects: 0.021333 ms CreateObjectMapping: 0.019942 ms MarkObjects: 0.416463 ms  DeleteObjects: 0.029681 ms)
 
 ClientChangeScene done readyCon:
-FinishLoadScene client is null
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+ClientScene::Ready() called with connection [hostId: 0 connectionId: 1 isReady: False channel count: 2]
+
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 402.
+Total: 0.499942 ms (FindLiveObjects: 0.031072 ms CreateObjectMapping: 0.049623 ms MarkObjects: 0.416927 ms  DeleteObjects: 0.001855 ms)
+
+Client event: host=0 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=0 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:1 sceneId:1 pos:(0.0, 0.0, 0.0)
+Client spawn for [netId:1] [sceneId:1] obj:ShowroomManager
+RegisterSpawnHandler asset '3d081f6c25568404bad017e54b7d2a86' SpawnHandler/UnSpawnHandler
+RegisterSpawnHandler asset '6fe4d47c732009946a7387f078021497' SpawnHandler/UnSpawnHandler
+SetLocalObject 1 ShowroomManager (UnityEngine.GameObject)
+Client event: host=0 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:2 sceneId:2 pos:(0.0, 0.0, -101.0)
+Client spawn for [netId:2] [sceneId:2] obj:OrthoCamera
+SetLocalObject 2 OrthoCamera (UnityEngine.GameObject)
+Client event: host=0 event=DataEvent error=0
+Client spawn handler instantiating [netId:3 asset ID:6fe4d47c732009946a7387f078021497 pos:(0.0, 0.0, 0.0)]
+SetLocalObject 3 GratingQuad (UnityEngine.GameObject)
+Client event: host=0 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient ShowroomManager (UnityEngine.GameObject) GUID:1 localPlayerAuthority:False
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:2 localPlayerAuthority:False
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:3 localPlayerAuthority:False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+NetworkServer Created version Current
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 2 channel:0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 1->0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 2->3
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 3->5
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 0->1
 An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
-0x00007FF7DCA3992F (VLabEnvironment) RegisterModule_CloudWebServices
-0x00007FF7DCA3B55B (VLabEnvironment) RegisterModule_CloudWebServices
-0x00007FF7DC6902B6 (VLabEnvironment) DebugStringToFile
-0x00007FF7DC68E835 (VLabEnvironment) printf_console
-0x00007FF7DC68EBFC (VLabEnvironment) DebugStringToFile
-0x00007FF7DC5BD631 (VLabEnvironment) CallbackArray1<bool>::Invoke
-0x00007FF7DC679FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
-0x00007FF93FEC175B (USER32) DispatchMessageW
-0x00007FF93FEC0D86 (USER32) DispatchMessageW
-0x00007FF7DC481994 (VLabEnvironment) operator new
-0x00007FF7DCAC1B3B (VLabEnvironment) RectT<int>::GetRight
-0x00007FF7DCAB197E (VLabEnvironment) RectT<int>::GetRight
-0x00007FF7DCAB7029 (VLabEnvironment) RectT<int>::GetRight
-0x00007FF7DC5BCA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
-0x00007FF7DC5BCE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
-0x00007FF7DC5BD52E (VLabEnvironment) CallbackArray1<bool>::Invoke
-0x00007FF7DC679FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
-0x00007FF93FEC175B (USER32) DispatchMessageW
-0x00007FF93FEC0D86 (USER32) DispatchMessageW
-0x00007FF7DC481994 (VLabEnvironment) operator new
-0x00007FF7DC67A798 (VLabEnvironment) PlayerMainWndProc
-0x00007FF7DC67DB5E (VLabEnvironment) PlayerWinMain
-0x00007FF7DCB2ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
 0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
  
 (Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+An abnormal situation has occurred: the PlayerLoop internal function has been called recursively. Please contact Customer Support with a sample project so that we can reproduce the problem and troubleshoot it.
+0x00007FF76908992F (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF76908B55B (VLabEnvironment) RegisterModule_CloudWebServices
+0x00007FF768CE02B6 (VLabEnvironment) DebugStringToFile
+0x00007FF768CDE835 (VLabEnvironment) printf_console
+0x00007FF768CDEBFC (VLabEnvironment) DebugStringToFile
+0x00007FF768C0D631 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEF1336 (USER32) VTagOutput
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA008A7 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0EE2 (USER32) DispatchMessageW
+0x00007FF93FED0BEE (USER32) GetMenuItemInfoW
+0x00007FF942AE8BA4 (ntdll) KiUserCallbackDispatcher
+0x00007FF93FEE21F4 (USER32) InvalidateRect
+0x00007FF93FEBE6A3 (USER32) GetWindowTextW
+0x00007FF93FEBE1D2 (USER32) GetWindowTextW
+0x00007FF93D9FEBB8 (uxtheme) Ordinal119
+0x00007FF93DA00933 (uxtheme) Ordinal104
+0x00007FF93D9F82EF (uxtheme) CloseThemeData
+0x00007FF93D9F6B31 (uxtheme) CloseThemeData
+0x00007FF93FEBE3C9 (USER32) GetWindowTextW
+0x00007FF768CCA683 (VLabEnvironment) PlayerMainWndProc
+0x00007FF93FEC1169 (USER32) DispatchMessageW
+0x00007FF93FEC0C97 (USER32) DispatchMessageW
+0x00007FF768AD1994 (VLabEnvironment) operator new
+0x00007FF769111B3B (VLabEnvironment) RectT<int>::GetRight
+0x00007FF76910197E (VLabEnvironment) RectT<int>::GetRight
+0x00007FF769107029 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF768C0CA8C (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768C0D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF768CC9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF768CCA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF768CCDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF76917ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+ 
+(Filename:  Line: 1859)
+
+NetworkManager StopClient
+Shutting down client -1
+ClientChangeScene newSceneName:Welcomeback networkSceneName:Showroom
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.501333 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.563014 ms (FindLiveObjects: 0.039884 ms CreateObjectMapping: 0.018550 ms MarkObjects: 0.487420 ms  DeleteObjects: 0.016231 ms)
 
 NetworkManager destroyed
