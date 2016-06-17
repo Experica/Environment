@@ -1,0 +1,520 @@
+Initialize engine version: 5.4.0b21 (b9b5b8f40e73)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) Iris(TM) Graphics 540 (ID=0x1926)
+    Vendor:   Intel
+    VRAM:     4204 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll (this message is harmless)
+Loading C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\LibUsbDotNet.dll into Unity Child Domain
+- Completed reload, in  0.093 seconds
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Managed\System.dll (this message is harmless)
+desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.918261 ms
+NetworkManager created singleton (DontDestroyOnLoad)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 3378 -> priority: 1 
+Client created version Current
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler id:39 handler:OnClientSceneInternal
+NetworkManager StartClient address:localhost port:8888
+RegisterHandlerSafe id:3 handler:OnObjectSpawn
+RegisterHandlerSafe id:10 handler:OnObjectSpawnScene
+RegisterHandlerSafe id:12 handler:OnObjectSpawnFinished
+RegisterHandlerSafe id:1 handler:OnObjectDestroy
+RegisterHandlerSafe id:13 handler:OnObjectDestroy
+RegisterHandlerSafe id:8 handler:OnUpdateVarsMessage
+RegisterHandlerSafe id:4 handler:OnOwnerMessage
+RegisterHandlerSafe id:9 handler:OnSyncListMessage
+RegisterHandlerSafe id:40 handler:OnAnimationClientMessage
+RegisterHandlerSafe id:41 handler:OnAnimationParametersClientMessage
+RegisterHandlerSafe id:15 handler:OnClientAuthority
+RegisterHandlerSafe id:2 handler:OnRPCMessage
+RegisterHandlerSafe id:7 handler:OnSyncEventMessage
+RegisterHandlerSafe id:42 handler:OnAnimationTriggerClientMessage
+RegisterHandlerSafe id:14 handler:OnCRC
+RegisterHandlerSafe id:17 handler:OnFragment
+Client Connect: localhost:8888
+Client event: host=0 event=ConnectEvent error=0
+Client connected
+NetworkManager:OnClientConnectInternal
+Send PeerType Message.
+Send AspectRatio Message.
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Showroom networkSceneName:
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.477217 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 401.
+Total: 0.422956 ms (FindLiveObjects: 0.024579 ms CreateObjectMapping: 0.031072 ms MarkObjects: 0.354319 ms  DeleteObjects: 0.010202 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+ClientScene::Ready() called with connection [hostId: 0 connectionId: 1 isReady: False channel count: 2]
+
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 402.
+Total: 0.431304 ms (FindLiveObjects: 0.021797 ms CreateObjectMapping: 0.011130 ms MarkObjects: 0.396058 ms  DeleteObjects: 0.001855 ms)
+
+Client event: host=0 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=0 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:1 sceneId:1 pos:(0.0, 0.0, 0.0)
+Client spawn for [netId:1] [sceneId:1] obj:ShowroomManager
+RegisterSpawnHandler asset '3d081f6c25568404bad017e54b7d2a86' SpawnHandler/UnSpawnHandler
+RegisterSpawnHandler asset '6fe4d47c732009946a7387f078021497' SpawnHandler/UnSpawnHandler
+SetLocalObject 1 ShowroomManager (UnityEngine.GameObject)
+Client event: host=0 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:2 sceneId:2 pos:(0.0, 0.0, -101.0)
+Client spawn for [netId:2] [sceneId:2] obj:OrthoCamera
+SetLocalObject 2 OrthoCamera (UnityEngine.GameObject)
+Client event: host=0 event=DataEvent error=0
+Client spawn handler instantiating [netId:3 asset ID:6fe4d47c732009946a7387f078021497 pos:(0.0, 0.0, 0.0)]
+SetLocalObject 3 GratingQuad (UnityEngine.GameObject)
+Client event: host=0 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient ShowroomManager (UnityEngine.GameObject) GUID:1 localPlayerAuthority:False
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:2 localPlayerAuthority:False
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:3 localPlayerAuthority:False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+NetworkServer Created version Current
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 2 channel:0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+SetSyncVar ENGratingQuad bit [4] 120->90
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+SetSyncVar ENGratingQuad bit [128] 1->2
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+SetSyncVar ENGratingQuad bit [128] 2->1
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 90->0
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [4] 0->90
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+NetworkManager StopClient
+Shutting down client -1
+ClientChangeScene newSceneName:Welcomeback networkSceneName:Showroom
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.578782 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.549565 ms (FindLiveObjects: 0.032463 ms CreateObjectMapping: 0.015304 ms MarkObjects: 0.481855 ms  DeleteObjects: 0.017623 ms)
+
+NetworkManager destroyed
+Crash!!!
+SymInit: Symbol-SearchPath: '.;C:\Users\fff00\VLabEnvironment;C:\Users\fff00\VLabEnvironment;C:\WINDOWS;C:\WINDOWS\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 530, UserName: 'fff00'
+OS-Version: 10.0.10586 () 0x100-0x1
+C:\Users\fff00\VLabEnvironment\VLabEnvironment.exe:VLabEnvironment.exe (00007FF758F90000), size: 22343680 (result: 0), SymType: '-exported-', PDB: 'C:\Users\fff00\VLabEnvironment\VLabEnvironment.exe', fileVersion: 5.4.0.46520
+C:\WINDOWS\SYSTEM32\ntdll.dll:ntdll.dll (00007FF942A40000), size: 1839104 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\ntdll.dll', fileVersion: 10.0.10586.306
+C:\WINDOWS\system32\KERNEL32.DLL:KERNEL32.DLL (00007FF942790000), size: 708608 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\KERNEL32.DLL', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\KERNELBASE.dll:KERNELBASE.dll (00007FF93FC50000), size: 1998848 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\KERNELBASE.dll', fileVersion: 10.0.10586.306
+C:\WINDOWS\system32\apphelp.dll:apphelp.dll (00007FF93D850000), size: 495616 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\apphelp.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\GDI32.dll:GDI32.dll (00007FF941E90000), size: 1597440 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\GDI32.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\system32\USER32.dll:USER32.dll (00007FF93FEB0000), size: 1400832 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\USER32.dll', fileVersion: 10.0.10586.306
+C:\WINDOWS\SYSTEM32\HID.DLL:HID.DLL (00007FF93E050000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\HID.DLL', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\msvcrt.dll:msvcrt.dll (00007FF9404A0000), size: 643072 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\msvcrt.dll', fileVersion: 7.0.10586.0
+C:\WINDOWS\system32\ADVAPI32.dll:ADVAPI32.dll (00007FF942840000), size: 684032 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\ADVAPI32.dll', fileVersion: 10.0.10586.63
+C:\WINDOWS\system32\sechost.dll:sechost.dll (00007FF940440000), size: 372736 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\sechost.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\RPCRT4.dll:RPCRT4.dll (00007FF941B70000), size: 1163264 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\RPCRT4.dll', fileVersion: 10.0.10586.306
+C:\WINDOWS\system32\WS2_32.dll:WS2_32.dll (00007FF941CB0000), size: 438272 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\WS2_32.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\system32\ole32.dll:ole32.dll (00007FF9428F0000), size: 1323008 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\ole32.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\system32\combase.dll:combase.dll (00007FF940100000), size: 2609152 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\combase.dll', fileVersion: 10.0.10586.103
+C:\WINDOWS\system32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF93F4E0000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\bcryptPrimitives.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\system32\SHLWAPI.dll:SHLWAPI.dll (00007FF942610000), size: 335872 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\SHLWAPI.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\SHELL32.dll:SHELL32.dll (00007FF940610000), size: 22396928 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\SHELL32.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\system32\cfgmgr32.dll:cfgmgr32.dll (00007FF93F1B0000), size: 274432 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\cfgmgr32.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\windows.storage.dll:windows.storage.dll (00007FF93F550000), size: 6569984 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\windows.storage.dll', fileVersion: 10.0.10586.306
+C:\WINDOWS\SYSTEM32\VERSION.dll:VERSION.dll (00007FF932D40000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\VERSION.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\kernel.appcore.dll:kernel.appcore.dll (00007FF93F0C0000), size: 61440 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\kernel.appcore.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\shcore.dll:shcore.dll (00007FF93F0F0000), size: 741376 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\shcore.dll', fileVersion: 10.0.10586.306
+C:\WINDOWS\system32\powrprof.dll:powrprof.dll (00007FF93F070000), size: 307200 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\powrprof.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\profapi.dll:profapi.dll (00007FF93F0D0000), size: 81920 (result: 0), SymType: '-nosymbols-', PDB: 'C:\WINDOWS\system32\profapi.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\OLEAUT32.dll:OLEAUT32.dll (00007FF940540000), size: 790528 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\OLEAUT32.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\IMM32.dll:IMM32.dll (00007FF9400C0000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\IMM32.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF9211A0000), size: 1216512 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\OPENGL32.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\WINMM.dll:WINMM.dll (00007FF93CF30000), size: 143360 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WINMM.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF93DAD0000), size: 696320 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\DNSAPI.dll', fileVersion: 10.0.10586.212
+C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF93C4C0000), size: 229376 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL', fileVersion: 10.0.10586.0
+C:\WINDOWS\system32\NSI.dll:NSI.dll (00007FF942670000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\NSI.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF93BB20000), size: 819200 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WINHTTP.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\SYSTEM32\GLU32.dll:GLU32.dll (00007FF927680000), size: 188416 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\GLU32.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\DDRAW.dll:DDRAW.dll (00007FF923930000), size: 1024000 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\DDRAW.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\WINMMBASE.dll:WINMMBASE.dll (00007FF93CED0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WINMMBASE.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\DCIMAN32.dll:DCIMAN32.dll (00007FF936D70000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\DCIMAN32.dll', fileVersion: 10.0.10586.3
+C:\WINDOWS\system32\uxtheme.dll:uxtheme.dll (00007FF93D9E0000), size: 614400 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\uxtheme.dll', fileVersion: 10.0.10586.0
+C:\Program Files\Common Files\microsoft shared\ink\tiptsf.dll:tiptsf.dll (00007FF920A90000), size: 667648 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\microsoft shared\ink\tiptsf.dll', fileVersion: 10.0.10586.212
+C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Mono\mono.dll:mono.dll (00007FF90B210000), size: 2994176 (result: 0), SymType: '-exported-', PDB: 'C:\Users\fff00\VLabEnvironment\VLabEnvironment_Data\Mono\mono.dll', fileVersion: 1.0.0.1
+C:\WINDOWS\system32\PSAPI.DLL:PSAPI.DLL (00007FF942600000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\PSAPI.DLL', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\MSWSOCK.dll:MSWSOCK.dll (00007FF93E990000), size: 376832 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\MSWSOCK.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\system32\MSCTF.dll:MSCTF.dll (00007FF941D30000), size: 1417216 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\MSCTF.dll', fileVersion: 10.0.10586.71
+C:\WINDOWS\system32\dwmapi.dll:dwmapi.dll (00007FF93D350000), size: 139264 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\dwmapi.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\d3d11.dll:d3d11.dll (00007FF93D0A0000), size: 2785280 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\d3d11.dll', fileVersion: 10.0.10586.122
+C:\WINDOWS\SYSTEM32\dxgi.dll:dxgi.dll (00007FF93CF60000), size: 663552 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dxgi.dll', fileVersion: 10.0.10586.420
+C:\WINDOWS\SYSTEM32\igd10iumd64.dll:igd10iumd64.dll (00007FF93A410000), size: 14262272 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\igd10iumd64.dll', fileVersion: 20.19.15.4409
+C:\WINDOWS\SYSTEM32\bcrypt.dll:bcrypt.dll (00007FF93EC60000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\bcrypt.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\ncrypt.dll:ncrypt.dll (00007FF93EC30000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\ncrypt.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\NTASN1.dll:NTASN1.dll (00007FF93EBF0000), size: 237568 (result: 0), SymType: '-nosymbols-', PDB: 'C:\WINDOWS\SYSTEM32\NTASN1.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\igc64.dll:igc64.dll (00007FF939290000), size: 15138816 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\igc64.dll', fileVersion: 20.19.15.4409
+C:\WINDOWS\system32\clbcatq.dll:clbcatq.dll (00007FF940010000), size: 684032 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\clbcatq.dll', fileVersion: 2001.12.10941.16384
+C:\WINDOWS\System32\MMDevApi.dll:MMDevApi.dll (00007FF936CB0000), size: 458752 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\MMDevApi.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\System32\DEVOBJ.dll:DEVOBJ.dll (00007FF93DA80000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\DEVOBJ.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\System32\PROPSYS.dll:PROPSYS.dll (00007FF93CCB0000), size: 1597440 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\PROPSYS.dll', fileVersion: 7.0.10586.0
+C:\WINDOWS\SYSTEM32\wdmaud.drv:wdmaud.drv (00007FF92D1B0000), size: 270336 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\wdmaud.drv', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\ksuser.dll:ksuser.dll (00007FF9341B0000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\ksuser.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\AVRT.dll:AVRT.dll (00007FF93B3C0000), size: 45056 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\AVRT.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF916680000), size: 557056 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\AUDIOSES.DLL', fileVersion: 10.0.10586.122
+C:\WINDOWS\SYSTEM32\wintypes.dll:wintypes.dll (00007FF936700000), size: 1269760 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\wintypes.dll', fileVersion: 10.0.10586.103
+C:\WINDOWS\SYSTEM32\msacm32.drv:msacm32.drv (00007FF9369C0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\msacm32.drv', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\MSACM32.dll:MSACM32.dll (00007FF933620000), size: 114688 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\MSACM32.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\midimap.dll:midimap.dll (00007FF9356E0000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\midimap.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_8c15ae12515e1c22\comctl32.dll:comctl32.dll (00007FF92CAE0000), size: 2572288 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_8c15ae12515e1c22\comctl32.dll', fileVersion: 6.10.10586.0
+C:\Windows\System32\uiautomationcore.dll:uiautomationcore.dll (00007FF933640000), size: 1425408 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\uiautomationcore.dll', fileVersion: 7.2.10586.212
+C:\Windows\System32\USERENV.dll:USERENV.dll (00007FF93E820000), size: 126976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\USERENV.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\sxs.dll:sxs.dll (00007FF93EF20000), size: 626688 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\sxs.dll', fileVersion: 10.0.10586.0
+C:\Windows\System32\OLEACC.dll:OLEACC.dll (00007FF920670000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\OLEACC.dll', fileVersion: 7.2.10586.212
+C:\WINDOWS\SYSTEM32\twinapi.dll:twinapi.dll (00007FF920BE0000), size: 724992 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\twinapi.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF93DB80000), size: 1048576 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\twinapi.appcore.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF93A220000), size: 1622016 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dbghelp.dll', fileVersion: 10.0.10586.0
+C:\WINDOWS\SYSTEM32\SspiCli.dll:SspiCli.dll (00007FF93ED70000), size: 184320 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\SspiCli.dll', fileVersion: 10.0.10586.0
+
+========== OUTPUTING STACK TRACE ==================
+
+0x00007FF75920CAB2 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF75920CE11 (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF75920D52E (VLabEnvironment) CallbackArray1<bool>::Invoke
+0x00007FF7592C9FD0 (VLabEnvironment) IntermediateRenderer::GetLayer
+0x00007FF7592CA7BA (VLabEnvironment) PlayerMainWndProc
+0x00007FF7592CDB5E (VLabEnvironment) PlayerWinMain
+0x00007FF75977ACF8 (VLabEnvironment) RectT<int>::GetRight
+0x00007FF9427A8102 (KERNEL32) BaseThreadInitThunk
+
+========== END OF STACKTRACE ===========
+
+**** Crash! ****

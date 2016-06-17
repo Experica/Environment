@@ -2,15 +2,12 @@
 // VLEUIController.cs is part of the VLAB project.
 // Copyright (c) 2016 All Rights Reserved
 // Li Alex Zhang fff008@gmail.com
-// 5-21-2016
+// 6-16-2016
 // --------------------------------------------------------------
 
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using UnityEngine.Networking;
-using UnityEngine.Networking.NetworkSystem;
-using System.Collections;
+using System.Diagnostics;
 using VLab;
 
 namespace VLabEnvironment
@@ -24,9 +21,9 @@ namespace VLabEnvironment
         public Canvas canvas;
         public VLEApplicationManager appmanager;
 
-        private bool isautoconn;
-        private int autoconncountdown;
-        private float lastautoconntime;
+        bool isautoconn, isconnect;
+        int autoconncountdown;
+        float lastautoconntime;
 
         public float GetAspectRatio()
         {
@@ -36,7 +33,7 @@ namespace VLabEnvironment
 
         public void OnRectTransformDimensionsChange()
         {
-            if (netmanager.IsClientConnected())
+            if (isconnect)
             {
                 netmanager.client.Send(VLMsgType.AspectRatio, new FloatMessage(GetAspectRatio()));
             }
@@ -48,19 +45,11 @@ namespace VLabEnvironment
             {
                 netmanager.networkAddress = serveraddress.text;
                 netmanager.StartClient();
-
-                if ((bool)VLConvert.Convert(appmanager.config["ishideuiwhenconnect"], typeof(bool)))
-                {
-                    canvas.enabled = false;
-                }
-                if ((bool)VLConvert.Convert(appmanager.config["ishidecursorwhenconnect"], typeof(bool)))
-                {
-                    Cursor.visible = false;
-                }
             }
             else
             {
                 netmanager.StopClient();
+                OnClientDisconnect();
             }
         }
 
@@ -77,8 +66,8 @@ namespace VLabEnvironment
 
         public void ResetAutoConnect()
         {
-            autoconncountdown = (int)VLConvert.Convert(appmanager.config["autoconntimeout"], typeof(int));
-            isautoconn = (bool)VLConvert.Convert(appmanager.config["isautoconn"], typeof(bool));
+            autoconncountdown = VLConvert.Convert<int>(appmanager.config["autoconntimeout"]);
+            isautoconn = VLConvert.Convert<bool>(appmanager.config["isautoconn"]);
             if (!isautoconn)
             {
                 autoconntext.text = "Auto Connect OFF";
@@ -88,37 +77,69 @@ namespace VLabEnvironment
 
         void Start()
         {
+            serveraddress.text = VLConvert.Convert<string>(appmanager.config["serveraddress"]);
             ResetAutoConnect();
-            serveraddress.text = (string)appmanager.config["serveraddress"];
         }
 
         void Update()
         {
-            if (isautoconn && !netmanager.IsClientConnected())
+            if (isautoconn && !isconnect)
             {
                 if (Time.unscaledTime - lastautoconntime >= 1)
                 {
                     autoconncountdown--;
                     if (autoconncountdown > 0)
                     {
-                        autoconntext.text = "Auto Connect " + autoconncountdown + "s";
                         lastautoconntime = Time.unscaledTime;
+                        autoconntext.text = "Auto Connect " + autoconncountdown + "s";
                     }
                     else
                     {
+                        clientconnect.isOn = true;
                         clientconnect.onValueChanged.Invoke(true);
+                        autoconntext.text = "Connecting ...";
                         isautoconn = false;
                     }
                 }
             }
         }
 
+        public void OnClientConnect()
+        {
+            isconnect = true;
+            autoconntext.text = "Connected";
+            // since VLabEnvironment is to provide virtual reality environment, we may want to
+            // hide cursor and default ui when connected to VLab.
+            canvas.enabled = !VLConvert.Convert<bool>(appmanager.config["ishideuiwhenconnect"]);
+            Cursor.visible = !VLConvert.Convert<bool>(appmanager.config["ishidecursorwhenconnect"]);
+            // when connected to VLab, we need to make sure that all system resourses
+            // VLabEnvironment needed is ready to start experiment.
+            QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
+            QualitySettings.antiAliasing = VLConvert.Convert<int>(appmanager.config["antialiasing"]);
+            QualitySettings.vSyncCount = VLConvert.Convert<int>(appmanager.config["vsynccount"]);
+            QualitySettings.maxQueuedFrames = VLConvert.Convert<int>(appmanager.config["maxqueuedframes"]);
+
+            Time.fixedDeltaTime = VLConvert.Convert<float>(appmanager.config["fixeddeltatime"]);
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+        }
+
         public void OnClientDisconnect()
         {
+            isconnect = false;
+            // when disconnected, we should back to default ui and turn on cursor.
             ResetAutoConnect();
             clientconnect.isOn = false;
             canvas.enabled = true;
             Cursor.visible = true;
+
+            // when disconnect, we can relax and release some system resourses for other process
+            QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
+            QualitySettings.antiAliasing = 0;
+            QualitySettings.vSyncCount = 1;
+            QualitySettings.maxQueuedFrames = 2;
+
+            Time.fixedDeltaTime = 0.02f;
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
         }
 
     }

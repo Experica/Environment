@@ -2,7 +2,7 @@
 // VLEApplicationManager.cs is part of the VLAB project.
 // Copyright (c) 2016 All Rights Reserved
 // Li Alex Zhang fff008@gmail.com
-// 5-21-2016
+// 6-16-2016
 // --------------------------------------------------------------
 
 using UnityEngine;
@@ -16,15 +16,20 @@ namespace VLabEnvironment
     {
         public VLEUIController uicontroller;
         public Dictionary<string, object> config;
-        public readonly string configpath = "VLabEnvironmentConfig.yaml";
+        public static readonly string configpath = "VLabEnvironmentConfig.yaml";
 
+        /// <summary>
+        /// because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
+        /// as the first to Awake in unity project setting(Script Order), so that application wide 
+        /// configuration is ready for all other objects to use.
+        /// </summary>
         void Awake()
         {
             if (File.Exists(configpath))
             {
                 config = Yaml.ReadYaml<Dictionary<string, object>>(configpath);
             }
-            else
+            if (config == null)
             {
                 config = new Dictionary<string, object>();
             }
@@ -52,6 +57,22 @@ namespace VLabEnvironment
             if (!config.ContainsKey("ishidecursorwhenconnect"))
             {
                 config["ishidecursorwhenconnect"] = true;
+            }
+            if (!config.ContainsKey("antialiasing"))
+            {
+                config["antialiasing"] = 2;
+            }
+            if (!config.ContainsKey("vsynccount"))
+            {
+                config["vsynccount"] = 0;
+            }
+            if (!config.ContainsKey("maxqueuedframes"))
+            {
+                config["maxqueuedframes"] = 0;
+            }
+            if (!config.ContainsKey("fixeddeltatime"))
+            {
+                config["fixeddeltatime"] = 0.02f;
             }
         }
 

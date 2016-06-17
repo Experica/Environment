@@ -3,3 +3,7 @@ autoconntimeout: 10
 serveraddress: localhost
 ishideuiwhenconnect: true
 ishidecursorwhenconnect: true
+antialiasing: 8
+vsynccount: 1
+maxqueuedframes: 0
+fixeddeltatime: 0.02
