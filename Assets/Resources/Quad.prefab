@@ -55,6 +55,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -88,12 +89,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 153446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c3ec94ef35e774893416b19aac885d, type: 3}
+  m_Script: {fileID: 11500000, guid: a1e5626d81f7d2542af8acb3a8400308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visible: 1
   position: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 2399636}
+  renderer: {fileID: 0}
   ori: 0
   length: 1
   width: 1

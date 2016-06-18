@@ -115,7 +115,6 @@ namespace VLabEnvironment
             // when connected to VLab, we need to make sure that all system resourses
             // VLabEnvironment needed is ready to start experiment.
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
-            QualitySettings.antiAliasing = VLConvert.Convert<int>(appmanager.config["antialiasing"]);
             QualitySettings.vSyncCount = VLConvert.Convert<int>(appmanager.config["vsynccount"]);
             QualitySettings.maxQueuedFrames = VLConvert.Convert<int>(appmanager.config["maxqueuedframes"]);
 
@@ -134,7 +133,6 @@ namespace VLabEnvironment
 
             // when disconnect, we can relax and release some system resourses for other process
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
-            QualitySettings.antiAliasing = 0;
             QualitySettings.vSyncCount = 1;
             QualitySettings.maxQueuedFrames = 2;
 

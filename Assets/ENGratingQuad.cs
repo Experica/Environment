@@ -2,7 +2,7 @@
 // ENGratingQuad.cs is part of the VLAB project.
 // Copyright (c) 2016 All Rights Reserved
 // Li Alex Zhang fff008@gmail.com
-// 6-16-2016
+// 5-21-2016
 // --------------------------------------------------------------
 
 using UnityEngine;
@@ -28,7 +28,7 @@ namespace VLab
         [SyncVar(hook = "onisdrifting")]
         public bool isdrifting = true;
 
-        public override void OnVisible(bool v)
+        protected override void OnVisible(bool v)
         {
             base.OnVisible(v);
             if (v)
@@ -41,7 +41,7 @@ namespace VLab
         {
             OnSpatialFreq(sf);
         }
-        public virtual void OnSpatialFreq(float sf)
+        protected virtual void OnSpatialFreq(float sf)
         {
             renderer.material.SetFloat("sf", sf);
             spatialfreq = sf;
@@ -51,7 +51,7 @@ namespace VLab
         {
             OnTemporalFreq(tf);
         }
-        public virtual void OnTemporalFreq(float tf)
+        protected virtual void OnTemporalFreq(float tf)
         {
             renderer.material.SetFloat("tf", tf);
             temporalfreq = tf;
@@ -61,7 +61,7 @@ namespace VLab
         {
             OnSpatialPhase(p);
         }
-        public virtual void OnSpatialPhase(float p)
+        protected virtual void OnSpatialPhase(float p)
         {
             renderer.material.SetFloat("phase", p);
             spatialphase = p;
@@ -71,7 +71,7 @@ namespace VLab
         {
             OnSigma(s);
         }
-        public virtual void OnSigma(float s)
+        protected virtual void OnSigma(float s)
         {
             renderer.material.SetFloat("sigma", s);
             sigma = s;
@@ -81,7 +81,7 @@ namespace VLab
         {
             OnMinColor(c);
         }
-        public virtual void OnMinColor(Color c)
+        protected virtual void OnMinColor(Color c)
         {
             renderer.material.SetColor("mincolor", c);
             mincolor = c;
@@ -91,7 +91,7 @@ namespace VLab
         {
             OnMaxColor(c);
         }
-        public virtual void OnMaxColor(Color c)
+        protected virtual void OnMaxColor(Color c)
         {
             renderer.material.SetColor("maxcolor", c);
             maxcolor = c;
@@ -101,7 +101,7 @@ namespace VLab
         {
             OnIsDrifting(i);
         }
-        public virtual void OnIsDrifting(bool i)
+        protected virtual void OnIsDrifting(bool i)
         {
             isdrifting = i;
         }

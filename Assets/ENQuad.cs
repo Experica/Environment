@@ -2,7 +2,7 @@
 // ENQuad.cs is part of the VLAB project.
 // Copyright (c) 2016 All Rights Reserved
 // Li Alex Zhang fff008@gmail.com
-// 6-16-2016
+// 5-21-2016
 // --------------------------------------------------------------
 
 using UnityEngine;
@@ -28,7 +28,7 @@ namespace VLab
 
         public VLTimer t = new VLTimer();
 
-        public override void OnAwake()
+        protected override void OnAwake()
         {
             base.OnAwake();
             t.Start();
@@ -38,7 +38,7 @@ namespace VLab
         {
             OnOri(o);
         }
-        public virtual void OnOri(float o)
+        protected virtual void OnOri(float o)
         {
             transform.eulerAngles = new Vector3(0, 0, o);
             ori = o;
@@ -48,7 +48,7 @@ namespace VLab
         {
             OnLength(l);
         }
-        public virtual void OnLength(float l)
+        protected virtual void OnLength(float l)
         {
             transform.localScale = new Vector3(l, width, height);
             renderer.material.SetFloat("length", l);
@@ -59,7 +59,7 @@ namespace VLab
         {
             OnWidth(w);
         }
-        public virtual void OnWidth(float w)
+        protected virtual void OnWidth(float w)
         {
             transform.localScale = new Vector3(length, w, height);
             renderer.material.SetFloat("width", w);
@@ -70,7 +70,7 @@ namespace VLab
         {
             OnHeight(h);
         }
-        public virtual void OnHeight(float h)
+        protected virtual void OnHeight(float h)
         {
             transform.localScale = new Vector3(length, width, h);
             height = h;
@@ -80,7 +80,7 @@ namespace VLab
         {
             OnColor(c);
         }
-        public virtual void OnColor(Color c)
+        protected virtual void OnColor(Color c)
         {
             renderer.material.color = c;
             color = c;
@@ -90,7 +90,7 @@ namespace VLab
         {
             OnMaskType(t);
         }
-        public virtual void OnMaskType(int t)
+        protected virtual void OnMaskType(int t)
         {
             renderer.material.SetInt("masktype", t);
             masktype = t;

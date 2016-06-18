@@ -58,10 +58,6 @@ namespace VLabEnvironment
             {
                 config["ishidecursorwhenconnect"] = true;
             }
-            if (!config.ContainsKey("antialiasing"))
-            {
-                config["antialiasing"] = 2;
-            }
             if (!config.ContainsKey("vsynccount"))
             {
                 config["vsynccount"] = 0;
