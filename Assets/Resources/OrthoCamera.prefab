@@ -12,7 +12,7 @@ GameObject:
   - 81: {fileID: 81000010540390862}
   - 114: {fileID: 114000014067321596}
   - 114: {fileID: 114000014195594034}
-  - 114: {fileID: 114000012020711904}
+  - 114: {fileID: 114000012155848062}
   m_Layer: 0
   m_Name: OrthoCamera
   m_TagString: MainCamera
@@ -97,7 +97,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147930}
   m_Enabled: 1
---- !u!114 &114000012020711904
+--- !u!114 &114000012155848062
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

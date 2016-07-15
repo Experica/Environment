@@ -66,8 +66,8 @@ namespace VLabEnvironment
 
         public void ResetAutoConnect()
         {
-            autoconncountdown = VLConvert.Convert<int>(appmanager.config["autoconntimeout"]);
-            isautoconn = VLConvert.Convert<bool>(appmanager.config["isautoconn"]);
+            autoconncountdown = appmanager.config["autoconntimeout"].Convert<int>();
+            isautoconn = appmanager.config["isautoconn"].Convert<bool>();
             if (!isautoconn)
             {
                 autoconntext.text = "Auto Connect OFF";
@@ -77,7 +77,7 @@ namespace VLabEnvironment
 
         void Start()
         {
-            serveraddress.text = VLConvert.Convert<string>(appmanager.config["serveraddress"]);
+            serveraddress.text = appmanager.config["serveraddress"].Convert<string>();
             ResetAutoConnect();
         }
 
@@ -110,33 +110,32 @@ namespace VLabEnvironment
             autoconntext.text = "Connected";
             // since VLabEnvironment is to provide virtual reality environment, we may want to
             // hide cursor and default ui when connected to VLab.
-            canvas.enabled = !VLConvert.Convert<bool>(appmanager.config["ishideuiwhenconnect"]);
-            Cursor.visible = !VLConvert.Convert<bool>(appmanager.config["ishidecursorwhenconnect"]);
+            canvas.enabled = !appmanager.config["ishideuiwhenconnect"].Convert<bool>();
+            Cursor.visible = !appmanager.config["ishidecursorwhenconnect"].Convert<bool>();
             // when connected to VLab, we need to make sure that all system resourses
             // VLabEnvironment needed is ready to start experiment.
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
-            QualitySettings.vSyncCount = VLConvert.Convert<int>(appmanager.config["vsynccount"]);
-            QualitySettings.maxQueuedFrames = VLConvert.Convert<int>(appmanager.config["maxqueuedframes"]);
+            QualitySettings.vSyncCount = appmanager.config["vsynccount"].Convert<int>();
+            QualitySettings.maxQueuedFrames = appmanager.config["maxqueuedframes"].Convert<int>();
+            Time.fixedDeltaTime = appmanager.config["fixeddeltatime"].Convert<float>();
 
-            Time.fixedDeltaTime = VLConvert.Convert<float>(appmanager.config["fixeddeltatime"]);
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
         }
 
         public void OnClientDisconnect()
         {
             isconnect = false;
-            // when disconnected, we should back to default ui and turn on cursor.
+            // when disconnected, we should go back to default ui and turn on cursor.
             ResetAutoConnect();
             clientconnect.isOn = false;
             canvas.enabled = true;
             Cursor.visible = true;
-
             // when disconnect, we can relax and release some system resourses for other process
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
             QualitySettings.vSyncCount = 1;
             QualitySettings.maxQueuedFrames = 2;
-
             Time.fixedDeltaTime = 0.02f;
+
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
         }
 

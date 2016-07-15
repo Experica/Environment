@@ -40,7 +40,7 @@ namespace VLabEnvironment
 
         /// <summary>
         /// when new scene has loaded, and old scene unloaded, we should unload any
-        /// assets that is loaded by old scene but not used by new scene, keep a 
+        /// assets that was loaded by old scene but not used by the new scene, keeping a 
         /// smaller memeory footprint.
         /// </summary>
         /// <param name="conn"></param>

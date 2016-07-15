@@ -22,6 +22,7 @@
 		_NoiseTex ("-", 2D) = "grey" {}
 		_VelTex ("-", 2D) = "black" {}
 		_NeighbourMaxTex ("-", 2D) = "black" {}
+		_TileTexDebug ("-", 2D) = "" {}
 	}
 
 	CGINCLUDE

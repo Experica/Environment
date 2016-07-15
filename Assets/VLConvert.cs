@@ -2,30 +2,25 @@
 // VLConvert.cs is part of the VLAB project.
 // Copyright (c) 2016 All Rights Reserved
 // Li Alex Zhang fff008@gmail.com
-// 6-16-2016
+// 5-21-2016
 // --------------------------------------------------------------
 
 using UnityEngine;
-using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using System.Reflection;
 using System;
-using System.Linq;
 
 namespace VLab
 {
-    public class VLConvert
+    public static class VLConvert
     {
-        public static T Convert<T>(object value)
+        public static T Convert<T>(this object value)
         {
             return (T)Convert(value, typeof(T));
         }
 
-        public static object Convert(object value, Type T)
+        public static object Convert(this object value, Type ToT)
         {
             Type VT = value.GetType();
-            if (T == typeof(Vector3))
+            if (ToT == typeof(Vector3))
             {
                 if (VT == typeof(string))
                 {
@@ -35,10 +30,10 @@ namespace VLab
                 }
                 else
                 {
-                    return System.Convert.ChangeType(value, T);
+                    return System.Convert.ChangeType(value, ToT);
                 }
             }
-            else if (T == typeof(Color))
+            else if (ToT == typeof(Color))
             {
                 if (VT == typeof(string))
                 {
@@ -48,10 +43,10 @@ namespace VLab
                 }
                 else
                 {
-                    return System.Convert.ChangeType(value, T);
+                    return System.Convert.ChangeType(value, ToT);
                 }
             }
-            else if (T == typeof(string))
+            else if (ToT == typeof(string))
             {
                 if (VT == typeof(Vector3))
                 {
@@ -66,13 +61,13 @@ namespace VLab
                     return value.ToString();
                 }
             }
-            else if (T.IsEnum)
+            else if (ToT.IsEnum)
             {
-                if (Enum.IsDefined(T, value))
+                if (Enum.IsDefined(ToT, value))
                 {
                     if (VT == typeof(string))
                     {
-                        return Enum.Parse(T, (string)value);
+                        return Enum.Parse(ToT, (string)value);
                     }
                     else
                     {
@@ -81,15 +76,14 @@ namespace VLab
                 }
                 else
                 {
-                    return Activator.CreateInstance(T);
+                    return Activator.CreateInstance(ToT);
                 }
             }
             else
             {
-                return System.Convert.ChangeType(value, T);
+                return System.Convert.ChangeType(value, ToT);
             }
         }
 
     }
-
 }

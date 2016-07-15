@@ -16,7 +16,7 @@ namespace VLabEnvironment
     {
         public VLEUIController uicontroller;
         public Dictionary<string, object> config;
-        public static readonly string configpath = "VLabEnvironmentConfig.yaml";
+        public readonly string configpath = "VLabEnvironmentConfig.yaml";
 
         /// <summary>
         /// because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
