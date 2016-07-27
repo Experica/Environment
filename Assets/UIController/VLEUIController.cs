@@ -55,19 +55,19 @@ namespace VLabEnvironment
 
         public void OnServerAddressEndEdit(string v)
         {
-            appmanager.config["serveraddress"] = v;
+            appmanager.config[VLECFG.ServerAddress] = v;
         }
 
         public void OnToggleAutoConnect(bool ison)
         {
-            appmanager.config["isautoconn"] = ison;
+            appmanager.config[VLECFG.AutoConnection] = ison;
             ResetAutoConnect();
         }
 
         public void ResetAutoConnect()
         {
-            autoconncountdown = appmanager.config["autoconntimeout"].Convert<int>();
-            isautoconn = appmanager.config["isautoconn"].Convert<bool>();
+            autoconncountdown = (int)appmanager.config[VLECFG.AutoConnectionTimeOut];
+            isautoconn = (bool)appmanager.config[VLECFG.AutoConnection];
             if (!isautoconn)
             {
                 autoconntext.text = "Auto Connect OFF";
@@ -77,7 +77,7 @@ namespace VLabEnvironment
 
         void Start()
         {
-            serveraddress.text = appmanager.config["serveraddress"].Convert<string>();
+            serveraddress.text = (string)appmanager.config[VLECFG.ServerAddress];
             ResetAutoConnect();
         }
 
@@ -110,14 +110,14 @@ namespace VLabEnvironment
             autoconntext.text = "Connected";
             // since VLabEnvironment is to provide virtual reality environment, we may want to
             // hide cursor and default ui when connected to VLab.
-            canvas.enabled = !appmanager.config["ishideuiwhenconnect"].Convert<bool>();
-            Cursor.visible = !appmanager.config["ishidecursorwhenconnect"].Convert<bool>();
+            canvas.enabled = !(bool)appmanager.config[VLECFG.HideUIWhenConnected];
+            Cursor.visible = !(bool)appmanager.config[VLECFG.HideCursorWhenConnected];
             // when connected to VLab, we need to make sure that all system resourses
             // VLabEnvironment needed is ready to start experiment.
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
-            QualitySettings.vSyncCount = appmanager.config["vsynccount"].Convert<int>();
-            QualitySettings.maxQueuedFrames = appmanager.config["maxqueuedframes"].Convert<int>();
-            Time.fixedDeltaTime = appmanager.config["fixeddeltatime"].Convert<float>();
+            QualitySettings.vSyncCount = (int)appmanager.config[VLECFG.VSyncCount];
+            QualitySettings.maxQueuedFrames = (int)appmanager.config[VLECFG.MaxQueuedFrames];
+            Time.fixedDeltaTime = (float)appmanager.config[VLECFG.FixedDeltaTime];
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
         }

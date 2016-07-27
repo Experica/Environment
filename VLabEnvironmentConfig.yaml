@@ -1,8 +1,8 @@
-isautoconn: true
-autoconntimeout: 10
-serveraddress: localhost
-ishideuiwhenconnect: true
-ishidecursorwhenconnect: true
-vsynccount: 0
-maxqueuedframes: 0
-fixeddeltatime: 0.02
+AutoConnection: false
+AutoConnectionTimeOut: 10
+ServerAddress: localhost
+HideUIWhenConnected: true
+HideCursorWhenConnected: true
+VSyncCount: 0
+MaxQueuedFrames: 0
+FixedDeltaTime: 0.02

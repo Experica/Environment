@@ -12,14 +12,26 @@ using VLab;
 
 namespace VLabEnvironment
 {
+    public enum VLECFG
+    {
+        AutoConnection,
+        AutoConnectionTimeOut,
+        ServerAddress,
+        HideUIWhenConnected,
+        HideCursorWhenConnected,
+        VSyncCount,
+        MaxQueuedFrames,
+        FixedDeltaTime
+    }
+
     public class VLEApplicationManager : MonoBehaviour
     {
         public VLEUIController uicontroller;
-        public Dictionary<string, object> config;
+        public Dictionary<VLECFG, object> config;
         public readonly string configpath = "VLabEnvironmentConfig.yaml";
 
         /// <summary>
-        /// because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
+        /// Because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
         /// as the first to Awake in unity project setting(Script Order), so that application wide 
         /// configuration is ready for all other objects to use.
         /// </summary>
@@ -27,48 +39,76 @@ namespace VLabEnvironment
         {
             if (File.Exists(configpath))
             {
-                config = Yaml.ReadYaml<Dictionary<string, object>>(configpath);
+                config = Yaml.ReadYaml<Dictionary<VLECFG, object>>(configpath);
             }
             if (config == null)
             {
-                config = new Dictionary<string, object>();
+                config = new Dictionary<VLECFG, object>();
             }
             ValidateConfig();
         }
 
         void ValidateConfig()
         {
-            if (!config.ContainsKey("isautoconn"))
+            if (!config.ContainsKey(VLECFG.AutoConnection))
             {
-                config["isautoconn"] = true;
+                config[VLECFG.AutoConnection] = true;
             }
-            if (!config.ContainsKey("autoconntimeout"))
+            else
             {
-                config["autoconntimeout"] = 10;
+                config[VLECFG.AutoConnection] = config[VLECFG.AutoConnection].Convert<bool>();
             }
-            if (!config.ContainsKey("serveraddress"))
+            if (!config.ContainsKey(VLECFG.AutoConnectionTimeOut))
             {
-                config["serveraddress"] = "localhost";
+                config[VLECFG.AutoConnectionTimeOut] = 10;
             }
-            if (!config.ContainsKey("ishideuiwhenconnect"))
+            else
             {
-                config["ishideuiwhenconnect"] = true;
+                config[VLECFG.AutoConnectionTimeOut] = config[VLECFG.AutoConnectionTimeOut].Convert<int>();
             }
-            if (!config.ContainsKey("ishidecursorwhenconnect"))
+            if (!config.ContainsKey(VLECFG.ServerAddress))
             {
-                config["ishidecursorwhenconnect"] = true;
+                config[VLECFG.ServerAddress] = "localhost";
             }
-            if (!config.ContainsKey("vsynccount"))
+            if (!config.ContainsKey(VLECFG.HideUIWhenConnected))
             {
-                config["vsynccount"] = 0;
+                config[VLECFG.HideUIWhenConnected] = true;
             }
-            if (!config.ContainsKey("maxqueuedframes"))
+            else
             {
-                config["maxqueuedframes"] = 0;
+                config[VLECFG.HideUIWhenConnected] = config[VLECFG.HideUIWhenConnected].Convert<bool>();
             }
-            if (!config.ContainsKey("fixeddeltatime"))
+            if (!config.ContainsKey(VLECFG.HideCursorWhenConnected))
             {
-                config["fixeddeltatime"] = 0.02f;
+                config[VLECFG.HideCursorWhenConnected] = true;
+            }
+            else
+            {
+                config[VLECFG.HideCursorWhenConnected] = config[VLECFG.HideCursorWhenConnected].Convert<bool>();
+            }
+            if (!config.ContainsKey(VLECFG.VSyncCount))
+            {
+                config[VLECFG.VSyncCount] = 0;
+            }
+            else
+            {
+                config[VLECFG.VSyncCount] = config[VLECFG.VSyncCount].Convert<int>();
+            }
+            if (!config.ContainsKey(VLECFG.MaxQueuedFrames))
+            {
+                config[VLECFG.MaxQueuedFrames] = 0;
+            }
+            else
+            {
+                config[VLECFG.MaxQueuedFrames] = config[VLECFG.MaxQueuedFrames].Convert<int>();
+            }
+            if (!config.ContainsKey(VLECFG.FixedDeltaTime))
+            {
+                config[VLECFG.FixedDeltaTime] = 0.02f;
+            }
+            else
+            {
+                config[VLECFG.FixedDeltaTime] = config[VLECFG.FixedDeltaTime].Convert<float>();
             }
         }
 
