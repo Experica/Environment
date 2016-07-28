@@ -181,7 +181,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1600, y: 1200}
-  m_ScreenMatchMode: 2
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -607,15 +607,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011510695084, guid: 68a3e94b64003ed4ba183b20fc248e51, type: 2}
+      propertyPath: m_Name
+      value: AutoConnect
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011958694586, guid: 68a3e94b64003ed4ba183b20fc248e51,
         type: 2}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 835844596}
-    - target: {fileID: 1000011510695084, guid: 68a3e94b64003ed4ba183b20fc248e51, type: 2}
-      propertyPath: m_Name
-      value: AutoConnect
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68a3e94b64003ed4ba183b20fc248e51, type: 2}
   m_IsPrefabParent: 0

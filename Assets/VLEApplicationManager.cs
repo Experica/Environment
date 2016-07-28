@@ -136,13 +136,5 @@ namespace VLabEnvironment
             Yaml.WriteYaml(configpath, config);
         }
 
-        void Update()
-        {
-            if (Input.GetButton("Quit"))
-            {
-                Application.Quit();
-            }
-        }
-
     }
 }

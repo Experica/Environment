@@ -98,22 +98,30 @@ namespace VLabEnvironment
 
         void Update()
         {
-            if (isautoconn && !isconnect)
+            if(!isconnect)
             {
-                if (Time.unscaledTime - lastautoconntime >= 1)
+                if (Input.GetButton("Quit"))
                 {
-                    autoconncountdown--;
-                    if (autoconncountdown > 0)
+                    Application.Quit();
+                    return;
+                }
+                if(isautoconn)
+                {
+                    if (Time.unscaledTime - lastautoconntime >= 1)
                     {
-                        lastautoconntime = Time.unscaledTime;
-                        autoconntext.text = "Auto Connect " + autoconncountdown + "s";
-                    }
-                    else
-                    {
-                        clientconnect.isOn = true;
-                        clientconnect.onValueChanged.Invoke(true);
-                        autoconntext.text = "Connecting ...";
-                        isautoconn = false;
+                        autoconncountdown--;
+                        if (autoconncountdown > 0)
+                        {
+                            lastautoconntime = Time.unscaledTime;
+                            autoconntext.text = "Auto Connect " + autoconncountdown + "s";
+                        }
+                        else
+                        {
+                            clientconnect.isOn = true;
+                            clientconnect.onValueChanged.Invoke(true);
+                            autoconntext.text = "Connecting ...";
+                            isautoconn = false;
+                        }
                     }
                 }
             }
@@ -124,7 +132,7 @@ namespace VLabEnvironment
             isconnect = true;
             autoconntext.text = "Connected";
             // since VLabEnvironment is to provide virtual reality environment, we may want to
-            // hide cursor and default ui when connected to VLab.
+            // hide cursor and ui when connected to VLab.
             canvas.enabled = !(bool)appmanager.config[VLECFG.HideUIWhenConnected];
             Cursor.visible = !(bool)appmanager.config[VLECFG.HideCursorWhenConnected];
             // when connected to VLab, we need to make sure that all system resourses
@@ -140,7 +148,7 @@ namespace VLabEnvironment
         public void OnClientDisconnect()
         {
             isconnect = false;
-            // when disconnected, we should go back to default ui and turn on cursor.
+            // when disconnected, we should go back to ui and turn on cursor.
             ResetAutoConnect();
             clientconnect.isOn = false;
             canvas.enabled = true;
@@ -148,7 +156,7 @@ namespace VLabEnvironment
             // when disconnect, we can relax and release some system resourses for other process
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
             QualitySettings.vSyncCount = 1;
-            QualitySettings.maxQueuedFrames = 2;
+            QualitySettings.maxQueuedFrames = 1;
             Time.fixedDeltaTime = 0.02f;
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;

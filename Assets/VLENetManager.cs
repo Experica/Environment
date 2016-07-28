@@ -61,8 +61,8 @@ namespace VLabEnvironment
         /// <param name="conn"></param>
         public override void OnClientSceneChanged(NetworkConnection conn)
         {
-            Resources.UnloadUnusedAssets();
             base.OnClientSceneChanged(conn);
+            Resources.UnloadUnusedAssets();
         }
 
     }
