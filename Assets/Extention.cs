@@ -371,5 +371,19 @@ namespace VLab
             }
         }
 
+        public static float GetColorScale(float luminance, float contrast )
+        {
+            luminance = Mathf.Clamp(luminance, 0, 1);
+            contrast = Mathf.Clamp(contrast, 0, 1);
+            return 2*luminance * contrast;
+        }
+
+        public static void GetColor(this float scale,Color minc,Color maxc, out Color sminc,out Color smaxc)
+        {
+            var ac = (minc + maxc) / 2;
+            var acd = maxc - ac;
+             sminc = new Color(ac.r - acd.r * scale, ac.g - acd.g * scale, ac.b - acd.b * scale, minc.a);
+             smaxc = new Color(ac.r + acd.r * scale, ac.g + acd.g * scale, ac.b + acd.b * scale, maxc.a);
+        }
     }
 }

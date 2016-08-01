@@ -26,6 +26,13 @@ using System.Collections;
 
 namespace VLab
 {
+    public enum MaskType
+    {
+        None,
+        Disk,
+        Gaussian
+    }
+
     public class ENQuad : EnvNet
     {
         [SyncVar(hook = "onori")]
@@ -33,13 +40,13 @@ namespace VLab
         [SyncVar(hook ="onorioffset")]
         public float OriOffset = 0;
         [SyncVar(hook ="onsize")]
-        public Vector3 Size = new Vector3(1, 1, 1);
+        public Vector3 Size = new Vector3(2, 2, 1);
         [SyncVar(hook ="ondiameter")]
-        public float Diameter = 1;
+        public float Diameter = 2;
         [SyncVar(hook = "oncolor")]
         public Color Color = new Color();
         [SyncVar(hook = "onmasktype")]
-        public int MaskType = 0;
+        public MaskType MaskType;
 
         public VLTimer t = new VLTimer();
 
@@ -76,8 +83,8 @@ namespace VLab
         public virtual void OnSize(Vector3 s)
         {
             transform.localScale = s;
-            renderer.material.SetFloat("length", s.x);
-            renderer.material.SetFloat("width", s.y);
+            renderer.material.SetFloat("sizex", s.x);
+            renderer.material.SetFloat("sizey", s.y);
             Size = s;
         }
 
@@ -87,9 +94,9 @@ namespace VLab
         }
         public virtual void OnDiameter(float d)
         {
-            transform.localScale = new Vector3(d,d,d);
-            renderer.material.SetFloat("length", d);
-            renderer.material.SetFloat("width", d);
+            transform.localScale = new Vector3(d,d,1);
+            renderer.material.SetFloat("sizex", d);
+            renderer.material.SetFloat("sizey", d);
             Diameter = d;
         }
 
@@ -99,17 +106,17 @@ namespace VLab
         }
         public virtual void OnColor(Color c)
         {
-            renderer.material.color = c;
+            renderer.material.SetColor("col", c);
             Color = c;
         }
 
-        void onmasktype(int t)
+        void onmasktype(MaskType t)
         {
             OnMaskType(t);
         }
-        public virtual void OnMaskType(int t)
+        public virtual void OnMaskType(MaskType t)
         {
-            renderer.material.SetInt("masktype", t);
+            renderer.material.SetInt("masktype", (int)t);
             MaskType = t;
         }
 

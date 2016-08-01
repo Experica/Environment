@@ -1,6 +1,6 @@
-AutoConnection: false
+AutoConnection: true
 AutoConnectionTimeOut: 10
-ServerAddress: lyonripple
+ServerAddress: localhost
 HideUIWhenConnected: true
 HideCursorWhenConnected: true
 VSyncCount: 0
