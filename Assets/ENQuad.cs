@@ -39,10 +39,10 @@ namespace VLab
         public float Ori = 0;
         [SyncVar(hook ="onorioffset")]
         public float OriOffset = 0;
+        [SyncVar(hook = "ondiameter")]
+        public float Diameter = 2;
         [SyncVar(hook ="onsize")]
         public Vector3 Size = new Vector3(2, 2, 1);
-        [SyncVar(hook ="ondiameter")]
-        public float Diameter = 2;
         [SyncVar(hook = "oncolor")]
         public Color Color = new Color();
         [SyncVar(hook = "onmasktype")]
@@ -63,6 +63,7 @@ namespace VLab
         public virtual void OnOri(float o)
         {
             transform.eulerAngles = new Vector3(0, 0, o+OriOffset);
+            transform.position = Position + PositionOffset.RotateZCCW(OriOffset + o);
             Ori = o;
         }
 
@@ -73,7 +74,20 @@ namespace VLab
         public virtual void OnOriOffset(float ooffset)
         {
             transform.eulerAngles = new Vector3(0, 0, ooffset+Ori);
+            transform.position = Position + PositionOffset.RotateZCCW(Ori + ooffset);
             OriOffset = ooffset;
+        }
+
+        public override void OnPosition(Vector3 p)
+        {
+            transform.position = p + PositionOffset.RotateZCCW(Ori+OriOffset);
+            Position = p;
+        }
+
+        public override void OnPositionOffset(Vector3 poffset)
+        {
+            transform.position = Position + poffset.RotateZCCW(Ori + OriOffset);
+            PositionOffset = poffset;
         }
 
         void onsize(Vector3 s)
@@ -94,7 +108,8 @@ namespace VLab
         }
         public virtual void OnDiameter(float d)
         {
-            transform.localScale = new Vector3(d,d,1);
+            Size = new Vector3(d, d, Size.z);
+            transform.localScale = Size;
             renderer.material.SetFloat("sizex", d);
             renderer.material.SetFloat("sizey", d);
             Diameter = d;
