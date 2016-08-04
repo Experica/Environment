@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------------
 // VLEApplicationManager.cs is part of the VLAB project.
-// Copyright (c) 2016  Li Alex Zhang  fff008@gmail.com
+// Copyright (c) 2016 Li Alex Zhang and Contributors
 //
 // Permission is hereby granted, free of charge, to any person obtaining a 
 // copy of this software and associated documentation files (the "Software"),
@@ -29,8 +29,8 @@ namespace VLabEnvironment
 {
     public enum VLECFG
     {
-        AutoConnection,
-        AutoConnectionTimeOut,
+        AutoConnect,
+        AutoConnectTimeOut,
         ServerAddress,
         HideUIWhenConnected,
         HideCursorWhenConnected,
@@ -65,21 +65,21 @@ namespace VLabEnvironment
 
         void ValidateConfig()
         {
-            if (!config.ContainsKey(VLECFG.AutoConnection))
+            if (!config.ContainsKey(VLECFG.AutoConnect))
             {
-                config[VLECFG.AutoConnection] = true;
+                config[VLECFG.AutoConnect] = true;
             }
             else
             {
-                config[VLECFG.AutoConnection] = config[VLECFG.AutoConnection].Convert<bool>();
+                config[VLECFG.AutoConnect] = config[VLECFG.AutoConnect].Convert<bool>();
             }
-            if (!config.ContainsKey(VLECFG.AutoConnectionTimeOut))
+            if (!config.ContainsKey(VLECFG.AutoConnectTimeOut))
             {
-                config[VLECFG.AutoConnectionTimeOut] = 10;
+                config[VLECFG.AutoConnectTimeOut] = 10;
             }
             else
             {
-                config[VLECFG.AutoConnectionTimeOut] = config[VLECFG.AutoConnectionTimeOut].Convert<int>();
+                config[VLECFG.AutoConnectTimeOut] = config[VLECFG.AutoConnectTimeOut].Convert<int>();
             }
             if (!config.ContainsKey(VLECFG.ServerAddress))
             {

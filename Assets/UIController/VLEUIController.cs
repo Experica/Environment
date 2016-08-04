@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------------
 // VLEUIController.cs is part of the VLAB project.
-// Copyright (c) 2016  Li Alex Zhang  fff008@gmail.com
+// Copyright (c) 2016 Li Alex Zhang and Contributors
 //
 // Permission is hereby granted, free of charge, to any person obtaining a 
 // copy of this software and associated documentation files (the "Software"),
@@ -75,14 +75,14 @@ namespace VLabEnvironment
 
         public void OnToggleAutoConnect(bool ison)
         {
-            appmanager.config[VLECFG.AutoConnection] = ison;
+            appmanager.config[VLECFG.AutoConnect] = ison;
             ResetAutoConnect();
         }
 
         public void ResetAutoConnect()
         {
-            autoconncountdown = (int)appmanager.config[VLECFG.AutoConnectionTimeOut];
-            isautoconn = (bool)appmanager.config[VLECFG.AutoConnection];
+            autoconncountdown = (int)appmanager.config[VLECFG.AutoConnectTimeOut];
+            isautoconn = (bool)appmanager.config[VLECFG.AutoConnect];
             if (!isautoconn)
             {
                 autoconntext.text = "Auto Connect OFF";
