@@ -47,7 +47,7 @@ namespace VLabEnvironment
         /// <summary>
         /// Because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
         /// as the first to Awake in unity project setting(Script Order), so that application wide 
-        /// configuration is ready for all other objects to use.
+        /// configuration will be ready for all other objects to use.
         /// </summary>
         void Awake()
         {

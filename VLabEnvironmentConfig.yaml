@@ -1,8 +1,8 @@
-AutoConnect: true
+AutoConnect: false
 AutoConnectTimeOut: 10
 ServerAddress: localhost
 HideUIWhenConnected: true
 HideCursorWhenConnected: true
 VSyncCount: 0
 MaxQueuedFrames: 0
-FixedDeltaTime: 0.02
+FixedDeltaTime: 0.0199999996

@@ -149,7 +149,12 @@ namespace VLabEnvironment
             isconnect = false;
             // when disconnected, we should go back to ui and turn on cursor.
             ResetAutoConnect();
+
+            var callback = clientconnect.onValueChanged;
+            clientconnect.onValueChanged = new Toggle.ToggleEvent();
             clientconnect.isOn = false;
+            clientconnect.onValueChanged = callback;
+
             canvas.enabled = true;
             Cursor.visible = true;
             // when disconnect, we can relax and release some system resourses for other process
