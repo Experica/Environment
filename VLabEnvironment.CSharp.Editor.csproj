@@ -94,9 +94,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="LibUsbDotNet">
-      <HintPath>Assets\Plugins\LibUsbDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="YamlDotNet">
       <HintPath>Assets\Plugins\YamlDotNet\YamlDotNet.dll</HintPath>
     </Reference>

@@ -52,17 +52,5 @@ namespace VLabEnvironment
             uicontroller.OnClientDisconnect();
         }
 
-        /// <summary>
-        /// when new scene has loaded, and old scene unloaded, we should unload any
-        /// assets that was loaded by old scene but not used by the new scene, keeping a 
-        /// smaller memeory footprint.
-        /// </summary>
-        /// <param name="conn"></param>
-        public override void OnClientSceneChanged(NetworkConnection conn)
-        {
-            base.OnClientSceneChanged(conn);
-            Resources.UnloadUnusedAssets();
-        }
-
     }
 }

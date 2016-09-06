@@ -61,9 +61,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="LibUsbDotNet">
-      <HintPath>Assets\Plugins\LibUsbDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="YamlDotNet">
       <HintPath>Assets\Plugins\YamlDotNet\YamlDotNet.dll</HintPath>
     </Reference>
@@ -85,9 +82,9 @@
     <Compile Include="Assets\VLEApplicationManager.cs" />
     <Compile Include="Assets\VLENetManager.cs" />
     <Compile Include="Assets\VLExtention.cs" />
-    <Compile Include="Assets\VLIO.cs" />
     <Compile Include="Assets\VLNetwork.cs" />
     <Compile Include="Assets\VLTimer.cs" />
+    <Compile Include="Assets\VLYaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\YamlDotNet\YamlDotNet.xml" />

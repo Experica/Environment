@@ -1,6 +1,6 @@
 AutoConnect: false
 AutoConnectTimeOut: 10
-ServerAddress: localhost
+ServerAddress: lyonlab-visual
 HideUIWhenConnected: true
 HideCursorWhenConnected: true
 VSyncCount: 0
