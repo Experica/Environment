@@ -44,8 +44,6 @@ namespace VLab
         public float TemporalFreq;
         [SyncVar(hook = "onspatialphase")]
         public float SpatialPhase;
-        [SyncVar(hook = "onsigma")]
-        public float Sigma;
         [SyncVar(hook = "onmincolor")]
         public Color MinColor;
         [SyncVar(hook = "onmaxcolor")]
@@ -126,16 +124,6 @@ namespace VLab
             SpatialPhase = p;
         }
 
-        void onsigma(float s)
-        {
-            OnSigma(s);
-        }
-        public virtual void OnSigma(float s)
-        {
-            renderer.material.SetFloat("sigma", s);
-            Sigma = s;
-        }
-
         void onmincolor(Color c)
         {
             OnMinColor(c);
@@ -191,7 +179,7 @@ namespace VLab
         {
             if (Drifting)
             {
-                renderer.material.SetFloat("t", (float)(ReverseTime?2*reversetime-t.ElapsedSecond : t.ElapsedSecond));
+                renderer.material.SetFloat("t", (float)(ReverseTime?2*reversetime-t.ElapsedSecond: t.ElapsedSecond));
             }
         }
     }

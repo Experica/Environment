@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 465644}
-  - 20: {fileID: 2070478}
+  - component: {fileID: 465644}
+  - component: {fileID: 2070478}
   m_Layer: 0
   m_Name: PerspCamera
   m_TagString: MainCamera
@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -101}
+  m_LocalPosition: {x: 0, y: 0, z: 999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,7 +46,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 1
-  far clip plane: 1000
+  far clip plane: 2001
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -54,7 +54,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 3
+  m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
