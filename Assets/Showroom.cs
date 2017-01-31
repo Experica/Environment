@@ -84,6 +84,7 @@ namespace VLab
 
         void UnSpawnHandler(GameObject spawned)
         {
+            Destroy(spawned);
         }
 
         void onmarker(bool ismarker)
