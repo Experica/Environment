@@ -23,6 +23,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Networking.NetworkSystem;
 using VLab;
+using System;
 
 namespace VLabEnvironment
 {
@@ -50,6 +51,12 @@ namespace VLabEnvironment
         {
             base.OnClientDisconnect(conn);
             uicontroller.OnClientDisconnect();
+        }
+
+        public override void OnClientSceneChanged(NetworkConnection conn)
+        {
+            base.OnClientSceneChanged(conn);
+            GC.Collect();
         }
 
     }

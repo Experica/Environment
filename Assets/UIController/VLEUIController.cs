@@ -23,6 +23,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Diagnostics;
 using VLab;
+using System.Threading;
+using System.Runtime;
+using System;
 
 namespace VLabEnvironment
 {
@@ -97,14 +100,14 @@ namespace VLabEnvironment
 
         void Update()
         {
-            if(!isconnect)
+            if (!isconnect)
             {
                 if (Input.GetButton("Quit"))
                 {
                     Application.Quit();
                     return;
                 }
-                if(isautoconn)
+                if (isautoconn)
                 {
                     if (Time.unscaledTime - lastautoconntime >= 1)
                     {
@@ -142,6 +145,9 @@ namespace VLabEnvironment
             Time.fixedDeltaTime = (float)appmanager.config[VLECFG.FixedDeltaTime];
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+            Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Highest;
+            GC.Collect();
+            GCSettings.LatencyMode = GCLatencyMode.LowLatency;
         }
 
         public void OnClientDisconnect()
@@ -164,6 +170,9 @@ namespace VLabEnvironment
             Time.fixedDeltaTime = 0.02f;
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
+            Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Normal;
+            GCSettings.LatencyMode = GCLatencyMode.Interactive;
+            GC.Collect();
         }
 
     }

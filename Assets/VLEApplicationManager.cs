@@ -102,7 +102,7 @@ namespace VLabEnvironment
             }
             if (!config.ContainsKey(VLECFG.VSyncCount))
             {
-                config[VLECFG.VSyncCount] = 0;
+                config[VLECFG.VSyncCount] = 1;
             }
             else
             {
@@ -118,7 +118,7 @@ namespace VLabEnvironment
             }
             if (!config.ContainsKey(VLECFG.FixedDeltaTime))
             {
-                config[VLECFG.FixedDeltaTime] = 0.02f;
+                config[VLECFG.FixedDeltaTime] = 1000000f;
             }
             else
             {

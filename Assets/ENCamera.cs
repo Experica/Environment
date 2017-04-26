@@ -1,5 +1,5 @@
 ﻿/*
-ENCamera.cs is part of the VLAB project.
+encamera.cs is part of the VLAB project.
 Copyright (c) 2017 Li Alex Zhang and Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a 
@@ -29,7 +29,7 @@ namespace VLab
     public class ENCamera : NetworkBehaviour
     {
         [SyncVar(hook = "onbgcolor")]
-        public Color BGColor = new Color();
+        public Color BGColor = Color.gray;
         [SyncVar(hook = "onscreenhalfheight")]
         public float ScreenHalfHeight = 15;
         [SyncVar(hook = "onscreentoeye")]
