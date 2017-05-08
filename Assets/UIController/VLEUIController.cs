@@ -146,6 +146,7 @@ namespace VLabEnvironment
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
             Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Highest;
+            Process.GetCurrentProcess().PriorityBoostEnabled = true;
             GC.Collect();
             GCSettings.LatencyMode = GCLatencyMode.LowLatency;
         }
