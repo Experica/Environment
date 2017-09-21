@@ -1,4 +1,4 @@
-AutoConnect: false
+AutoConnect: true
 AutoConnectTimeOut: 10
 ServerAddress: localhost
 HideUIWhenConnected: true
