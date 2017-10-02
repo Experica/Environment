@@ -119,9 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\YamlDotNet\YamlDotNet.xml" />
-    <None Include="Assets\Resources\color.shader" />
-    <None Include="Assets\Resources\grating.shader" />
-    <None Include="Assets\Resources\image.shader" />
+    <None Include="Assets\Resources\maskcolor.shader" />
+    <None Include="Assets\Resources\maskgrating.shader" />
+    <None Include="Assets\Resources\maskimage.shader" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />

@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Color
-  m_Shader: {fileID: 4800000, guid: 35f076e127c17d14694cc771d2cbfff9, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: 2000
+  m_Name: MaskGrating
+  m_Shader: {fileID: 4800000, guid: fef92eb22a8280e4fa748c2ab5b746be, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -83,8 +83,14 @@ Material:
         name: _DstBlend
       second: 0
     - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
         name: _Glossiness
       second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
     - first:
         name: _Metallic
       second: 0
@@ -98,6 +104,12 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
         name: _SrcBlend
       second: 1
     - first:
@@ -107,8 +119,20 @@ Material:
         name: _ZWrite
       second: 1
     - first:
+        name: gratingtype
+      second: 0
+    - first:
+        name: maskradius
+      second: 0.5
+    - first:
         name: masktype
       second: 0
+    - first:
+        name: phase
+      second: 0
+    - first:
+        name: sf
+      second: 1
     - first:
         name: sigma
       second: 0.15
@@ -118,16 +142,25 @@ Material:
     - first:
         name: sizey
       second: 2
+    - first:
+        name: t
+      second: 0
+    - first:
+        name: tf
+      second: 1
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.7686275, g: 0.8862746, b: 0.9294118, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
-        name: c
+        name: cdist
+      second: {r: 1, g: 1, b: 1, a: 0}
+    - first:
+        name: maxc
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
-        name: col
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: minc
+      second: {r: 0, g: 0, b: 0, a: 1}

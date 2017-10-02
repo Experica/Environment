@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Image
-  m_Shader: {fileID: 4800000, guid: 44e1f4a388d51d34e8e771a7333ef8a4, type: 3}
+  m_Name: MaskImage
+  m_Shader: {fileID: 4800000, guid: fdba7081c2e76ef439fb57db0427dcf7, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -125,11 +125,14 @@ Material:
         name: _ZWrite
       second: 1
     - first:
+        name: maskradius
+      second: 0.5
+    - first:
         name: masktype
       second: 0
     - first:
         name: sigma
-      second: 0.15
+      second: 25
     - first:
         name: sizex
       second: 2
@@ -143,9 +146,3 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: col
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: img
-      second: {r: 1, g: 1, b: 1, a: 1}

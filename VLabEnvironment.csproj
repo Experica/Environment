@@ -84,14 +84,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DynamicShowroom.cs" />
-    <Compile Include="Assets\ENCamera.cs" />
-    <Compile Include="Assets\ENGratingQuad.cs" />
-    <Compile Include="Assets\ENImageQuad.cs" />
-    <Compile Include="Assets\ENMarker.cs" />
-    <Compile Include="Assets\ENQuad.cs" />
-    <Compile Include="Assets\EnvNet.cs" />
-    <Compile Include="Assets\Showroom.cs" />
+    <Compile Include="Assets\Environment\DynamicShowroom.cs" />
+    <Compile Include="Assets\Environment\ENCamera.cs" />
+    <Compile Include="Assets\Environment\ENGratingQuad.cs" />
+    <Compile Include="Assets\Environment\ENImageQuad.cs" />
+    <Compile Include="Assets\Environment\ENMarker.cs" />
+    <Compile Include="Assets\Environment\ENQuad.cs" />
+    <Compile Include="Assets\Environment\EnvNet.cs" />
+    <Compile Include="Assets\Environment\Showroom.cs" />
     <Compile Include="Assets\UIController\VLEUICanvas.cs" />
     <Compile Include="Assets\UIController\VLEUIController.cs" />
     <Compile Include="Assets\VLEApplicationManager.cs" />
@@ -103,9 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\YamlDotNet\YamlDotNet.xml" />
-    <None Include="Assets\Resources\color.shader" />
-    <None Include="Assets\Resources\grating.shader" />
-    <None Include="Assets\Resources\image.shader" />
+    <None Include="Assets\Resources\maskcolor.shader" />
+    <None Include="Assets\Resources\maskgrating.shader" />
+    <None Include="Assets\Resources\maskimage.shader" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
