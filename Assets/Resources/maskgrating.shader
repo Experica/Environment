@@ -2,9 +2,11 @@
 {
 	Properties
 	{
+		ori("Orientation",Float) = 0
+		orioffset("OrientationOffset",Float) = 0
 		minc("MinColor",Color) = (0,0,0,1)
 		maxc("MaxColor",Color) = (1,1,1,1)
-		cdist("ColorDistance",Color)=(1,1,1,0)
+		cdist("ColorDistance",Color) = (1,1,1,0)
 		sf("SpatialFreq", Float) = 1
 		tf("TemporalFreq", Float) = 1
 		t("Time", Float) = 0
@@ -17,7 +19,7 @@
 		masktype("MaskType",Int) = 0
 	}
 
-	SubShader
+		SubShader
 	{
 		Tags{ "RenderType" = "Transparent" "Queue" = "Transparent"}
 		Blend SrcAlpha OneMinusSrcAlpha
@@ -30,6 +32,8 @@
 			#pragma fragment frag
 			#include "UnityCG.cginc"
 
+			float ori;
+	        float orioffset;
 			fixed4 minc;
 	        fixed4 maxc;
 			fixed4 cdist;
@@ -82,7 +86,10 @@
 			fixed4 frag(v2f i) : SV_Target
 			{
 				fixed4 c;
-			    float y = frac((i.uv.y*sizey - t*tf / sf + phase / sf)*sf);
+			    float sinv, cosv;
+				sincos(radians(ori + orioffset), sinv, cosv);
+				float p = cosv*i.uv.y*sizey - sinv*i.uv.x*sizex;
+				float y = frac((p - t*tf / sf + phase / sf)*sf);
 				if (gratingtype == 0)
 				{
 					if (y< 0.5)

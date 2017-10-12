@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: MaskColor
-  m_Shader: {fileID: 4800000, guid: 71a3dd08da654a541beab27f61928e5d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 35f076e127c17d14694cc771d2cbfff9, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1

@@ -2,6 +2,8 @@
 {
 	Properties
 	{
+		ori("Orientation",Float) = 0
+		orioffset("OrientationOffset",Float) = 0
 		img("Image", 2D) = "white" {}
 		maskradius("MaskRadius",Float) = 0.5
 		sigma("Sigma", Float) = 25
@@ -23,6 +25,8 @@
 			#pragma fragment frag
 			#include "UnityCG.cginc"
 
+			float ori;
+		    float orioffset;
 			sampler2D img;
 			float maskradius;
 			float sigma;
@@ -61,14 +65,17 @@
 			{
 				v2f o;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
-				o.uv = v.uv;
+				o.uv = v.uv - 0.5;
 				return o;
 			}
 
 			fixed4 frag(v2f i) : SV_Target
 			{
-				fixed4 c = tex2D(img,i.uv);
-			    i.uv = i.uv - 0.5;
+				float sinv, cosv;
+				sincos(radians(ori + orioffset), sinv, cosv);
+				float2 ruv = mul(i.uv, float2x2(cosv, -sinv, sinv, cosv));
+				fixed4 c = tex2D(img, ruv + 0.5);
+
 			    if(masktype==0)
 				{ }
 				else if (masktype == 1)
