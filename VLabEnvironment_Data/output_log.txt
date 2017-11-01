@@ -1,0 +1,1580 @@
+Initialize engine version: 5.5.5f1 (d875e6967482)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   NVIDIA
+    VRAM:     8085 MB
+    Driver:   22.21.13.8165
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\YamlDotNet.dll (this message is harmless)
+Loading C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\YamlDotNet.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\lyonlab\VLabEnvironment\VLabEnvironment_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.596729 ms
+NetworkManager created singleton (DontDestroyOnLoad)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1648 -> priority: 1 
+  Thread -> id: 164c -> priority: 1 
+GfxDevice: creating device client; threaded=1
+GfxDevice: creating device client; threaded=1
+Client created version Current
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler id:39 handler:OnClientSceneInternal
+NetworkManager StartClient address:localhost port:8800
+RegisterHandlerSafe id:3 handler:OnObjectSpawn
+RegisterHandlerSafe id:10 handler:OnObjectSpawnScene
+RegisterHandlerSafe id:12 handler:OnObjectSpawnFinished
+RegisterHandlerSafe id:1 handler:OnObjectDestroy
+RegisterHandlerSafe id:13 handler:OnObjectDestroy
+RegisterHandlerSafe id:8 handler:OnUpdateVarsMessage
+RegisterHandlerSafe id:4 handler:OnOwnerMessage
+RegisterHandlerSafe id:9 handler:OnSyncListMessage
+RegisterHandlerSafe id:40 handler:OnAnimationClientMessage
+RegisterHandlerSafe id:41 handler:OnAnimationParametersClientMessage
+RegisterHandlerSafe id:15 handler:OnClientAuthority
+RegisterHandlerSafe id:2 handler:OnRPCMessage
+RegisterHandlerSafe id:7 handler:OnSyncEventMessage
+RegisterHandlerSafe id:42 handler:OnAnimationTriggerClientMessage
+RegisterHandlerSafe id:14 handler:OnCRC
+RegisterHandlerSafe id:17 handler:OnFragment
+Client Connect: localhost:8800
+Client created version Current
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler id:39 handler:OnClientSceneInternal
+NetworkManager StartClient address:localhost port:8800
+RegisterHandlerSafe id:3 handler:OnObjectSpawn
+RegisterHandlerSafe id:10 handler:OnObjectSpawnScene
+RegisterHandlerSafe id:12 handler:OnObjectSpawnFinished
+RegisterHandlerSafe id:1 handler:OnObjectDestroy
+RegisterHandlerSafe id:13 handler:OnObjectDestroy
+RegisterHandlerSafe id:8 handler:OnUpdateVarsMessage
+RegisterHandlerSafe id:4 handler:OnOwnerMessage
+RegisterHandlerSafe id:9 handler:OnSyncListMessage
+RegisterHandlerSafe id:40 handler:OnAnimationClientMessage
+RegisterHandlerSafe id:41 handler:OnAnimationParametersClientMessage
+RegisterHandlerSafe id:15 handler:OnClientAuthority
+RegisterHandlerSafe id:2 handler:OnRPCMessage
+RegisterHandlerSafe id:7 handler:OnSyncEventMessage
+RegisterHandlerSafe id:42 handler:OnAnimationTriggerClientMessage
+RegisterHandlerSafe id:14 handler:OnCRC
+RegisterHandlerSafe id:17 handler:OnFragment
+Client Connect: localhost:8800
+Client event: host=0 event=ConnectEvent error=0
+Client connected
+NetworkManager:OnClientConnectInternal
+Send PeerType Message.
+NetworkClient Send when not connected to a server
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Send AspectRatio Message.
+NetworkClient Send when not connected to a server
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+Client event: host=1 event=ConnectEvent error=0
+Client connected
+NetworkManager:OnClientConnectInternal
+Send PeerType Message.
+Send AspectRatio Message.
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.141645 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.283005 ms (FindLiveObjects: 0.014790 ms CreateObjectMapping: 0.005972 ms MarkObjects: 0.257407 ms  DeleteObjects: 0.004550 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+ClientScene::Ready() called with connection [hostId: 1 connectionId: 1 isReady: False channel count: 2]
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:1 sceneId:1 pos:(0.0, 0.0, 0.0)
+Client spawn for [netId:1] [sceneId:1] obj:GratingQuad
+SetLocalObject 1 GratingQuad (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:2 sceneId:2 pos:(0.0, 0.0, -1001.0)
+Client spawn for [netId:2] [sceneId:2] obj:OrthoCamera
+SetLocalObject 2 OrthoCamera (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:1 localPlayerAuthority:False
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:2 localPlayerAuthority:False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+NetworkServer Created version Current
+SetSyncVar ENGratingQuad bit [256] (5.0, 90.0, 1.0)->(2.0, 2.0, 1.0)
+SetSyncVar ENGratingQuad bit [256] (2.0, 2.0, 1.0)->(5.0, 90.0, 1.0)
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 2 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-2.5, 0.0, 0.0)->(-7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 45->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 135->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-7.5, 0.0, 0.0)->(7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 0->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 135->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (7.5, 0.0, 0.0)->(2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 90->22.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 22.5->67.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (2.5, 0.0, 0.0)->(-2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 67.5->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-2.5, 0.0, 0.0)->(-7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 0->157.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-7.5, 0.0, 0.0)->(-2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 157.5->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 90->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-2.5, 0.0, 0.0)->(-7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 0->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 90->157.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-7.5, 0.0, 0.0)->(7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 157.5->22.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 2 channel:0
+SetSyncVar ENCamera bit [4] 57->37
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (7.5, 0.0, 0.0)->(-2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 22.5->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 2 channel:0
+SetSyncVar ENCamera bit [2] 15->32
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 0->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-2.5, 0.0, 0.0)->(2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 135->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 1 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientNotReadyMessageInternal
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.904480 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.841337 ms (FindLiveObjects: 0.030433 ms CreateObjectMapping: 0.023038 ms MarkObjects: 0.771368 ms  DeleteObjects: 0.016496 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.141929 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.204788 ms (FindLiveObjects: 0.010523 ms CreateObjectMapping: 0.006257 ms MarkObjects: 0.184593 ms  DeleteObjects: 0.003128 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+ClientScene::Ready() called with connection [hostId: 1 connectionId: 1 isReady: True channel count: 2]
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:3 sceneId:1 pos:(0.0, -10.0, 0.0)
+Client spawn for [netId:3] [sceneId:1] obj:GratingQuad
+SetLocalObject 3 GratingQuad (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:4 sceneId:2 pos:(0.0, 0.0, -1001.0)
+Client spawn for [netId:4] [sceneId:2] obj:OrthoCamera
+SetLocalObject 4 OrthoCamera (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:3 localPlayerAuthority:False
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:4 localPlayerAuthority:False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [256] (90.0, 5.0, 1.0)->(2.0, 2.0, 1.0)
+SetSyncVar ENGratingQuad bit [256] (2.0, 2.0, 1.0)->(90.0, 5.0, 1.0)
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 4 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 157.5->112.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -7.5, 0.0)->(0.0, 7.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 112.5->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, 7.5, 0.0)->(0.0, -2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 135->45
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 45->67.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 3 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientNotReadyMessageInternal
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.727566 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.931785 ms (FindLiveObjects: 0.039251 ms CreateObjectMapping: 0.025598 ms MarkObjects: 0.844466 ms  DeleteObjects: 0.021900 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.237212 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.417255 ms (FindLiveObjects: 0.022185 ms CreateObjectMapping: 0.013652 ms MarkObjects: 0.373169 ms  DeleteObjects: 0.007963 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+ClientScene::Ready() called with connection [hostId: 1 connectionId: 1 isReady: True channel count: 2]
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:6 sceneId:2 pos:(0.0, 0.0, -1001.0)
+Client spawn for [netId:6] [sceneId:2] obj:OrthoCamera
+SetLocalObject 6 OrthoCamera (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:5 sceneId:1 pos:(0.0, 0.0, 0.0)
+Client spawn for [netId:5] [sceneId:1] obj:GratingQuad
+SetLocalObject 5 GratingQuad (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:6 localPlayerAuthority:False
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:5 localPlayerAuthority:False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 6 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 5 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientNotReadyMessageInternal
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.414175 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 370.
+Total: 0.714482 ms (FindLiveObjects: 0.030149 ms CreateObjectMapping: 0.036975 ms MarkObjects: 0.633420 ms  DeleteObjects: 0.013652 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.168381 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.305759 ms (FindLiveObjects: 0.013936 ms CreateObjectMapping: 0.008532 ms MarkObjects: 0.277886 ms  DeleteObjects: 0.004550 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+ClientScene::Ready() called with connection [hostId: 1 connectionId: 1 isReady: True channel count: 2]
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:8 sceneId:2 pos:(0.0, 0.0, -1001.0)
+Client spawn for [netId:8] [sceneId:2] obj:OrthoCamera
+SetLocalObject 8 OrthoCamera (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:7 sceneId:1 pos:(0.0, 0.0, 0.0)
+Client spawn for [netId:7] [sceneId:1] obj:GratingQuad
+SetLocalObject 7 GratingQuad (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:8 localPlayerAuthority:False
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:7 localPlayerAuthority:False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 8 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 7 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 8 channel:0
+SetSyncVar ENCamera bit [2] 32->15
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientNotReadyMessageInternal
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.790709 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 1.605310 ms (FindLiveObjects: 0.071106 ms CreateObjectMapping: 0.055463 ms MarkObjects: 1.437213 ms  DeleteObjects: 0.040388 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.178905 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.305475 ms (FindLiveObjects: 0.014221 ms CreateObjectMapping: 0.009101 ms MarkObjects: 0.275895 ms  DeleteObjects: 0.006257 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+ClientScene::Ready() called with connection [hostId: 1 connectionId: 1 isReady: True channel count: 2]
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:10 sceneId:2 pos:(0.0, 0.0, -1001.0)
+Client spawn for [netId:10] [sceneId:2] obj:OrthoCamera
+SetLocalObject 10 OrthoCamera (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:9 sceneId:1 pos:(0.0, 0.0, 0.0)
+Client spawn for [netId:9] [sceneId:1] obj:GratingQuad
+SetLocalObject 9 GratingQuad (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:10 localPlayerAuthority:False
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:9 localPlayerAuthority:False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 10 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 9 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientNotReadyMessageInternal
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.196824 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.308319 ms (FindLiveObjects: 0.010523 ms CreateObjectMapping: 0.006541 ms MarkObjects: 0.283574 ms  DeleteObjects: 0.007110 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.367196 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.690021 ms (FindLiveObjects: 0.034700 ms CreateObjectMapping: 0.022185 ms MarkObjects: 0.619768 ms  DeleteObjects: 0.012514 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+ClientScene::Ready() called with connection [hostId: 1 connectionId: 1 isReady: True channel count: 2]
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:12 sceneId:2 pos:(0.0, 0.0, -1001.0)
+Client spawn for [netId:12] [sceneId:2] obj:OrthoCamera
+SetLocalObject 12 OrthoCamera (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:11 sceneId:1 pos:(5.0, 0.0, 0.0)
+Client spawn for [netId:11] [sceneId:1] obj:GratingQuad
+SetLocalObject 11 GratingQuad (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:12 localPlayerAuthority:False
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:11 localPlayerAuthority:False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 12 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [256] (5.0, 90.0, 1.0)->(2.0, 2.0, 1.0)
+SetSyncVar ENGratingQuad bit [256] (2.0, 2.0, 1.0)->(5.0, 90.0, 1.0)
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (2.5, 0.0, 0.0)->(-2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 90->45
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-2.5, 0.0, 0.0)->(7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 45->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (7.5, 0.0, 0.0)->(2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 135->157.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (2.5, 0.0, 0.0)->(7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 157.5->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (7.5, 0.0, 0.0)->(-2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 135->22.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-2.5, 0.0, 0.0)->(-7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 22.5->67.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-7.5, 0.0, 0.0)->(-2.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 67.5->112.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-2.5, 0.0, 0.0)->(-7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 112.5->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 0->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 135->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (-7.5, 0.0, 0.0)->(7.5, 0.0, 0.0)
+SetSyncVar ENGratingQuad bit [32] 0->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 135->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 11 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientNotReadyMessageInternal
+Client event: host=1 event=DataEvent error=0
+NetworkManager:OnClientSceneInternal
+ClientChangeScene newSceneName:Grating networkSceneName:Grating
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.293245 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.431192 ms (FindLiveObjects: 0.015927 ms CreateObjectMapping: 0.010808 ms MarkObjects: 0.394501 ms  DeleteObjects: 0.009386 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.178051 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 369.
+Total: 0.315999 ms (FindLiveObjects: 0.015643 ms CreateObjectMapping: 0.009101 ms MarkObjects: 0.284712 ms  DeleteObjects: 0.005972 ms)
+
+ClientChangeScene done readyCon:
+RegisterHandler replacing 32
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler replacing 33
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler replacing 36
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler replacing 34
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler replacing 39
+RegisterHandler id:39 handler:OnClientSceneInternal
+ClientScene::Ready() called with connection [hostId: 1 connectionId: 1 isReady: True channel count: 2]
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:0
+ClientScene::PrepareSpawnObjects sceneId:1
+ClientScene::PrepareSpawnObjects sceneId:2
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:14 sceneId:2 pos:(0.0, 0.0, -1001.0)
+Client spawn for [netId:14] [sceneId:2] obj:OrthoCamera
+SetLocalObject 14 OrthoCamera (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+Client spawn scene handler instantiating [netId:13 sceneId:1 pos:(0.0, -5.0, 0.0)
+Client spawn for [netId:13] [sceneId:1] obj:GratingQuad
+SetLocalObject 13 GratingQuad (UnityEngine.GameObject)
+Client event: host=1 event=DataEvent error=0
+SpawnFinished:1
+OnStartClient OrthoCamera (UnityEngine.GameObject) GUID:14 localPlayerAuthority:False
+OnStartClient GratingQuad (UnityEngine.GameObject) GUID:13 localPlayerAuthority:False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 14 channel:0
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [256] (90.0, 5.0, 1.0)->(2.0, 2.0, 1.0)
+SetSyncVar ENGratingQuad bit [256] (2.0, 2.0, 1.0)->(90.0, 5.0, 1.0)
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -2.5, 0.0)->(0.0, 2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 67.5->22.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 22.5->67.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, 2.5, 0.0)->(0.0, -2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 67.5->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -2.5, 0.0)->(0.0, -7.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 0->157.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -7.5, 0.0)->(0.0, -2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 157.5->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 90->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -2.5, 0.0)->(0.0, -7.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 0->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 90->157.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -7.5, 0.0)->(0.0, 7.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 157.5->22.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, 7.5, 0.0)->(0.0, -2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 22.5->0
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 0->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -2.5, 0.0)->(0.0, 2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 135->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, 2.5, 0.0)->(0.0, -7.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 90->112.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -7.5, 0.0)->(0.0, 7.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 112.5->135
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, 7.5, 0.0)->(0.0, -2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 135->45
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 45->67.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 67.5->157.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, -2.5, 0.0)->(0.0, 2.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 157.5->67.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 67.5->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [32] 90->112.5
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] False->True
+SetSyncVar ENGratingQuad bit [4] (0.0, 2.5, 0.0)->(0.0, -7.5, 0.0)
+SetSyncVar ENGratingQuad bit [32] 112.5->90
+SetSyncVar ENGratingQuad bit [65536] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [65536] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] False->True
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [262144] True->False
+Client event: host=1 event=DataEvent error=0
+ClientScene::OnUpdateVarsMessage 13 channel:0
+SetSyncVar ENGratingQuad bit [1] True->False
+Client event: host=0 event=DisconnectEvent error=0
+Client disconnected
+NetworkManager:OnClientDisconnectInternal
+ClientChangeScene newSceneName:Welcomeback networkSceneName:Grating
+NetworkManager StopClient
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Shutting down client -1
+ClientChangeScene newSceneName:Welcomeback networkSceneName:Welcomeback
+FinishLoadScene client is null
+UnloadTime: 0.625172 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 357.
+Total: 0.787580 ms (FindLiveObjects: 0.037828 ms CreateObjectMapping: 0.024460 ms MarkObjects: 0.660157 ms  DeleteObjects: 0.064565 ms)
+
+ClientChangeScene done readyCon:
+FinishLoadScene client is null
+Client created version Current
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler id:39 handler:OnClientSceneInternal
+NetworkManager StartClient address:localhost port:8800
+RegisterHandlerSafe id:3 handler:OnObjectSpawn
+RegisterHandlerSafe id:10 handler:OnObjectSpawnScene
+RegisterHandlerSafe id:12 handler:OnObjectSpawnFinished
+RegisterHandlerSafe id:1 handler:OnObjectDestroy
+RegisterHandlerSafe id:13 handler:OnObjectDestroy
+RegisterHandlerSafe id:8 handler:OnUpdateVarsMessage
+RegisterHandlerSafe id:4 handler:OnOwnerMessage
+RegisterHandlerSafe id:9 handler:OnSyncListMessage
+RegisterHandlerSafe id:40 handler:OnAnimationClientMessage
+RegisterHandlerSafe id:41 handler:OnAnimationParametersClientMessage
+RegisterHandlerSafe id:15 handler:OnClientAuthority
+RegisterHandlerSafe id:2 handler:OnRPCMessage
+RegisterHandlerSafe id:7 handler:OnSyncEventMessage
+RegisterHandlerSafe id:42 handler:OnAnimationTriggerClientMessage
+RegisterHandlerSafe id:14 handler:OnCRC
+RegisterHandlerSafe id:17 handler:OnFragment
+Client Connect: localhost:8800
+Client created version Current
+RegisterHandler id:32 handler:OnClientConnectInternal
+RegisterHandler id:33 handler:OnClientDisconnectInternal
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
+RegisterHandler id:34 handler:OnClientErrorInternal
+RegisterHandler id:39 handler:OnClientSceneInternal
+NetworkManager StartClient address:localhost port:8800
+RegisterHandlerSafe id:3 handler:OnObjectSpawn
+RegisterHandlerSafe id:10 handler:OnObjectSpawnScene
+RegisterHandlerSafe id:12 handler:OnObjectSpawnFinished
+RegisterHandlerSafe id:1 handler:OnObjectDestroy
+RegisterHandlerSafe id:13 handler:OnObjectDestroy
+RegisterHandlerSafe id:8 handler:OnUpdateVarsMessage
+RegisterHandlerSafe id:4 handler:OnOwnerMessage
+RegisterHandlerSafe id:9 handler:OnSyncListMessage
+RegisterHandlerSafe id:40 handler:OnAnimationClientMessage
+RegisterHandlerSafe id:41 handler:OnAnimationParametersClientMessage
+RegisterHandlerSafe id:15 handler:OnClientAuthority
+RegisterHandlerSafe id:2 handler:OnRPCMessage
+RegisterHandlerSafe id:7 handler:OnSyncEventMessage
+RegisterHandlerSafe id:42 handler:OnAnimationTriggerClientMessage
+RegisterHandlerSafe id:14 handler:OnCRC
+RegisterHandlerSafe id:17 handler:OnFragment
+Client Connect: localhost:8800
+NetworkManager destroyed
