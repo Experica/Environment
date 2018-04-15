@@ -1,0 +1,9 @@
+{
+    "name": "VLabEnvironment",
+    "references": [
+        "VLab"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

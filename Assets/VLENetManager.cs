@@ -1,6 +1,6 @@
 ﻿/*
 VLENetManager.cs is part of the VLAB project.
-Copyright (c) 2017 Li Alex Zhang and Contributors
+Copyright (c) 2016 Li Alex Zhang and Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a 
 copy of this software and associated documentation files (the "Software"),
@@ -43,7 +43,7 @@ namespace VLabEnvironment
                 Debug.Log("Send AspectRatio Message.");
             }
             client.Send(VLMsgType.AspectRatio, new FloatMessage(uicontroller.GetAspectRatio()));
-
+           
             uicontroller.OnClientConnect();
         }
 
@@ -57,6 +57,12 @@ namespace VLabEnvironment
         {
             base.OnClientSceneChanged(conn);
             GC.Collect();
+        }
+
+        public override void OnStopClient()
+        {
+            NetworkClient.ShutdownAll();
+            client = null;
         }
 
     }

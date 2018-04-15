@@ -1,6 +1,6 @@
 AutoConnect: true
 AutoConnectTimeOut: 10
-ServerAddress: localhost
+ServerAddress: LocalHost
 HideUIWhenConnected: true
 HideCursorWhenConnected: true
 VSyncCount: 1

@@ -1,6 +1,6 @@
 ﻿/*
 VLEUIController.cs is part of the VLAB project.
-Copyright (c) 2017 Li Alex Zhang and Contributors
+Copyright (c) 2016 Li Alex Zhang and Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a 
 copy of this software and associated documentation files (the "Software"),
@@ -33,7 +33,7 @@ namespace VLabEnvironment
     {
         public InputField serveraddress;
         public Toggle clientconnect, autoconn;
-        public Text autoconntext;
+        public Text autoconntext, version;
         public VLENetManager netmanager;
         public Canvas canvas;
         public VLEApplicationManager appmanager;
@@ -72,19 +72,19 @@ namespace VLabEnvironment
 
         public void OnServerAddressEndEdit(string v)
         {
-            appmanager.config[VLECFG.ServerAddress] = v;
+            appmanager.config.ServerAddress = v;
         }
 
         public void OnToggleAutoConnect(bool ison)
         {
-            appmanager.config[VLECFG.AutoConnect] = ison;
+            appmanager.config.AutoConnect = ison;
             ResetAutoConnect();
         }
 
         public void ResetAutoConnect()
         {
-            autoconncountdown = (int)appmanager.config[VLECFG.AutoConnectTimeOut];
-            isautoconn = (bool)appmanager.config[VLECFG.AutoConnect];
+            autoconncountdown = appmanager.config.AutoConnectTimeOut;
+            isautoconn = appmanager.config.AutoConnect;
             if (!isautoconn)
             {
                 autoconntext.text = "Auto Connect OFF";
@@ -94,7 +94,7 @@ namespace VLabEnvironment
 
         void Start()
         {
-            serveraddress.text = (string)appmanager.config[VLECFG.ServerAddress];
+            serveraddress.text = appmanager.config.ServerAddress;
             ResetAutoConnect();
         }
 
@@ -135,20 +135,24 @@ namespace VLabEnvironment
             autoconntext.text = "Connected";
             // since VLabEnvironment is to provide virtual reality environment, we may want to
             // hide cursor and ui when connected to VLab.
-            canvas.enabled = !(bool)appmanager.config[VLECFG.HideUIWhenConnected];
-            Cursor.visible = !(bool)appmanager.config[VLECFG.HideCursorWhenConnected];
+            canvas.enabled = !appmanager.config.HideUIWhenConnected;
+            Cursor.visible = !appmanager.config.HideCursorWhenConnected;
             // when connected to VLab, we need to make sure that all system resourses
             // VLabEnvironment needed is ready to start experiment.
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
-            QualitySettings.vSyncCount = (int)appmanager.config[VLECFG.VSyncCount];
-            QualitySettings.maxQueuedFrames = (int)appmanager.config[VLECFG.MaxQueuedFrames];
-            Time.fixedDeltaTime = (float)appmanager.config[VLECFG.FixedDeltaTime];
+            QualitySettings.vSyncCount = appmanager.config.VSyncCount;
+            QualitySettings.maxQueuedFrames = appmanager.config.MaxQueuedFrames;
+            Time.fixedDeltaTime = appmanager.config.FixedDeltaTime;
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
             Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Highest;
             Process.GetCurrentProcess().PriorityBoostEnabled = true;
             GC.Collect();
             GCSettings.LatencyMode = GCLatencyMode.LowLatency;
+            //if (!GC.TryStartNoGCRegion(1000000000))
+            //{
+            //    GCSettings.LatencyMode = GCLatencyMode.SustainedLowLatency;
+            //}
         }
 
         public void OnClientDisconnect()
@@ -172,8 +176,21 @@ namespace VLabEnvironment
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
             Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Normal;
+            //if (GCSettings.LatencyMode == GCLatencyMode.NoGCRegion)
+            //{
+            //    GC.EndNoGCRegion();
+            //}
+            //else
+            //{
+            //    GCSettings.LatencyMode = GCLatencyMode.Interactive;
+            //}
             GCSettings.LatencyMode = GCLatencyMode.Interactive;
             GC.Collect();
+        }
+
+        public void UpdateSystemInformation()
+        {
+            version.text = $"Version {Application.version}\nUnity {Application.unityVersion}";
         }
 
     }
