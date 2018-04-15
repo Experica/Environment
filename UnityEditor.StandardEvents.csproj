@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F6E8A7AA-FE3E-A0E4-CAB8-D40F860F8E20}</ProjectGuid>
+    <ProjectGuid>{6800202F-4402-D405-F8CB-03DC7BD78B92}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>VLab</AssemblyName>
+    <AssemblyName>UnityEditor.StandardEvents</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -16,7 +16,7 @@
     </TargetFrameworkProfile>
     <CompilerResponseFile>
     </CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2018.1.0b13</UnityVersion>
     <RootNamespace>
@@ -672,19 +672,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\VLab\Environment\DynamicShowroom.cs" />
-    <Compile Include="Assets\VLab\Environment\ENCamera.cs" />
-    <Compile Include="Assets\VLab\Environment\ENGratingQuad.cs" />
-    <Compile Include="Assets\VLab\Environment\ENImageQuad.cs" />
-    <Compile Include="Assets\VLab\Environment\ENMarker.cs" />
-    <Compile Include="Assets\VLab\Environment\ENQuad.cs" />
-    <Compile Include="Assets\VLab\Environment\EnvNet.cs" />
-    <Compile Include="Assets\VLab\Environment\Showroom.cs" />
-    <Compile Include="Assets\VLab\Environment\VLEnvironment.cs" />
-    <Compile Include="Assets\VLab\VLExtention.cs" />
-    <Compile Include="Assets\VLab\VLNetwork.cs" />
-    <Compile Include="Assets\VLab\VLTimer.cs" />
-    <Compile Include="Assets\VLab\VLYaml.cs" />
+    <Compile Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\YamlDotNet.4.3.0\YamlDotNet.xml" />
