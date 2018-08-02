@@ -30,7 +30,8 @@ namespace VLab
         None,
         Quad,
         GratingQuad,
-        ImageQuad
+        ImageQuad,
+        ImageArrayQuad
     }
 
     public enum MaskType
@@ -39,12 +40,6 @@ namespace VLab
         Disk,
         Gaussian,
         DiskFade
-    }
-
-    public enum OnOff
-    {
-        On,
-        Off
     }
 
     public enum Corner

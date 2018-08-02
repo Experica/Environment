@@ -24,6 +24,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 
 namespace VLab
 {
@@ -33,6 +35,8 @@ namespace VLab
         CondRepeat,
         BlockIndex,
         BlockRepeat,
+        Event,
+        SyncEvent,
         CONDSTATE,
         TRIALSTATE,
         BLOCKSTATE,
@@ -42,6 +46,7 @@ namespace VLab
     public static class VLExtention
     {
         static Type TObject, TString, TBool, TInt, TFloat, TVector2, TVector3, TVector4, TColor, TListT;
+        static readonly object apilock = new object();
 
         static HashSet<Type> NumericTypes = new HashSet<Type>
         {
@@ -79,179 +84,187 @@ namespace VLab
 
         public static object Convert(this object value, Type CT)
         {
-            Type VT = value.GetType();
-            if (VT == CT)
+            lock (apilock)
             {
-                return value;
-            }
-            else if (VT == TFloat)
-            {
-                var v = (float)value;
-                if (CT == TString)
+                if (value == null)
                 {
-                    return v.ToString("G3");
+                    return null;
                 }
-            }
-            else if (VT.IsGenericType && VT.GetGenericTypeDefinition() == TListT)
-            {
-                if (CT.IsGenericType && CT.GetGenericTypeDefinition() == TListT)
+                Type VT = value.GetType();
+                if (VT == CT)
                 {
-                    var CTT = CT.GetGenericArguments()[0];
-                    var v = Activator.CreateInstance(CT).AsList();
-                    foreach (var i in value.AsList())
-                    {
-                        v.Add(i.Convert(CTT));
-                    }
-                    return v;
+                    return value;
                 }
-                else if (CT == TVector3)
-                {
-                    var v = value.AsList();
-                    var vn = v.Count;
-                    float x = 0, y = 0, z = 0;
-                    if (vn > 0)
-                    {
-                        x = v[0].Convert<float>();
-                    }
-                    if (vn > 1)
-                    {
-                        y = v[1].Convert<float>();
-                    }
-                    if (vn > 2)
-                    {
-                        z = v[2].Convert<float>();
-                    }
-                    return new Vector3(x, y, z);
-                }
-                else if (CT == TColor)
-                {
-                    var v = value.AsList();
-                    var vn = v.Count;
-                    float r = 0, g = 0, b = 0, a = 1;
-                    if (vn > 0)
-                    {
-                        r = v[0].Convert<float>();
-                    }
-                    if (vn > 1)
-                    {
-                        g = v[1].Convert<float>();
-                    }
-                    if (vn > 2)
-                    {
-                        b = v[2].Convert<float>();
-                    }
-                    if (vn > 3)
-                    {
-                        a = v[3].Convert<float>();
-                    }
-                    return new Color(r, g, b, a);
-                }
-                else if (CT == TString)
-                {
-                    var v = value.AsList();
-                    var vn = v.Count;
-                    if (vn == 0) return "[]";
 
-                    var vs = new string[vn];
-                    for (var i = 0; i < vn; i++)
+                if (VT == TFloat)
+                {
+                    var v = (float)value;
+                    if (CT == TString)
                     {
-                        vs[i] = v[i].Convert<string>();
+                        return v.ToString("G4");
                     }
-                    return "[" + string.Join(", ", vs) + "]";
                 }
-            }
-            else if (VT == TVector2)
-            {
-                var v = (Vector2)value;
-                if (CT == TString)
+                else if (VT.IsGenericType && VT.GetGenericTypeDefinition() == TListT)
                 {
-                    return v.x.ToString("G4") + " " + v.y.ToString("G4");
-                }
-            }
-            else if (VT == TVector3)
-            {
-                var v = (Vector3)value;
-                if (CT == TString)
-                {
-                    return String.Join(" ", Enumerable.Range(0, 3).Select(i => v[i].ToString("G4")));
-                }
-            }
-            else if (VT == TVector4)
-            {
-                var v = (Vector4)value;
-                if (CT == TString)
-                {
-                    return String.Join(" ", Enumerable.Range(0, 4).Select(i => v[i].ToString("G4")));
-                }
-            }
-            else if (VT == TColor)
-            {
-                var v = (Color)value;
-                if (CT == TString)
-                {
-                    return String.Join(" ", Enumerable.Range(0, 4).Select(i => v[i].ToString("G4")));
-                }
-            }
-            else if (VT == TString)
-            {
-                var vstr = (string)value;
-                if (CT == TBool)
-                {
-                    return bool.Parse(vstr);
-                }
-                else if (CT == TInt)
-                {
-                    return int.Parse(vstr);
-                }
-                else if (CT == TFloat)
-                {
-                    return float.Parse(vstr);
-                }
-                else if (CT == TVector2)
-                {
-                    var vs = vstr.Split(' ');
-                    return new Vector2(float.Parse(vs[0]), float.Parse(vs[1]));
-                }
-                else if (CT == TVector3)
-                {
-                    var vs = vstr.Split(' ');
-                    return new Vector3(float.Parse(vs[0]), float.Parse(vs[1]), float.Parse(vs[2]));
-                }
-                else if (CT == TVector4)
-                {
-                    var vs = vstr.Split(' ');
-                    return new Vector4(float.Parse(vs[0]), float.Parse(vs[1]), float.Parse(vs[2]), float.Parse(vs[3]));
-                }
-                else if (CT == TColor)
-                {
-                    var vs = vstr.Split(' ');
-                    return new Color(float.Parse(vs[0]), float.Parse(vs[1]), float.Parse(vs[2]), float.Parse(vs[3]));
-                }
-                else if (CT.IsEnum && Enum.IsDefined(CT, vstr))
-                {
-                    return Enum.Parse(CT, vstr);
-                }
-                else if (CT.IsGenericType && CT.GetGenericTypeDefinition() == TListT)
-                {
-                    var CTT = CT.GetGenericArguments()[0];
-                    var v = Activator.CreateInstance(CT).AsList();
-                    var si = vstr.IndexOf('[') + 1; var ei = vstr.LastIndexOf(']');
-                    var vs = vstr.Substring(si, ei - si).Split(',').Select(i => i.Trim()).ToList();
-                    foreach (var i in vs)
+                    if (CT.IsGenericType && CT.GetGenericTypeDefinition() == TListT)
                     {
-                        v.Add(i.Convert(CTT));
+                        var CTT = CT.GetGenericArguments()[0];
+                        var v = Activator.CreateInstance(CT).AsList();
+                        foreach (var i in value.AsList())
+                        {
+                            v.Add(i.Convert(CTT));
+                        }
+                        return v;
                     }
-                    return v;
+                    else if (CT == TVector3)
+                    {
+                        var v = value.AsList();
+                        var vn = v.Count;
+                        float x = 0, y = 0, z = 0;
+                        if (vn > 0)
+                        {
+                            x = v[0].Convert<float>();
+                        }
+                        if (vn > 1)
+                        {
+                            y = v[1].Convert<float>();
+                        }
+                        if (vn > 2)
+                        {
+                            z = v[2].Convert<float>();
+                        }
+                        return new Vector3(x, y, z);
+                    }
+                    else if (CT == TColor)
+                    {
+                        var v = value.AsList();
+                        var vn = v.Count;
+                        float r = 0, g = 0, b = 0, a = 1;
+                        if (vn > 0)
+                        {
+                            r = v[0].Convert<float>();
+                        }
+                        if (vn > 1)
+                        {
+                            g = v[1].Convert<float>();
+                        }
+                        if (vn > 2)
+                        {
+                            b = v[2].Convert<float>();
+                        }
+                        if (vn > 3)
+                        {
+                            a = v[3].Convert<float>();
+                        }
+                        return new Color(r, g, b, a);
+                    }
+                    else if (CT == TString)
+                    {
+                        var v = value.AsList();
+                        var vn = v.Count;
+                        if (vn == 0) return "[]";
+
+                        var vs = new string[vn];
+                        for (var i = 0; i < vn; i++)
+                        {
+                            vs[i] = v[i].Convert<string>();
+                        }
+                        return "[" + string.Join(", ", vs) + "]";
+                    }
                 }
-            }
-            else
-            {
-                if (CT == TString)
+                else if (VT == TVector2)
                 {
-                    return value.ToString();
+                    var v = (Vector2)value;
+                    if (CT == TString)
+                    {
+                        return v.x.ToString("G4") + " " + v.y.ToString("G4");
+                    }
                 }
+                else if (VT == TVector3)
+                {
+                    var v = (Vector3)value;
+                    if (CT == TString)
+                    {
+                        return String.Join(" ", Enumerable.Range(0, 3).Select(i => v[i].ToString("G4")));
+                    }
+                }
+                else if (VT == TVector4)
+                {
+                    var v = (Vector4)value;
+                    if (CT == TString)
+                    {
+                        return String.Join(" ", Enumerable.Range(0, 4).Select(i => v[i].ToString("G4")));
+                    }
+                }
+                else if (VT == TColor)
+                {
+                    var v = (Color)value;
+                    if (CT == TString)
+                    {
+                        return String.Join(" ", Enumerable.Range(0, 4).Select(i => v[i].ToString("G4")));
+                    }
+                }
+                else if (VT == TString)
+                {
+                    var vstr = (string)value;
+                    if (CT == TBool)
+                    {
+                        return bool.Parse(vstr);
+                    }
+                    else if (CT == TInt)
+                    {
+                        return int.Parse(vstr);
+                    }
+                    else if (CT == TFloat)
+                    {
+                        return float.Parse(vstr);
+                    }
+                    else if (CT == TVector2)
+                    {
+                        var vs = vstr.Split(' ');
+                        return new Vector2(float.Parse(vs[0]), float.Parse(vs[1]));
+                    }
+                    else if (CT == TVector3)
+                    {
+                        var vs = vstr.Split(' ');
+                        return new Vector3(float.Parse(vs[0]), float.Parse(vs[1]), float.Parse(vs[2]));
+                    }
+                    else if (CT == TVector4)
+                    {
+                        var vs = vstr.Split(' ');
+                        return new Vector4(float.Parse(vs[0]), float.Parse(vs[1]), float.Parse(vs[2]), float.Parse(vs[3]));
+                    }
+                    else if (CT == TColor)
+                    {
+                        var vs = vstr.Split(' ');
+                        return new Color(float.Parse(vs[0]), float.Parse(vs[1]), float.Parse(vs[2]), float.Parse(vs[3]));
+                    }
+                    else if (CT.IsEnum && Enum.IsDefined(CT, vstr))
+                    {
+                        return Enum.Parse(CT, vstr);
+                    }
+                    else if (CT.IsGenericType && CT.GetGenericTypeDefinition() == TListT)
+                    {
+                        var CTT = CT.GetGenericArguments()[0];
+                        var v = Activator.CreateInstance(CT).AsList();
+                        var si = vstr.IndexOf('[') + 1; var ei = vstr.LastIndexOf(']');
+                        var vs = vstr.Substring(si, ei - si).Split(',').Select(i => i.Trim()).ToList();
+                        foreach (var i in vs)
+                        {
+                            v.Add(i.Convert(CTT));
+                        }
+                        return v;
+                    }
+                }
+                else
+                {
+                    if (CT == TString)
+                    {
+                        return value.ToString();
+                    }
+                }
+                return System.Convert.ChangeType(value, CT);
             }
-            return System.Convert.ChangeType(value, CT);
         }
 
         public static List<int> Permutation(this System.Random rng, int maxexclusive)
@@ -376,6 +389,30 @@ namespace VLab
                 }
             }
             return conddesign;
+        }
+
+        public static string GetAddresses(this string experimenter, VLCFG config)
+        {
+            string addresses = null;
+            if (string.IsNullOrEmpty(experimenter)) return addresses;
+            var al = experimenter.Split(',', ';').Where(i => config.ExperimenterAddress.ContainsKey(i)).Select(i => config.ExperimenterAddress[i]).ToArray();
+            if (al != null && al.Length > 0)
+            {
+                addresses = String.Join(",", al);
+            }
+            return addresses;
+        }
+
+        public static ILaser GetLaser(this string lasername, VLCFG config)
+        {
+            switch (lasername)
+            {
+                case "luxx473":
+                    return new Omicron(config.SerialPort1);
+                case "mambo594":
+                    return new Cobolt(config.SerialPort2);
+            }
+            return null;
         }
 #endif
         public static Dictionary<string, List<object>> OrthoCondOfFactorLevel(this Dictionary<string, List<object>> fsls)
@@ -639,6 +676,22 @@ namespace VLab
             return Quaternion.AngleAxis(angle, Vector3.forward) * v;
         }
 
+        public static string[] ValidStrings(params string[] ss)
+        {
+            var r = new List<string>();
+            if (ss.Length > 0)
+            {
+                foreach (var s in ss)
+                {
+                    if (!string.IsNullOrEmpty(s))
+                    {
+                        r.Add(s);
+                    }
+                }
+            }
+            return r.ToArray();
+        }
+
         public static Dictionary<string, Dictionary<string, List<string>>> ValidateEnvCrossInheritRule(this Dictionary<string, Dictionary<string, List<string>>> rule)
         {
             if (!rule.ContainsKey(EnvironmentObject.GratingQuad.ToString()))
@@ -689,5 +742,53 @@ namespace VLab
             return rule.ContainsKey(to);
         }
 
+        public static void Mail(this string to, string subject, string body)
+        {
+            if (string.IsNullOrEmpty(to)) return;
+            var smtp = new SmtpClient() { Host = "smtp.gmail.com", Port = 587, EnableSsl = true, Credentials = new NetworkCredential("vlabsys@gmail.com", "VLab$y$tem") };
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            smtp.Send("vlabsys@gmail.com", to, subject, body);
+        }
+
+        public static Dictionary<string, Texture2D> LoadImageSet(this string imgsetdir, int startidx = 0, int numofimg = 10)
+        {
+            if (string.IsNullOrEmpty(imgsetdir)) return null;
+            var imgs = new Dictionary<string, Texture2D>();
+            for (var i = startidx; i < numofimg + startidx; i++)
+            {
+                var img = Resources.Load<Texture2D>(imgsetdir + "/" + i);
+                if (img != null)
+                {
+                    imgs[i.ToString()] = img;
+                }
+            }
+            return imgs;
+        }
+
+        public static Texture2DArray LoadImageSet(this string imgsetdir, int startidx = 0, int numofimg = 10, bool forcereload = false)
+        {
+            if (string.IsNullOrEmpty(imgsetdir)) return null;
+            Texture2DArray imgarray;
+            if (!forcereload)
+            {
+                imgarray = Resources.Load<Texture2DArray>(imgsetdir + ".asset");
+                if (imgarray != null) return imgarray;
+            }
+            var img = Resources.Load<Texture2D>(imgsetdir + "/" + startidx);
+            if (img == null) return null;
+
+            imgarray = new Texture2DArray(img.width, img.height, numofimg + startidx, img.format, false);
+            imgarray.SetPixels(img.GetPixels(), startidx);
+            for (var i = startidx + 1; i < numofimg + startidx; i++)
+            {
+                img = Resources.Load<Texture2D>(imgsetdir + "/" + i);
+                if (img != null)
+                {
+                    imgarray.SetPixels(img.GetPixels(), i);
+                }
+            }
+            imgarray.Apply();
+            return imgarray;
+        }
     }
 }

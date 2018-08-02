@@ -1,10 +1,11 @@
-﻿Shader "VLAB/maskimage"
+﻿Shader "VLAB/maskimagearray"
 {
 	Properties
 	{
 		ori("Orientation",Float) = 0
 		orioffset("OrientationOffset",Float) = 0
-		img("Image", 2D) = "white" {}
+		imgs("Images", 2DArray) = "white" {}
+		imgidx("ImageIndex",Int) = 0
 		maskradius("MaskRadius",Float) = 0.5
 		sigma("Sigma", Float) = 25
 		sizex("SizeX",Float) = 2
@@ -23,11 +24,11 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+			#pragma require 2darray
 			#include "UnityCG.cginc"
 
 			float ori;
 		    float orioffset;
-			sampler2D img;
 			float maskradius;
 			float sigma;
 	        float sizex;
@@ -35,6 +36,8 @@
 	        int masktype;
 			static const float pi = 3.141592653589793238462;
 			static const float pi2 = 6.283185307179586476924;
+			UNITY_DECLARE_TEX2DARRAY(imgs);
+			int imgidx;
 
 			inline float erf(const float x)
 			{
@@ -57,7 +60,7 @@
 			};
 			struct v2f
 			{
-				float2 uv : TEXCOORD0;
+				float3 uv : TEXCOORD0;
 				float4 vertex : SV_POSITION;
 			};
 
@@ -65,7 +68,8 @@
 			{
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
-				o.uv = v.uv - 0.5;
+				o.uv.xy = v.uv - 0.5;
+				o.uv.z = imgidx;
 				return o;
 			}
 
@@ -73,8 +77,8 @@
 			{
 				float sinv, cosv;
 				sincos(radians(ori + orioffset), sinv, cosv);
-				float2 ruv = mul(i.uv, float2x2(cosv, -sinv, sinv, cosv));
-				fixed4 c = tex2D(img, ruv + 0.5);
+				i.uv.xy = mul(i.uv.xy, float2x2(cosv, -sinv, sinv, cosv)) + 0.5;
+				fixed4 c = UNITY_SAMPLE_TEX2DARRAY(imgs, i.uv);
 
 			    if(masktype==0)
 				{ }
