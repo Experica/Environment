@@ -9,27 +9,27 @@ EditorBuildSettings:
     path: Assets/Welcome.unity
     guid: 9d3f93c52767c61408562032d59fbb65
   - enabled: 1
-    path: Assets/Welcomeback.unity
+    path: Assets/WelcomeBack.unity
     guid: bed984f48c8c2e64fb1ffdc8f23cbcd7
   - enabled: 1
-    path: Assets/VLab/Environment/Showroom.unity
+    path: Assets/Environment/Showroom.unity
     guid: 0f82f7db04c8f5f4fb2b9466a19b2952
   - enabled: 1
-    path: Assets/VLab/Environment/DynamicShowroom.unity
+    path: Assets/Environment/DynamicShowroom.unity
     guid: e2b066d5ee3be2c4e99e83f19bd6bf42
   - enabled: 1
-    path: Assets/VLab/Environment/MarkerBar.unity
+    path: Assets/Environment/MarkerBar.unity
     guid: 5a5b6206aecbd48438fb1df8683922c3
   - enabled: 1
-    path: Assets/VLab/Environment/MarkerGrating.unity
+    path: Assets/Environment/MarkerGrating.unity
     guid: b8daedbbdd0bb234ba1366bb1cc3fb39
   - enabled: 1
-    path: Assets/VLab/Environment/MarkerImage.unity
+    path: Assets/Environment/MarkerImage.unity
     guid: 4c0004b8d9f7c1b4593c4a8453c052c6
   - enabled: 1
-    path: Assets/VLab/Environment/MarkerImageArray.unity
+    path: Assets/Environment/MarkerImageArray.unity
     guid: 4497716acc5d06f459a84a2282f741e8
   - enabled: 1
-    path: Assets/VLab/Environment/Grating.unity
+    path: Assets/Environment/Grating.unity
     guid: b415f7a600ca7314c9dfd208f1067244
   m_configObjects: {}
