@@ -1,5 +1,4 @@
-# VLabEnvironment
-___
+# Environment
 
-VLabEnvironment is a client for VLab server. It is used to present virtual reality environment facing subjects of interest.
+Environment is a client for Command server. It is used to present virtual reality environment facing subjects of interest.
 
