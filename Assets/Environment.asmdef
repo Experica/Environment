@@ -1,7 +1,8 @@
 {
     "name": "Environment",
     "references": [
-        "Experica"
+        "GUID:3dd3a94103dfc444e8d2f72242974ffe",
+        "GUID:a44f47cf3ada4435dbc516bad0bc86fe"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
@@ -10,5 +11,6 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": []
+    "defineConstraints": [],
+    "versionDefines": []
 }
