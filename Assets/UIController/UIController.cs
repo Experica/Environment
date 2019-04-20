@@ -21,6 +21,7 @@ OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 using System.Diagnostics;
 using System.Threading;
 using System.Runtime;
@@ -37,6 +38,7 @@ namespace Experica.Environment
         public NetManager netmanager;
         public Canvas canvas;
         public EnvironmentConfig config;
+        public PostProcessVolume postprocessvolume;
         readonly string configpath = "EnvironmentConfig.yaml";
 
         bool isautoconn, isconnect;
@@ -116,6 +118,24 @@ namespace Experica.Environment
             version.text = $"Version {Application.version}\nUnity {Application.unityVersion}";
             serveraddress.text = config.ServerAddress;
             ResetAutoConnect();
+        }
+
+        public void SetCLUT(Texture2D lut)
+        {
+            ColorGrading colorgrading;
+            if (postprocessvolume.profile.TryGetSettings(out colorgrading))
+            {
+                colorgrading.ldrLut.value = lut;
+            }
+        }
+
+        public void ToggleColorGrading(bool ison)
+        {
+            ColorGrading colorgrading;
+            if (postprocessvolume.profile.TryGetSettings(out colorgrading))
+            {
+                colorgrading.enabled.value = ison;
+            }
         }
 
         void Update()

@@ -417,6 +417,7 @@ MonoBehaviour:
   version: {fileID: 2071902595}
   netmanager: {fileID: 1801762641}
   canvas: {fileID: 413606487}
+  postprocessvolume: {fileID: 954917734}
 --- !u!1001 &894777709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,6 +542,93 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 2109663825, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &954917732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1801762642}
+    m_Modifications:
+    - target: {fileID: 5463714164240484185, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_Name
+      value: PostProcessVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4740df59db35e2e4ab2870eb69bde6a8, type: 3}
+--- !u!4 &954917733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5463714164240484187, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 954917732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &954917734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5463714164240484184, guid: 4740df59db35e2e4ab2870eb69bde6a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 954917732}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1544054908
@@ -702,7 +790,7 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs: []
   m_CustomConfig: 1
-  m_MaxConnections: 128
+  m_MaxConnections: 512
   m_ConnectionConfig:
     m_PacketSize: 1500
     m_FragmentSize: 500
@@ -734,8 +822,8 @@ MonoBehaviour:
   m_GlobalConfig:
     m_ThreadAwakeTimeout: 1
     m_ReactorModel: 0
-    m_ReactorMaximumReceivedMessages: 1024
-    m_ReactorMaximumSentMessages: 1024
+    m_ReactorMaximumReceivedMessages: 2048
+    m_ReactorMaximumSentMessages: 2048
     m_MaxPacketSize: 2000
     m_MaxHosts: 16
     m_ThreadPoolSize: 1
@@ -748,7 +836,7 @@ MonoBehaviour:
   m_UseSimulator: 0
   m_SimulatedLatency: 1
   m_PacketLossPercentage: 0
-  m_MaxBufferedPackets: 64
+  m_MaxBufferedPackets: 512
   m_AllowFragmentation: 1
   m_MatchHost: mm.unet.unity3d.com
   m_MatchPort: 443
@@ -771,6 +859,7 @@ Transform:
   - {fileID: 835844595}
   - {fileID: 610661997}
   - {fileID: 413606488}
+  - {fileID: 954917733}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
