@@ -147,6 +147,10 @@ namespace Experica.Environment
                     Application.Quit();
                     return;
                 }
+                if (Input.GetButton("FullScreen"))
+                {
+                    Screen.fullScreen = !Screen.fullScreen;
+                }
                 if (isautoconn)
                 {
                     if (Time.unscaledTime - lastautoconntime >= 1)
