@@ -44,6 +44,7 @@ namespace Experica.Environment
         bool isautoconn, isconnect;
         int autoconncountdown;
         float lastautoconntime;
+        int lastwindowwidth=800, lastwindowheight=600;
 
         /// <summary>
         /// Because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
@@ -66,7 +67,9 @@ namespace Experica.Environment
         public float GetAspectRatio()
         {
             var rootrt = canvas.gameObject.transform as RectTransform;
-            return rootrt.rect.width / rootrt.rect.height;
+           // return rootrt.rect.width / rootrt.rect.height;
+
+            return Screen.width.Convert<float>() / Screen.height;
         }
 
         public void OnRectTransformDimensionsChange()
@@ -147,9 +150,18 @@ namespace Experica.Environment
                     Application.Quit();
                     return;
                 }
-                if (Input.GetButton("FullScreen"))
+                if (Input.GetButtonDown("FullScreen"))
                 {
-                    Screen.fullScreen = !Screen.fullScreen;
+                    if (Screen.fullScreen)
+                    {
+                        Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
+                    }
+                    else
+                    {
+                        lastwindowwidth = Math.Max(800, Screen.width);
+                        lastwindowheight =Math.Max(600, Screen.height);
+                        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, FullScreenMode.FullScreenWindow);
+                    }
                 }
                 if (isautoconn)
                 {

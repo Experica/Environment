@@ -41,7 +41,9 @@ namespace Experica.Environment
             {
                 Debug.Log("Send AspectRatio Message.");
             }
-            client.Send(MsgType.AspectRatio, new FloatMessage(uicontroller.GetAspectRatio()));
+            var ar = uicontroller.GetAspectRatio();
+            Debug.LogWarning($"AspectRatio is {ar}");
+            client.Send(MsgType.AspectRatio, new FloatMessage(ar));
            
             uicontroller.OnClientConnect();
         }
