@@ -4,8 +4,8 @@
 /[Bb]uild/
 /[Mm]ono*/
 /[Ll]og*/
+/[Rr]ecordings/
 
-/Assets/Resources/Imageset_*/
 /Environment_Data/
 /*.exe
 /*.dll
@@ -25,7 +25,6 @@
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb
-# *.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
