@@ -30,6 +30,8 @@ using System.Net;
 using System.Net.Mail;
 #if COMMAND
 using System.Windows.Forms;
+using MathNet.Numerics;
+using MathNet.Numerics.Interpolation;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 #endif
@@ -60,7 +62,9 @@ namespace Experica
 
     public static class Extension
     {
-        static Type TObject, TString, TBool, TInt, TFloat, TVector2, TVector3, TVector4, TColor, TListT;
+        public const uint ExDataVersion = 2;
+
+        static Type TObject, TString, TBool, TInt, TFloat, TDouble, TVector2, TVector3, TVector4, TColor, TListT;
         static readonly object apilock = new object();
 
         static HashSet<Type> NumericTypes = new HashSet<Type>
@@ -77,6 +81,7 @@ namespace Experica
             TBool = typeof(bool);
             TInt = typeof(int);
             TFloat = typeof(float);
+            TDouble = typeof(double);
             TVector2 = typeof(Vector2);
             TVector3 = typeof(Vector3);
             TVector4 = typeof(Vector4);
@@ -234,6 +239,10 @@ namespace Experica
                     {
                         return float.Parse(vstr);
                     }
+                    else if (CT == TDouble)
+                    {
+                        return double.Parse(vstr);
+                    }
                     else if (CT == TVector2)
                     {
                         var vs = vstr.Split(' ');
@@ -301,6 +310,18 @@ namespace Experica
         public static List<T> Shuffle<T>(this System.Random rng, List<T> seq)
         {
             return rng.Permutation(seq.Count).Select(i => seq[i]).ToList();
+        }
+
+        public static void Scale01(this List<double> data)
+        {
+            if (data == null || data.Count < 2) return;
+            var min = data.Min();
+            var max = data.Max();
+            var range = max - min;
+            for (var i = 0; i < data.Count; i++)
+            {
+                data[i] = (data[i] - min) / range;
+            }
         }
 
         //public static Dictionary<string, List<object>> ResolveConditionReference(this Dictionary<string, List<object>> cond, Dictionary<string, Param> param)
@@ -522,6 +543,214 @@ namespace Experica
                 return display[displayid].Latency;
             }
             return double.NaN;
+        }
+
+        public static double GammaFunc(double x, double gamma, double a = 1, double c = 0)
+        {
+            return a * Math.Pow(x, gamma) + c;
+        }
+
+        public static double InverseGammaFunc(double x, double gamma, double a = 1, double c = 0)
+        {
+            return a * Math.Pow(x, 1 / gamma) + c;
+        }
+
+        public static bool GammaFit(double[] x, double[] y, out double gamma, out double amp, out double cons)
+        {
+            gamma = 0; amp = 0; cons = 0;
+            try
+            {
+                var param = Fit.Curve(x, y, (g, a, c, i) => GammaFunc(i, g, a, c), 1, 1, 0);
+                gamma = param.Item1; amp = param.Item2; cons = param.Item3;
+                return true;
+            }
+            catch (Exception ex) { }
+            return false;
+        }
+
+        public static bool SplineFit(double[] x, double[] y, out IInterpolation spline, DisplayFitType fittype = DisplayFitType.LinearSpline)
+        {
+            spline = null;
+            try
+            {
+                switch (fittype)
+                {
+                    case DisplayFitType.LinearSpline:
+                        spline = Interpolate.Linear(x, y);
+                        return true;
+                    case DisplayFitType.CubicSpline:
+                        spline = Interpolate.CubicSpline(x, y);
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex) { }
+            return false;
+        }
+
+        /// <summary>
+        /// Get Independent R,G,B channel measurement
+        /// </summary>
+        /// <param name="m"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="isnormalize"></param>
+        /// <param name="issort"></param>
+        public static void GetRGBIntensityMeasurement(this Dictionary<string, List<object>> m, out Dictionary<string, double[]> x, out Dictionary<string, double[]> y, bool isnormalize = false, bool issort = false)
+        {
+            var colors = m["Color"].Convert<List<Color>>();
+            var intensities = m["Y"].Convert<List<double>>();
+
+            var rs = new List<double>(); var gs = new List<double>(); var bs = new List<double>();
+            var rys = new List<double>(); var gys = new List<double>(); var bys = new List<double>();
+            for (var j = 0; j < colors.Count; j++)
+            {
+                var c = colors[j]; var i = intensities[j];
+                if (c.g == 0 && c.b == 0)
+                {
+                    rs.Add(c.r);
+                    rys.Add(i);
+                }
+                if (c.r == 0 && c.b == 0)
+                {
+                    gs.Add(c.g);
+                    gys.Add(i);
+                }
+                if (c.r == 0 && c.g == 0)
+                {
+                    bs.Add(c.b);
+                    bys.Add(i);
+                }
+            }
+            if (issort)
+            {
+                Sorting.Sort(rs, rys); Sorting.Sort(gs, gys); Sorting.Sort(bs, bys);
+            }
+            if (isnormalize)
+            {
+                rys.Scale01(); gys.Scale01(); bys.Scale01();
+            }
+            x = new Dictionary<string, double[]>() { { "R", rs.ToArray() }, { "G", gs.ToArray() }, { "B", bs.ToArray() } };
+            y = new Dictionary<string, double[]>() { { "R", rys.ToArray() }, { "G", gys.ToArray() }, { "B", bys.ToArray() } };
+        }
+
+        public static void GetRGBSpectralMeasurement(this Dictionary<string, List<object>> m, out Dictionary<string, double[]> x, out Dictionary<string, double[][]> yi, out Dictionary<string, double[][]> y)
+        {
+            var colors = m["Color"].Convert<List<Color>>();
+            var wls = m["WL"].Convert<List<double[]>>();
+            var wlis = m["Spectral"].Convert<List<double[]>>();
+
+            var rs = new List<double>(); var gs = new List<double>(); var bs = new List<double>();
+            var rwls = new List<double[]>(); var gwls = new List<double[]>(); var bwls = new List<double[]>();
+            var rwlis = new List<double[]>(); var gwlis = new List<double[]>(); var bwlis = new List<double[]>();
+            for (var j = 0; j < colors.Count; j++)
+            {
+                var c = colors[j]; var wl = wls[j]; var wli = wlis[j];
+                if (c.g == 0 && c.b == 0)
+                {
+                    rs.Add(c.r);
+                    rwls.Add(wl);
+                    rwlis.Add(wli);
+                }
+                if (c.r == 0 && c.b == 0)
+                {
+                    gs.Add(c.g);
+                    gwls.Add(wl);
+                    gwlis.Add(wli);
+                }
+                if (c.r == 0 && c.g == 0)
+                {
+                    bs.Add(c.b);
+                    bwls.Add(wl);
+                    bwlis.Add(wli);
+                }
+            }
+            x = new Dictionary<string, double[]>() { { "R", rs.ToArray() }, { "G", gs.ToArray() }, { "B", bs.ToArray() } };
+            yi = new Dictionary<string, double[][]> { { "R", rwls.ToArray() }, { "G", gwls.ToArray() }, { "B", bwls.ToArray() } };
+            y = new Dictionary<string, double[][]>() { { "R", rwlis.ToArray() }, { "G", gwlis.ToArray() }, { "B", bwlis.ToArray() } };
+        }
+
+        public static Texture3D GenerateRGBGammaCLUT(double rgamma, double ggamma, double bgamma, int n)
+        {
+            var xx = Generate.LinearSpaced(n, 0, 1);
+            var riy = Generate.Map(xx, i => (float)InverseGammaFunc(i, rgamma));
+            var giy = Generate.Map(xx, i => (float)InverseGammaFunc(i, ggamma));
+            var biy = Generate.Map(xx, i => (float)InverseGammaFunc(i, bgamma));
+
+            var clut = new Texture3D(n, n, n, TextureFormat.RGB24, false);
+            for (var r = 0; r < n; r++)
+            {
+                for (var g = 0; g < n; g++)
+                {
+                    for (var b = 0; b < n; b++)
+                    {
+                        clut.SetPixel(r, g, b, new Color(riy[r], giy[g], biy[b]));
+                    }
+                }
+            }
+            clut.Apply();
+            return clut;
+        }
+
+        public static Texture3D GenerateRGBSplineCLUT(IInterpolation rii, IInterpolation gii, IInterpolation bii, int n)
+        {
+            var xx = Generate.LinearSpaced(n, 0, 1);
+            var riy = Generate.Map(xx, i => (float)rii.Interpolate(i));
+            var giy = Generate.Map(xx, i => (float)gii.Interpolate(i));
+            var biy = Generate.Map(xx, i => (float)bii.Interpolate(i));
+
+            var clut = new Texture3D(n, n, n, TextureFormat.RGB24, false);
+            for (var r = 0; r < n; r++)
+            {
+                for (var g = 0; g < n; g++)
+                {
+                    for (var b = 0; b < n; b++)
+                    {
+                        clut.SetPixel(r, g, b, new Color(riy[r], giy[g], biy[b]));
+                    }
+                }
+            }
+            clut.Apply();
+            return clut;
+        }
+
+        /// <summary>
+        /// Prepare Color Look-Up Table based on Display R,G,B intensity measurement
+        /// </summary>
+        /// <param name="display"></param>
+        /// <param name="forceprepare"></param>
+        /// <returns></returns>
+        public static bool PrepareCLUT(this Display display, bool forceprepare = false)
+        {
+            if (display.CLUT != null && !forceprepare) { return true; }
+            var m = display.IntensityMeasurement;
+            if (m == null || m.Count == 0) { return false; }
+
+            Dictionary<string, double[]> x, y;
+            switch (display.FitType)
+            {
+                case DisplayFitType.Gamma:
+                    m.GetRGBIntensityMeasurement(out x, out y, false, true);
+                    double rgamma, ra, rc, ggamma, ga, gc, bgamma, ba, bc;
+                    GammaFit(x["R"], y["R"], out rgamma, out ra, out rc);
+                    GammaFit(x["G"], y["G"], out ggamma, out ga, out gc);
+                    GammaFit(x["B"], y["B"], out bgamma, out ba, out bc);
+                    display.CLUT = GenerateRGBGammaCLUT(rgamma, ggamma, bgamma, display.CLUTSize);
+                    break;
+                case DisplayFitType.LinearSpline:
+                case DisplayFitType.CubicSpline:
+                    m.GetRGBIntensityMeasurement(out x, out y, true, true);
+                    IInterpolation rii, gii, bii;
+                    SplineFit(y["R"], x["R"], out rii, display.FitType);
+                    SplineFit(y["G"], x["G"], out gii, display.FitType);
+                    SplineFit(y["B"], x["B"], out bii, display.FitType);
+                    if (rii != null && gii != null && bii != null)
+                    {
+                        display.CLUT = GenerateRGBSplineCLUT(rii, gii, bii, display.CLUTSize);
+                    }
+                    break;
+            }
+            return display.CLUT == null ? false : true;
         }
 #endif
 
@@ -767,19 +996,31 @@ namespace Experica
             }
         }
 
-        public static float GetColorScale(float luminance, float contrast)
+        /// <summary>
+        /// Luminance span based on average luminance and michelson contrast(symmatric min and max luminance)
+        /// </summary>
+        /// <param name="luminance"></param>
+        /// <param name="contrast"></param>
+        /// <returns></returns>
+        public static float LuminanceSpan(float luminance, float contrast)
         {
-            luminance = Mathf.Clamp(luminance, 0, 1);
-            contrast = Mathf.Clamp(contrast, 0, 1);
             return 2 * luminance * contrast;
         }
 
-        public static void GetColor(this float scale, Color minc, Color maxc, out Color sminc, out Color smaxc)
+        /// <summary>
+        /// Symmatric scale between mincolor and maxcolor
+        /// </summary>
+        /// <param name="scale"></param>
+        /// <param name="minc"></param>
+        /// <param name="maxc"></param>
+        /// <param name="sminc"></param>
+        /// <param name="smaxc"></param>
+        public static void ScaleColor(this float scale, Color minc, Color maxc, out Color sminc, out Color smaxc)
         {
-            var ac = (minc + maxc) / 2;
-            var acd = maxc - ac;
-            sminc = new Color(ac.r - acd.r * scale, ac.g - acd.g * scale, ac.b - acd.b * scale, minc.a);
-            smaxc = new Color(ac.r + acd.r * scale, ac.g + acd.g * scale, ac.b + acd.b * scale, maxc.a);
+            var mc = (minc + maxc) / 2;
+            var dmc = maxc - mc;
+            sminc = new Color(mc.r - dmc.r * scale, mc.g - dmc.g * scale, mc.b - dmc.b * scale, minc.a);
+            smaxc = new Color(mc.r + dmc.r * scale, mc.g + dmc.g * scale, mc.b + dmc.b * scale, maxc.a);
         }
 
         public static Vector3 RotateZCCW(this Vector3 v, float angle)
@@ -829,13 +1070,39 @@ namespace Experica
             smtp.Send("vlabsys@gmail.com", to, subject, body);
         }
 
-        public static Dictionary<string, Texture2D> LoadImageSet(this string imgsetdir, int startidx = 0, int numofimg = 10)
+        /// <summary>
+        /// Load all images from a AssetBundle
+        /// </summary>
+        /// <param name="imageset"></param>
+        /// <returns></returns>
+        public static Dictionary<string, Texture2D> Load(this string imageset)
         {
-            if (string.IsNullOrEmpty(imgsetdir)) return null;
+            if (string.IsNullOrEmpty(imageset)) return null;
+
+            var isab = AssetBundle.LoadFromFile(Path.Combine(UnityEngine.Application.streamingAssetsPath, imageset));
+            var ins = isab.GetAllAssetNames().Select(i => Path.GetFileNameWithoutExtension(i));
+            if (ins != null && ins.Count() > 0)
+            {
+                var imgs = new Dictionary<string, Texture2D>();
+                foreach (var n in ins)
+                {
+                    imgs[n] = isab.LoadAsset<Texture2D>(n);
+                }
+                return imgs;
+            }
+            return null;
+        }
+
+        public static Dictionary<string, Texture2D> Load(this string imageset, int startidx = 0, int numofimg = 10)
+        {
+            if (string.IsNullOrEmpty(imageset)) return null;
             var imgs = new Dictionary<string, Texture2D>();
+
+            //Addressables.LoadAssetsAsync
+
             for (var i = startidx; i < numofimg + startidx; i++)
             {
-                var img = Resources.Load<Texture2D>(imgsetdir + "/" + i);
+                var img = Resources.Load<Texture2D>(imageset + "/" + i);
                 if (img != null)
                 {
                     imgs[i.ToString()] = img;
@@ -869,5 +1136,6 @@ namespace Experica
             imgarray.Apply();
             return imgarray;
         }
+
     }
 }
