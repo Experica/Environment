@@ -1,11 +1,12 @@
 {
     "name": "Experica",
+    "rootNamespace": "",
     "references": [
         "GUID:a44f47cf3ada4435dbc516bad0bc86fe"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": true,
+    "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,

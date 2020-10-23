@@ -56,4 +56,14 @@ namespace Experica
         Sinusoidal,
         Triangle
     }
+
+    public enum ColorChannel
+    {
+        None,
+        R,
+        G,
+        B,
+        A,
+        Each
+    }
 }
