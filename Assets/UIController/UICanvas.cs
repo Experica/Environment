@@ -30,7 +30,7 @@ namespace Experica.Environment
         protected override void OnRectTransformDimensionsChange()
         {
             base.OnRectTransformDimensionsChange();
-            uicontroller.OnRectTransformDimensionsChange();
+            uicontroller.OnWindowChange();
         }
     }
 }

@@ -20,6 +20,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
 OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 using UnityEngine;
+using UnityEngine.Networking.NetworkSystem;
 using UnityEngine.UI;
 using System.Diagnostics;
 using System.Threading;
@@ -36,16 +37,16 @@ namespace Experica.Environment
         public Toggle clientconnect, autoconn;
         public Text autoconntext, version;
         public NetManager netmanager;
-        public Canvas canvas;
+        public GameObject canvas;
         public EnvironmentConfig config;
         readonly string configpath = "EnvironmentConfig.yaml";
 
         bool isautoconn, isconnect;
         int autoconncountdown;
         float lastautoconntime;
-        int lastwindowwidth=800, lastwindowheight=600;
+        int lastwindowwidth = 800, lastwindowheight = 600;
 
-//#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+        //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
         [DllImport("User32.dll", EntryPoint = "SetWindowPos")]
         static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
         [DllImport("User32.dll", EntryPoint = "FindWindowA")]
@@ -63,7 +64,7 @@ namespace Experica.Environment
             SetWindowPos(hwnd, topmost ? HWND_TOPMOST : HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
             //SetWindowPos(hwnd, topmost ? HWND_TOPMOST : HWND_NOTOPMOST, 100, 100, 800, 600, SWP_SHOWWINDOW);
         }
-//#endif
+        //#endif
         /// <summary>
         /// Because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
         /// as the first to Awake in unity project setting(Script Order), so that application wide 
@@ -80,24 +81,22 @@ namespace Experica.Environment
             {
                 config = new EnvironmentConfig();
             }
-//#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+            //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
             HWND = FindWindow(null, "Environment");
-//#endif
+            //#endif
         }
 
         public float GetAspectRatio()
         {
-            var rootrt = canvas.gameObject.transform as RectTransform;
-           // return rootrt.rect.width / rootrt.rect.height;
-
-            return Screen.width.Convert<float>() / Screen.height;
+            return Screen.width.Convert<float>() / Screen.height.Convert<float>();
         }
 
-        public void OnRectTransformDimensionsChange()
+        public void OnWindowChange()
         {
             if (isconnect)
             {
-                netmanager.client.Send(MsgType.AspectRatio, new FloatMessage(GetAspectRatio()));
+                //netmanager.client.Send(MsgType.AspectRatio, new FloatMessage() { value = GetAspectRatio() });
+                netmanager.client.Send(MsgType.AspectRatio, new StringMessage(GetAspectRatio().ToString()));
             }
         }
 
@@ -158,18 +157,18 @@ namespace Experica.Environment
                     if (Screen.fullScreen)
                     {
                         Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
-//#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+                        //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
                         SetTopMost(HWND, true);
-//#endif
+                        //#endif
                     }
                     else
                     {
                         lastwindowwidth = Math.Max(800, Screen.width);
-                        lastwindowheight =Math.Max(600, Screen.height);
+                        lastwindowheight = Math.Max(600, Screen.height);
                         Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, FullScreenMode.FullScreenWindow);
-//#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+                        //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
                         SetTopMost(HWND, true);
-//#endif
+                        //#endif
                     }
                 }
                 if (isautoconn)
@@ -198,12 +197,12 @@ namespace Experica.Environment
         {
             isconnect = true;
             autoconntext.text = "Connected";
-            // since VLabEnvironment is to provide virtual reality environment, we may want to
-            // hide cursor and ui when connected to VLab.
-            canvas.enabled = !config.HideUIWhenConnected;
+            // since Environment is to provide virtual reality environment, we may want to
+            // hide cursor and ui when connected to Command.
+            canvas.SetActive(!config.HideUIWhenConnected);
             Cursor.visible = !config.HideCursorWhenConnected;
-            // when connected to VLab, we need to make sure that all system resourses
-            // VLabEnvironment needed is ready to start experiment.
+            // when connected to Command, we need to make sure that all system resourses
+            // Environment needed is ready to start experiment.
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
             QualitySettings.vSyncCount = config.VSyncCount;
             QualitySettings.maxQueuedFrames = config.MaxQueuedFrames;
@@ -231,7 +230,7 @@ namespace Experica.Environment
             clientconnect.isOn = false;
             clientconnect.onValueChanged = callback;
 
-            canvas.enabled = true;
+            canvas.SetActive(true);
             Cursor.visible = true;
             // when disconnect, we can relax and release some system resourses for other process
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
