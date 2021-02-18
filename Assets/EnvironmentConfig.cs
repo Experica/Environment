@@ -35,5 +35,6 @@ namespace Experica.Environment
         public int VSyncCount { get; set; } = 1;
         public int MaxQueuedFrames { get; set; } = 0;
         public float FixedDeltaTime { get; set; } = 1000000f;
+        public float SyncFrameTimeOut { get; set; } = 2;
     }
 }

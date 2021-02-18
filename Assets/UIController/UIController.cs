@@ -37,6 +37,7 @@ namespace Experica.Environment
         public Toggle clientconnect, autoconn;
         public Text autoconntext, version;
         public NetManager netmanager;
+        public SyncFrameManager syncmanager;
         public GameObject canvas;
         public EnvironmentConfig config;
         readonly string configpath = "EnvironmentConfig.yaml";

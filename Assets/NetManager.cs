@@ -30,6 +30,29 @@ namespace Experica.Environment
     {
         public UIController uicontroller;
 
+        public override void OnStartClient(NetworkClient client)
+        {
+            base.OnStartClient(client);
+            client.RegisterHandler(MsgType.BeginSyncFrame, new NetworkMessageDelegate(BeginSyncFrameHandler));
+            client.RegisterHandler(MsgType.EndSyncFrame, new NetworkMessageDelegate(EndSyncFrameHandler));
+        }
+
+        void BeginSyncFrameHandler(NetworkMessage netMsg)
+        {
+            uicontroller.syncmanager.beginsyncframe = true;
+            uicontroller.syncmanager.SyncFrameOnTime = Time.realtimeSinceStartupAsDouble;
+        }
+
+        void EndSyncFrameHandler(NetworkMessage netMsg)
+        {
+            uicontroller.syncmanager.endingsyncframe = true;
+        }
+
+        public void OnFinishSyncFrame()
+        {
+            client.Send(MsgType.EndSyncFrame, new EmptyMessage());
+        }
+
         public override void OnClientConnect(NetworkConnection conn)
         {
             if (LogFilter.logDebug)

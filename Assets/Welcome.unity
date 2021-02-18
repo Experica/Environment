@@ -457,6 +457,7 @@ MonoBehaviour:
   autoconntext: {fileID: 472454988}
   version: {fileID: 2071902595}
   netmanager: {fileID: 1801762641}
+  syncmanager: {fileID: 1801762643}
   canvas: {fileID: 413606484}
 --- !u!1001 &894777709
 PrefabInstance:
@@ -708,6 +709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1801762642}
   - component: {fileID: 1801762641}
+  - component: {fileID: 1801762643}
   m_Layer: 0
   m_Name: NetManager
   m_TagString: Untagged
@@ -735,7 +737,7 @@ MonoBehaviour:
   m_RunInBackground: 1
   m_ScriptCRCCheck: 0
   m_MaxDelay: 0
-  m_LogLevel: 3
+  m_LogLevel: 4
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 0
   m_PlayerSpawnMethod: 0
@@ -814,6 +816,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801762643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801762640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3784a96269bc2d04d878eaa9da1f9a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginsyncframe: 0
+  endingsyncframe: 0
+  netmanager: {fileID: 1801762641}
+  uicontroler: {fileID: 835844596}
+  SyncFrameOnTime: 0
 --- !u!224 &1891388125 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224000010702276182, guid: c0b2b891639cb1946ab57c182de8a5f8,
