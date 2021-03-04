@@ -28,6 +28,7 @@ using System.Runtime;
 using System.Runtime.InteropServices;
 using System;
 using System.IO;
+using UnityEngine.InputSystem;
 
 namespace Experica.Environment
 {
@@ -148,30 +149,7 @@ namespace Experica.Environment
         {
             if (!isconnect)
             {
-                if (Input.GetButton("Quit"))
-                {
-                    Application.Quit();
-                    return;
-                }
-                if (Input.GetButtonDown("FullScreen"))
-                {
-                    if (Screen.fullScreen)
-                    {
-                        Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
-                        //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-                        SetTopMost(HWND, true);
-                        //#endif
-                    }
-                    else
-                    {
-                        lastwindowwidth = Math.Max(800, Screen.width);
-                        lastwindowheight = Math.Max(600, Screen.height);
-                        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, FullScreenMode.FullScreenWindow);
-                        //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-                        SetTopMost(HWND, true);
-                        //#endif
-                    }
-                }
+                InputSystem.Update();
                 if (isautoconn)
                 {
                     if (Time.unscaledTime - lastautoconntime >= 1)
@@ -191,6 +169,31 @@ namespace Experica.Environment
                         }
                     }
                 }
+            }
+        }
+
+        public void OnQuitAction()
+        {
+            Application.Quit();
+        }
+
+        public void OnToggleFullScreenAction()
+        {
+            if (Screen.fullScreen)
+            {
+                Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
+                //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+                //SetTopMost(HWND, true);
+                //#endif
+            }
+            else
+            {
+                lastwindowwidth = Math.Max(800, Screen.width);
+                lastwindowheight = Math.Max(600, Screen.height);
+                Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, config.FullScreenMode);
+                //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+                //SetTopMost(HWND, true);
+                //#endif
             }
         }
 

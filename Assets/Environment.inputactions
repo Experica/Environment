@@ -1,0 +1,64 @@
+{
+    "name": "Environment",
+    "maps": [
+        {
+            "name": "Environment",
+            "id": "3dff73a5-450c-4ab0-a4bb-2f15f874d925",
+            "actions": [
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "535d027b-f615-4fa3-98f4-e80e4768780f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ToggleFullScreen",
+                    "type": "Button",
+                    "id": "0655345f-bd7b-4893-883d-6fd095ef2c41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ba7cfe14-a0ff-49f6-a88a-0dbe5ac9f00a",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1719b65f-fb5b-4893-a255-c2d0abc0533d",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ToggleFullScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

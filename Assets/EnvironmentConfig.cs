@@ -36,5 +36,6 @@ namespace Experica.Environment
         public int MaxQueuedFrames { get; set; } = 0;
         public float FixedDeltaTime { get; set; } = 1000000f;
         public float SyncFrameTimeOut { get; set; } = 2;
+        public FullScreenMode FullScreenMode { get; set; } = FullScreenMode.FullScreenWindow;
     }
 }

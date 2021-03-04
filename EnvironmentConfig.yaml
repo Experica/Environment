@@ -1,4 +1,4 @@
-AutoConnect: true
+AutoConnect: false
 AutoConnectTimeOut: 10
 ServerAddress: LocalHost
 HideUIWhenConnected: true
@@ -7,3 +7,4 @@ VSyncCount: 1
 MaxQueuedFrames: 0
 FixedDeltaTime: 1000000
 SyncFrameTimeOut: 2
+FullScreenMode: FullScreenWindow
