@@ -27,6 +27,7 @@ using System.Threading;
 using System.Runtime;
 using System.Runtime.InteropServices;
 using System;
+using System.Linq;
 using System.IO;
 using UnityEngine.InputSystem;
 
@@ -172,28 +173,31 @@ namespace Experica.Environment
             }
         }
 
-        public void OnQuitAction()
+        public void OnQuitAction(InputAction.CallbackContext context)
         {
-            Application.Quit();
+            if (context.performed) { Application.Quit(); }
         }
 
-        public void OnToggleFullScreenAction()
+        public void OnToggleFullScreenAction(InputAction.CallbackContext context)
         {
-            if (Screen.fullScreen)
+            if (context.performed)
             {
-                Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
-                //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-                //SetTopMost(HWND, true);
-                //#endif
-            }
-            else
-            {
-                lastwindowwidth = Math.Max(800, Screen.width);
-                lastwindowheight = Math.Max(600, Screen.height);
-                Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, config.FullScreenMode);
-                //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-                //SetTopMost(HWND, true);
-                //#endif
+                if (Screen.fullScreen)
+                {
+                    Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
+                    //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+                    //SetTopMost(HWND, true);
+                    //#endif
+                }
+                else
+                {
+                    lastwindowwidth = Math.Max(800, Screen.width);
+                    lastwindowheight = Math.Max(600, Screen.height);
+                    Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, config.FullScreenMode);
+                    //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+                    //SetTopMost(HWND, true);
+                    //#endif
+                }
             }
         }
 

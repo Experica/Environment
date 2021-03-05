@@ -24,26 +24,70 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "ba7cfe14-a0ff-49f6-a88a-0dbe5ac9f00a",
-                    "path": "<Keyboard>/escape",
+                    "name": "Button With One Modifier",
+                    "id": "a016a80f-91ae-4c22-b289-cc4ff7330921",
+                    "path": "ButtonWithOneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "fcc5489f-5be2-4591-ba14-c2fa29310398",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Quit",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "53ac2a49-0051-4795-960f-29f2e828e3ea",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Button With One Modifier",
+                    "id": "df7ce501-c950-4a40-b680-0665eb8b4c3a",
+                    "path": "ButtonWithOneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleFullScreen",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "1719b65f-fb5b-4893-a255-c2d0abc0533d",
-                    "path": "<Keyboard>/tab",
+                    "name": "modifier",
+                    "id": "92b9d1b8-9712-4308-a6bd-8522dd07f747",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "ToggleFullScreen",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "59fd8edc-cdf1-48d7-a2fb-d64c282359f1",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ToggleFullScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
