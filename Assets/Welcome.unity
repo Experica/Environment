@@ -825,7 +825,7 @@ MonoBehaviour:
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 0
   m_PlayerSpawnMethod: 0
-  m_OfflineScene: 
+  m_OfflineScene: Welcomeback
   m_OnlineScene: 
   m_SpawnPrefabs: []
   m_CustomConfig: 1
