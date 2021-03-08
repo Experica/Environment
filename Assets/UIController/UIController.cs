@@ -150,7 +150,6 @@ namespace Experica.Environment
         {
             if (!isconnect)
             {
-                InputSystem.Update();
                 if (isautoconn)
                 {
                     if (Time.unscaledTime - lastautoconntime >= 1)
@@ -175,12 +174,12 @@ namespace Experica.Environment
 
         public void OnQuitAction(InputAction.CallbackContext context)
         {
-            if (context.performed) { Application.Quit(); }
+            if (!isconnect && context.performed) { Application.Quit(); }
         }
 
         public void OnToggleFullScreenAction(InputAction.CallbackContext context)
         {
-            if (context.performed)
+            if (!isconnect && context.performed)
             {
                 if (Screen.fullScreen)
                 {
