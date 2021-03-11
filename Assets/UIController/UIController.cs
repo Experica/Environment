@@ -49,25 +49,6 @@ namespace Experica.Environment
         float lastautoconntime;
         int lastwindowwidth = 800, lastwindowheight = 600;
 
-        //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-        [DllImport("User32.dll", EntryPoint = "SetWindowPos")]
-        static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
-        [DllImport("User32.dll", EntryPoint = "FindWindowA")]
-        static extern IntPtr FindWindow(string className, string windowName);
-
-        const uint SWP_NOSIZE = 0x0001;
-        const uint SWP_NOMOVE = 0x0002;
-        const uint SWP_SHOWWINDOW = 0x0040;
-        static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
-        static readonly IntPtr HWND_NOTOPMOST = new IntPtr(-2);
-        static IntPtr HWND;
-
-        void SetTopMost(IntPtr hwnd, bool topmost)
-        {
-            SetWindowPos(hwnd, topmost ? HWND_TOPMOST : HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
-            //SetWindowPos(hwnd, topmost ? HWND_TOPMOST : HWND_NOTOPMOST, 100, 100, 800, 600, SWP_SHOWWINDOW);
-        }
-        //#endif
         /// <summary>
         /// Because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
         /// as the first to Awake in unity project setting(Script Order), so that application wide 
@@ -84,9 +65,6 @@ namespace Experica.Environment
             {
                 config = new EnvironmentConfig();
             }
-            //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-            HWND = FindWindow(null, "Environment");
-            //#endif
         }
 
         public float GetAspectRatio()
@@ -184,18 +162,12 @@ namespace Experica.Environment
                 if (Screen.fullScreen)
                 {
                     Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
-                    //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-                    //SetTopMost(HWND, true);
-                    //#endif
                 }
                 else
                 {
                     lastwindowwidth = Math.Max(800, Screen.width);
                     lastwindowheight = Math.Max(600, Screen.height);
                     Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, config.FullScreenMode);
-                    //#if UNITY_STANDALONE_WIN || UNITY_EDITOR
-                    //SetTopMost(HWND, true);
-                    //#endif
                 }
             }
         }

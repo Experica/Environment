@@ -32,8 +32,8 @@ using System.Net.Mail;
 using System.Windows.Forms;
 using MathNet.Numerics;
 using MathNet.Numerics.Interpolation;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
+//using Microsoft.CodeAnalysis;
+//using Microsoft.CodeAnalysis.CSharp;
 #endif
 
 namespace Experica
@@ -441,7 +441,7 @@ namespace Experica
             var al = experimenter.Split(',', ';').Where(i => config.ExperimenterAddress.ContainsKey(i)).Select(i => config.ExperimenterAddress[i]).ToArray();
             if (al != null && al.Length > 0)
             {
-                addresses = String.Join(",", al);
+                addresses = string.Join(",", al);
             }
             return addresses;
         }
@@ -465,20 +465,23 @@ namespace Experica
 
         public static Assembly Compile(this string source)
         {
-            var sourcetree = CSharpSyntaxTree.ParseText(source);
-            var compilation = CSharpCompilation.Create("sdfsdf")
-                .AddReferences()
-                .WithOptions(new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
-                                 .WithOptimizationLevel(OptimizationLevel.Release))
-                .AddSyntaxTrees(sourcetree);
-            using (var asm = new MemoryStream())
-            {
-                var emitresult = compilation.Emit(asm);
-                if (emitresult.Success)
-                {
-                    return Assembly.Load(asm.GetBuffer());
-                }
-            }
+            // currently not really needed, so desable them
+
+
+            //var sourcetree = CSharpSyntaxTree.ParseText(source);
+            //var compilation = CSharpCompilation.Create("sdfsdf")
+            //    .AddReferences()
+            //    .WithOptions(new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+            //                     .WithOptimizationLevel(OptimizationLevel.Release))
+            //    .AddSyntaxTrees(sourcetree);
+            //using (var asm = new MemoryStream())
+            //{
+            //    var emitresult = compilation.Emit(asm);
+            //    if (emitresult.Success)
+            //    {
+            //        return Assembly.Load(asm.GetBuffer());
+            //    }
+            //}
             return null;
         }
 
@@ -538,13 +541,25 @@ namespace Experica
             MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        public static double DisplayLatency(this string displayid, Dictionary<string, Display> display)
+        public static Display GetDisplay(this string displayid, Dictionary<string,Display> displays)
         {
-            if (!string.IsNullOrEmpty(displayid) && display != null && display.ContainsKey(displayid))
+            if (!string.IsNullOrEmpty(displayid) && displays != null && displays.ContainsKey(displayid))
             {
-                return display[displayid].Latency;
+                return displays[displayid];
             }
-            return double.NaN;
+            Debug.LogWarning($"Display ID: {displayid} can not be found.");
+            return null;
+        }
+
+        public static double? DisplayLatency(this string displayid, Dictionary<string, Display> displays)
+        {
+            var d = displayid.GetDisplay(displays);
+            if (d!=null)
+            {
+                if (d.Latency > 0) { return d.Latency; }
+                return Math.Max(d.RiseLag, d.FallLag);
+            }
+            return null;
         }
 
         public static double GammaFunc(double x, double gamma, double a = 1, double c = 0)
@@ -552,7 +567,7 @@ namespace Experica
             return a * Math.Pow(x, gamma) + c;
         }
 
-        public static double InverseGammaFunc(double x, double gamma, double a = 1, double c = 0)
+        public static double CounterGammaFunc(double x, double gamma, double a = 1, double c = 0)
         {
             return a * Math.Pow(x, 1 / gamma) + c;
         }
@@ -566,7 +581,7 @@ namespace Experica
                 gamma = param.Item1; amp = param.Item2; cons = param.Item3;
                 return true;
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
             return false;
         }
 
@@ -586,7 +601,7 @@ namespace Experica
                 }
                 return false;
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
             return false;
         }
 
@@ -608,20 +623,32 @@ namespace Experica
             for (var j = 0; j < colors.Count; j++)
             {
                 var c = colors[j]; var i = intensities[j];
-                if (c.g == 0 && c.b == 0)
+                if (c.r == 0 && c.g == 0 && c.b == 0)
                 {
                     rs.Add(c.r);
                     rys.Add(i);
-                }
-                if (c.r == 0 && c.b == 0)
-                {
                     gs.Add(c.g);
                     gys.Add(i);
-                }
-                if (c.r == 0 && c.g == 0)
-                {
                     bs.Add(c.b);
                     bys.Add(i);
+                }
+                else
+                {
+                    if (c.g == 0 && c.b == 0)
+                    {
+                        rs.Add(c.r);
+                        rys.Add(i);
+                    }
+                    if (c.r == 0 && c.b == 0)
+                    {
+                        gs.Add(c.g);
+                        gys.Add(i);
+                    }
+                    if (c.r == 0 && c.g == 0)
+                    {
+                        bs.Add(c.b);
+                        bys.Add(i);
+                    }
                 }
             }
             if (issort)
@@ -648,23 +675,38 @@ namespace Experica
             for (var j = 0; j < colors.Count; j++)
             {
                 var c = colors[j]; var wl = wls[j]; var wli = wlis[j];
-                if (c.g == 0 && c.b == 0)
+                if (c.r == 0 && c.g == 0 && c.b == 0)
                 {
                     rs.Add(c.r);
                     rwls.Add(wl);
                     rwlis.Add(wli);
-                }
-                if (c.r == 0 && c.b == 0)
-                {
                     gs.Add(c.g);
                     gwls.Add(wl);
                     gwlis.Add(wli);
-                }
-                if (c.r == 0 && c.g == 0)
-                {
                     bs.Add(c.b);
                     bwls.Add(wl);
                     bwlis.Add(wli);
+                }
+                else
+                {
+                    if (c.g == 0 && c.b == 0)
+                    {
+                        rs.Add(c.r);
+                        rwls.Add(wl);
+                        rwlis.Add(wli);
+                    }
+                    if (c.r == 0 && c.b == 0)
+                    {
+                        gs.Add(c.g);
+                        gwls.Add(wl);
+                        gwlis.Add(wli);
+                    }
+                    if (c.r == 0 && c.g == 0)
+                    {
+                        bs.Add(c.b);
+                        bwls.Add(wl);
+                        bwlis.Add(wli);
+                    }
                 }
             }
             x = new Dictionary<string, double[]>() { { "R", rs.ToArray() }, { "G", gs.ToArray() }, { "B", bs.ToArray() } };
@@ -672,12 +714,12 @@ namespace Experica
             y = new Dictionary<string, double[][]>() { { "R", rwlis.ToArray() }, { "G", gwlis.ToArray() }, { "B", bwlis.ToArray() } };
         }
 
-        public static Texture3D GenerateRGBGammaCLUT(double rgamma, double ggamma, double bgamma, int n)
+        public static Texture3D GenerateRGBGammaCLUT(double rgamma, double ggamma, double bgamma, double ra, double ga, double ba, double rc, double gc, double bc, int n)
         {
             var xx = Generate.LinearSpaced(n, 0, 1);
-            var riy = Generate.Map(xx, i => (float)InverseGammaFunc(i, rgamma));
-            var giy = Generate.Map(xx, i => (float)InverseGammaFunc(i, ggamma));
-            var biy = Generate.Map(xx, i => (float)InverseGammaFunc(i, bgamma));
+            var riy = Generate.Map(xx, i => (float)CounterGammaFunc(i, rgamma,ra,rc));
+            var giy = Generate.Map(xx, i => (float)CounterGammaFunc(i, ggamma,ga,gc));
+            var biy = Generate.Map(xx, i => (float)CounterGammaFunc(i, bgamma,ba,bc));
 
             var clut = new Texture3D(n, n, n, TextureFormat.RGB24, false);
             for (var r = 0; r < n; r++)
@@ -717,7 +759,7 @@ namespace Experica
         }
 
         /// <summary>
-        /// Prepare Color Look-Up Table based on Display R,G,B intensity measurement
+        /// Prepare Color Look-Up Table based on display R,G,B intensity measurement
         /// </summary>
         /// <param name="display"></param>
         /// <param name="forceprepare"></param>
@@ -737,7 +779,7 @@ namespace Experica
                     GammaFit(x["R"], y["R"], out rgamma, out ra, out rc);
                     GammaFit(x["G"], y["G"], out ggamma, out ga, out gc);
                     GammaFit(x["B"], y["B"], out bgamma, out ba, out bc);
-                    display.CLUT = GenerateRGBGammaCLUT(rgamma, ggamma, bgamma, display.CLUTSize);
+                    display.CLUT = GenerateRGBGammaCLUT(rgamma, ggamma, bgamma,ra,ga,ba,rc,gc,bc, display.CLUTSize);
                     break;
                 case DisplayFitType.LinearSpline:
                 case DisplayFitType.CubicSpline:
@@ -856,129 +898,78 @@ namespace Experica
             return final;
         }
 
-        public static bool FirstAtSplit(this string name, out string head, out string tail)
+        public static void FirstSplit(this string name, out string head, out string tail, string del = "@")
         {
             head = null; tail = null;
             if (!string.IsNullOrEmpty(name))
             {
-                var ati = name.IndexOf('@');
-                if (ati < 0)
+                var n = del.Length;
+                var i = name.IndexOf(del);
+                if (i == 0)
                 {
-                    head = name;
-                    tail = null;
-                    return false;
+                    tail = name.Substring(n);
                 }
-                else if (ati == 0)
+                else if (i > 0)
                 {
-                    if (name.Length >= 4)
-                    {
-                        head = null;
-                        tail = name.Substring(1);
-                        return false;
-                    }
-                }
-                else
-                {
-                    if (name.Length >= 5)
-                    {
-                        head = name.Substring(0, ati);
-                        tail = name.Substring(ati + 1);
-                        return true;
-                    }
+                    head = name.Substring(0, i);
+                    tail = name.Substring(i + n);
                 }
             }
-            return false;
         }
 
-        public static string FirstAtSplitHead(this string name)
+        public static string FirstSplitHead(this string name, string del = "@")
         {
-            string head, tail;
-            name.FirstAtSplit(out head, out tail);
+            name.FirstSplit(out string head, out _, del);
             return head;
         }
 
-        public static string FirstAtSplitTail(this string name)
+        public static string FirstSplitTail(this string name, string del = "@")
         {
-            string head, tail;
-            name.FirstAtSplit(out head, out tail);
+            name.FirstSplit(out _, out string tail, del);
             return tail;
         }
 
         public static bool IsEnvParamFullName(this string name)
         {
-            string head, tail;
-            return name.FirstAtSplit(out head, out tail);
+            return name.IsEnvParamFullName(out _, out _, out _);
         }
 
-        public static bool IsEnvParamFullName(this string name, out string shortname, out string fullname)
+        public static bool IsEnvParamFullName(this string name, out string varname, out string nbsoname, out string fullname)
         {
-            string head, tail;
-            var t = name.FirstAtSplit(out head, out tail);
-            if (t)
-            {
-                shortname = head;
-                fullname = name;
-            }
-            else
-            {
-                shortname = name;
-                fullname = null;
-            }
+            name.FirstSplit(out varname, out nbsoname, "@");
+            var t = !string.IsNullOrEmpty(varname) && !string.IsNullOrEmpty(nbsoname) && nbsoname.Length >= 3; // shortest nbso name: {nb}@{so}
+            fullname = t ? name : null;
             return t;
         }
 
-        public static bool IsEnvParamShortName(this string name)
-        {
-            string head, tail;
-            name.FirstAtSplit(out head, out tail);
-            return head != null && tail == null;
-        }
-
-        public static bool LastAtSplit(this string name, out string head, out string tail)
+        public static void LastSplit(this string name, out string head, out string tail, string del = "@")
         {
             head = null; tail = null;
             if (!string.IsNullOrEmpty(name))
             {
-                var ati = name.LastIndexOf('@');
-                if (ati < 0)
+                var n = del.Length;
+                var i = name.LastIndexOf(del);
+                if (i == 0)
                 {
-                    head = name;
-                    tail = null;
-                    return false;
+                    tail = name.Substring(n);
                 }
-                else if (ati == 0)
+                else if (i > 0)
                 {
-                    if (name.Length >= 2)
-                    {
-                        head = null;
-                        tail = name.Substring(1);
-                        return false;
-                    }
-                }
-                else
-                {
-                    if (name.Length >= 5)
-                    {
-                        head = name.Substring(0, ati);
-                        tail = name.Substring(ati + 1);
-                        return true;
-                    }
+                    head = name.Substring(0, i);
+                    tail = name.Substring(i + n);
                 }
             }
-            return false;
         }
 
-        public static string LastAtSplitHead(this string name)
+        public static string LastSplitHead(this string name, string del = "@")
         {
-            string head, tail;
-            name.LastAtSplit(out head, out tail);
+            name.LastSplit(out string head, out _, del);
             return head;
         }
 
-        public static string LastAtSplitTail(this string name)
+        public static string LastSplitTail(this string name, string del = "@")
         {
-            string head, tail;
-            name.LastAtSplit(out head, out tail);
+            name.LastSplit(out _, out string tail, del);
             return tail;
         }
 
