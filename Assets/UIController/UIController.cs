@@ -176,18 +176,18 @@ namespace Experica.Environment
         {
             isconnect = true;
             autoconntext.text = "Connected";
-            // since Environment is to provide virtual reality environment, we may want to
+            // Environment is to provide final stimuli, so we may want to
             // hide cursor and ui when connected to Command.
             canvas.SetActive(!config.HideUIWhenConnected);
             Cursor.visible = !config.HideCursorWhenConnected;
             // when connected to Command, we need to make sure that all system resourses
             // Environment needed is ready to start experiment.
-            QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
+            QualitySettings.anisotropicFiltering = AnisotropicFiltering.ForceEnable;
             QualitySettings.vSyncCount = config.VSyncCount;
             QualitySettings.maxQueuedFrames = config.MaxQueuedFrames;
             Time.fixedDeltaTime = config.FixedDeltaTime;
 
-            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.RealTime;
             Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Highest;
             Process.GetCurrentProcess().PriorityBoostEnabled = true;
             GC.Collect();
@@ -201,7 +201,6 @@ namespace Experica.Environment
         public void OnClientDisconnect()
         {
             isconnect = false;
-            // when disconnected, we should go back to ui and turn on cursor.
             ResetAutoConnect();
 
             var callback = clientconnect.onValueChanged;
@@ -209,12 +208,13 @@ namespace Experica.Environment
             clientconnect.isOn = false;
             clientconnect.onValueChanged = callback;
 
+            // when disconnected, we should go back to ui and turn on cursor.
             canvas.SetActive(true);
             Cursor.visible = true;
             // when disconnect, we can relax and release some system resourses for other process
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
             QualitySettings.vSyncCount = 1;
-            QualitySettings.maxQueuedFrames = 1;
+            QualitySettings.maxQueuedFrames = 2;
             Time.fixedDeltaTime = 0.02f;
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
