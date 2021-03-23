@@ -176,26 +176,19 @@ namespace Experica.Environment
         {
             isconnect = true;
             autoconntext.text = "Connected";
-            // Environment is to provide final stimuli, so we may want to
-            // hide cursor and ui when connected to Command.
+            // Environment is to present final stimuli, so we may want to hide UI and Cursor when connected to Command.
             canvas.SetActive(!config.HideUIWhenConnected);
             Cursor.visible = !config.HideCursorWhenConnected;
-            // when connected to Command, we need to make sure that all system resourses
-            // Environment needed is ready to start experiment.
-            QualitySettings.anisotropicFiltering = AnisotropicFiltering.ForceEnable;
+            // When connected to Command, we need to make sure Environment present fastest and best quality stimuli.
+            QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
             QualitySettings.vSyncCount = config.VSyncCount;
             QualitySettings.maxQueuedFrames = config.MaxQueuedFrames;
             Time.fixedDeltaTime = config.FixedDeltaTime;
 
-            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.RealTime;
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
             Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Highest;
-            Process.GetCurrentProcess().PriorityBoostEnabled = true;
+            GCSettings.LatencyMode = GCLatencyMode.SustainedLowLatency;
             GC.Collect();
-            GCSettings.LatencyMode = GCLatencyMode.LowLatency;
-            //if (!GC.TryStartNoGCRegion(1000000000))
-            //{
-            //    GCSettings.LatencyMode = GCLatencyMode.SustainedLowLatency;
-            //}
         }
 
         public void OnClientDisconnect()
@@ -208,25 +201,17 @@ namespace Experica.Environment
             clientconnect.isOn = false;
             clientconnect.onValueChanged = callback;
 
-            // when disconnected, we should go back to ui and turn on cursor.
+            // When disconnected, we should turn on UI and Cursor.
             canvas.SetActive(true);
             Cursor.visible = true;
-            // when disconnect, we can relax and release some system resourses for other process
+            // Return normal when disconnected
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
             QualitySettings.vSyncCount = 1;
             QualitySettings.maxQueuedFrames = 2;
-            Time.fixedDeltaTime = 0.02f;
+            Time.fixedDeltaTime = 0.016666f;
 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.Normal;
             Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Normal;
-            //if (GCSettings.LatencyMode == GCLatencyMode.NoGCRegion)
-            //{
-            //    GC.EndNoGCRegion();
-            //}
-            //else
-            //{
-            //    GCSettings.LatencyMode = GCLatencyMode.Interactive;
-            //}
             GCSettings.LatencyMode = GCLatencyMode.Interactive;
             GC.Collect();
         }
