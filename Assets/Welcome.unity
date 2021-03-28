@@ -987,9 +987,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quit:                Ctrl    +    Q
+  m_Text: 'Quit:                Alt    +    Q
 
-    FullScreen:    Ctrl    +    F'
+    FullScreen:    Alt    +    F'
 --- !u!222 &1842042037
 CanvasRenderer:
   m_ObjectHideFlags: 0

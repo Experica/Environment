@@ -1,6 +1,6 @@
-AutoConnect: true
+AutoConnect: false
 AutoConnectTimeOut: 10
-ServerAddress: 10.1.51.72
+ServerAddress: localhost
 HideUIWhenConnected: true
 HideCursorWhenConnected: true
 VSyncCount: 1

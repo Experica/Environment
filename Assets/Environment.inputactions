@@ -37,7 +37,7 @@
                 {
                     "name": "modifier",
                     "id": "fcc5489f-5be2-4591-ba14-c2fa29310398",
-                    "path": "<Keyboard>/ctrl",
+                    "path": "<Keyboard>/alt",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -70,7 +70,7 @@
                 {
                     "name": "modifier",
                     "id": "92b9d1b8-9712-4308-a6bd-8522dd07f747",
-                    "path": "<Keyboard>/ctrl",
+                    "path": "<Keyboard>/alt",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
