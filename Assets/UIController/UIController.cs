@@ -20,6 +20,8 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
 OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.Networking.NetworkSystem;
 using UnityEngine.UI;
 using System.Diagnostics;
@@ -42,6 +44,7 @@ namespace Experica.Environment
         public SyncFrameManager syncmanager;
         public GameObject canvas;
         public EnvironmentConfig config;
+        public Volume postprocessing;
         readonly string configpath = "EnvironmentConfig.yaml";
 
         bool isautoconn, isconnect;
@@ -78,6 +81,17 @@ namespace Experica.Environment
             {
                 //netmanager.client.Send(MsgType.AspectRatio, new FloatMessage() { value = GetAspectRatio() });
                 netmanager.client.Send(MsgType.AspectRatio, new StringMessage(GetAspectRatio().ToString()));
+            }
+        }
+
+        public void SetCLUT(CLUTMessage msg)
+        {
+            if (postprocessing.profile.TryGet(out Tonemapping tonemapping))
+            {
+                var tex = new Texture3D(msg.size, msg.size, msg.size, TextureFormat.RGB24, false);
+                tex.SetPixelData(msg.clut.Decompress(), 0);
+                tex.Apply();
+                tonemapping.lutTexture.value = tex;
             }
         }
 

@@ -437,6 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835844595}
+  - component: {fileID: 835844598}
   - component: {fileID: 835844596}
   - component: {fileID: 835844597}
   m_Layer: 0
@@ -480,6 +481,7 @@ MonoBehaviour:
   netmanager: {fileID: 1801762641}
   syncmanager: {fileID: 1801762643}
   canvas: {fileID: 413606484}
+  postprocessing: {fileID: 835844598}
 --- !u!114 &835844597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +545,23 @@ MonoBehaviour:
   m_DefaultActionMap: Environment
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &835844598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835844594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: bc3017157b016ca4698944e99ee3afb0, type: 2}
 --- !u!1001 &894777709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -870,7 +889,7 @@ MonoBehaviour:
     m_MaxTimerTimeout: 12000
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
-  m_Channels: 0a000000
+  m_Channels: 05000000
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1

@@ -35,6 +35,12 @@ namespace Experica.Environment
             base.OnStartClient(client);
             client.RegisterHandler(MsgType.BeginSyncFrame, new NetworkMessageDelegate(BeginSyncFrameHandler));
             client.RegisterHandler(MsgType.EndSyncFrame, new NetworkMessageDelegate(EndSyncFrameHandler));
+            client.RegisterHandler(MsgType.CLUT, new NetworkMessageDelegate(CLUTHandler));
+        }
+
+        void CLUTHandler(NetworkMessage netMsg)
+        {
+            uicontroller.SetCLUT(netMsg.ReadMessage<CLUTMessage>());
         }
 
         void BeginSyncFrameHandler(NetworkMessage netMsg)
@@ -64,8 +70,8 @@ namespace Experica.Environment
             {
                 Debug.Log("Send AspectRatio Message.");
             }
-            //client.Send(MsgType.AspectRatio, new FloatMessage() { value = uicontroller.GetAspectRatio() });
-            client.Send(MsgType.AspectRatio, new StringMessage(uicontroller.GetAspectRatio().ToString()));
+            client.Send(MsgType.AspectRatio, new FloatMessage() { value = uicontroller.GetAspectRatio() });
+            //client.Send(MsgType.AspectRatio, new StringMessage(uicontroller.GetAspectRatio().ToString()));
 
             uicontroller.OnClientConnect();
         }
