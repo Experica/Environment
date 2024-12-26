@@ -25,7 +25,7 @@ using UnityEngine;
 
 namespace Experica.Environment
 {
-    public class EnvironmentConfig
+    public class EnvironmentConfig : DataClass
     {
         public bool AutoConnect { get; set; } = true;
         public int AutoConnectTimeOut { get; set; } = 10;
@@ -37,5 +37,6 @@ namespace Experica.Environment
         public float FixedDeltaTime { get; set; } = 1000000f;
         public float SyncFrameTimeOut { get; set; } = 2;
         public FullScreenMode FullScreenMode { get; set; } = FullScreenMode.FullScreenWindow;
+        public uint Version { get; set; } = Base.EnvironmentConfigVersion;
     }
 }

@@ -21,7 +21,7 @@ OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.Networking.NetworkSystem;
+using Unity.Netcode;
 using System;
 using Fasterflect;
 using System.Reflection;
@@ -32,14 +32,14 @@ namespace Experica.Environment
     {
         public bool beginsyncframe;
         public bool endingsyncframe;
-        public NetManager netmanager;
-        public UIController uicontroler;
+        public NetworkController netmanager;
+        public AppManager uicontroler;
         public double SyncFrameOnTime;
         MethodInvoker UNetStaticUpdate;
 
         void Start()
         {
-            UNetStaticUpdate = typeof(NetworkIdentity).DelegateForCallMethod("UNetStaticUpdate", BindingFlags.Static | BindingFlags.NonPublic);
+            //UNetStaticUpdate = typeof(NetworkIdentity).DelegateForCallMethod("UNetStaticUpdate", BindingFlags.Static | BindingFlags.NonPublic);
         }
 
         // set this script execution order later than UNET
@@ -51,13 +51,13 @@ namespace Experica.Environment
                 if (endingsyncframe)
                 {
                     endingsyncframe = false;
-                    netmanager.OnFinishSyncFrame();
+                    //netmanager.OnFinishSyncFrame();
                     beginsyncframe = false;
                     break;
                 }
-                if (Time.realtimeSinceStartupAsDouble - SyncFrameOnTime >= uicontroler.config.SyncFrameTimeOut)
+                if (Time.realtimeSinceStartupAsDouble - SyncFrameOnTime >= uicontroler.cfgmgr.config.SyncFrameTimeOut)
                 {
-                    Debug.Log($"SyncFrame Timeout({uicontroler.config.SyncFrameTimeOut}s), Stop Waiting.");
+                    Debug.Log($"SyncFrame Timeout({uicontroler.cfgmgr.config.SyncFrameTimeOut}s), Stop Waiting.");
                     beginsyncframe = false;
                     break;
                 }
