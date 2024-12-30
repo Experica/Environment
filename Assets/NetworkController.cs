@@ -24,23 +24,28 @@ using UnityEngine.SceneManagement;
 using Unity.Netcode;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Netcode.Transports.UTP;
 using System.Threading;
+using Experica.NetEnv;
+using System.Drawing.Drawing2D;
+using System;
 
 namespace Experica.Environment
 {
     public class NetworkController : MonoBehaviour
     {
-        //public Dictionary<int, Dictionary<string, object>> peerinfo = new Dictionary<int, Dictionary<string, object>>();
-        //public GameObject vlabanalysismanagerprefab, vlabcontrolmanagerprefab;
-        //HashSet<int> envconnid = new HashSet<int>();
-        //int nenvsyncframe;
-
         public AppManager appmgr;
 
-        private void Start()
+        /// <summary>
+        /// NetworkManager and NetworkController have same lifetime(as the same GameObject components),
+        /// so we register events only once here when NetworkManager has initialized.
+        /// </summary>
+        void Start()
         {
-            StartClient();
+            if(NetworkManager.Singleton!=null)
+            {
+                NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
+                NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
+            }
         }
 
         public bool StartClient()
@@ -51,17 +56,22 @@ namespace Experica.Environment
             {
                 isstarted = nm.StartClient();
             }
-
-            if (isstarted)
-            {
-                nm.SceneManager.OnLoadEventCompleted += NetworkSceneManager_OnLoadEventCompleted;
-            }
             return isstarted;
         }
 
-        void NetworkSceneManager_OnLoadEventCompleted(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
+        void OnClientDisconnectCallback(ulong obj)
         {
-            //appmgr.OnSceneLoadEventCompleted(sceneName);
+            Debug.Log("onDisconnect");
+            // when caused by self disconnect throught UI, NetworkManager has shutdown in UI OnValueChanged, then disconnect-event lead to this callback, and now set UI will not raise OnValueChanged again,
+            // when triggered by ConnectingFailed/Server/Network disconnect-event, set UI will raise OnValueChanged in which NetworkManager will shutdown, but no extra disconnect-event to trigger this callback again.
+            appmgr.ui.client.value = false;
+            appmgr.UnBoost();
+        }
+
+        void OnClientConnectedCallback(ulong obj)
+        {
+            Debug.Log("onConnect");
+            appmgr.Boost();
         }
 
         public void Shutdown(bool cleanscene=true)
@@ -69,223 +79,63 @@ namespace Experica.Environment
             var nm = NetworkManager.Singleton;
             if (nm!=null && nm.IsListening)
             {
+                Debug.Log("shutdown");
                 nm.Shutdown();
                 if (cleanscene)
                 {
                     // Network SceneManager will not exist when NetworkManager shutdown, so here we use UnityEngine's SceneManager to clean any loaded scene by loading an Empty scene
                     SceneManager.LoadScene(Base.EmptyScene, LoadSceneMode.Single);
-                    //appmgr.OnSceneLoadEventCompleted(Base.EmptyScene);
                 }
             }
         }
 
-        public void LoadScene(string scene, LoadSceneMode mode = LoadSceneMode.Single)
-        {
-            var nm = NetworkManager.Singleton;
-            if (nm!=null && nm.IsServer)
-            {
-                var status = nm.SceneManager.LoadScene(scene, mode);
-                if (status != SceneEventProgressStatus.Started)
-                {
-                    Debug.LogError($"Failed to load {scene} with a {nameof(SceneEventProgressStatus)}: {status}");
-                }
-            }
-        }
-
-        public void UnLoadScene(Scene scene) 
-        {
-            var nm = NetworkManager.Singleton;
-            if (nm != null && nm.IsServer)
-            {
-                var status = nm.SceneManager.UnloadScene(scene);
-                if (status != SceneEventProgressStatus.Started)
-                {
-                    Debug.LogError($"Failed to unload {scene} with a {nameof(SceneEventProgressStatus)}: {status}");
-                }
-            }
-        }
-
-        public bool IsServer => NetworkManager.Singleton?.IsServer ?? false;
-        public bool IsHost => NetworkManager.Singleton?.IsHost ?? false;
-
-        //public bool IsPeerTypeConnected(PeerType peertype, int[] excludeconns)
+        //public override void OnStartClient(NetworkClient client)
         //{
-        //    foreach (var cid in peerinfo.Keys.Except(excludeconns))
-        //    {
-        //        var pi = peerinfo[cid];
-        //        var strkey = MsgType.MsgTypeToString(MsgType.PeerType);
-        //        if (pi != null && pi.ContainsKey(strkey) && (PeerType)pi[strkey] == peertype)
-        //        {
-        //            return true;
-        //        }
-        //    }
-        //    return false;
+        //    base.OnStartClient(client);
+        //    client.RegisterHandler(MsgType.BeginSyncFrame, new NetworkMessageDelegate(BeginSyncFrameHandler));
+        //    client.RegisterHandler(MsgType.EndSyncFrame, new NetworkMessageDelegate(EndSyncFrameHandler));
+        //    client.RegisterHandler(MsgType.CLUT, new NetworkMessageDelegate(CLUTHandler));
         //}
 
-        //public List<NetworkConnection> GetPeerTypeConnection(PeerType peertype)
+        //void CLUTHandler(NetworkMessage netMsg)
         //{
-        //    var peertypeconnection = new List<NetworkConnection>();
-        //    foreach (var c in NetworkServer.connections)
-        //    {
-        //        if (IsConnectionPeerType(c, peertype))
-        //        {
-        //            peertypeconnection.Add(c);
-        //        }
-        //    }
-        //    return peertypeconnection;
+        //    appmgr.SetCLUT(netMsg.ReadMessage<CLUTMessage>());
         //}
 
-        //public bool IsConnectionPeerType(NetworkConnection conn, PeerType peertype)
+        //void BeginSyncFrameHandler(NetworkMessage netMsg)
         //{
-        //    if (conn == null) { return false; }
-        //    var cid = conn.connectionId; var strkey = MsgType.MsgTypeToString(MsgType.PeerType);
-        //    return (peerinfo.ContainsKey(cid) && peerinfo[cid].ContainsKey(strkey) && (PeerType)peerinfo[cid][strkey] == peertype);
-        //}
-
-        ///// <summary>
-        ///// Prepare server to handle all kinds of client messages.
-        ///// </summary>
-        //public override void OnStartServer()
-        //{
-        //    base.OnStartServer();
-        //    NetworkServer.RegisterHandler(MsgType.PeerType, new NetworkMessageDelegate(PeerTypeHandler));
-        //    NetworkServer.RegisterHandler(MsgType.AspectRatio, new NetworkMessageDelegate(AspectRatioHandler));
-        //    NetworkServer.RegisterHandler(MsgType.EndSyncFrame, new NetworkMessageDelegate(EndSyncFrameHandler));
-        //    envconnid.Clear();
-        //}
-
-        ///// <summary>
-        ///// Peertype message is the first message received whenever a new client is connected.
-        ///// </summary>
-        ///// <param name="netMsg">The NetworkMessage Recieved</param>
-        //void PeerTypeHandler(NetworkMessage netMsg)
-        //{
-        //    var pt = (PeerType)netMsg.ReadMessage<IntegerMessage>().value;
-        //    if (LogFilter.logDebug)
-        //    {
-        //        Debug.Log("Receive PeerType Message: " + pt.ToString());
-        //    }
-        //    var connid = netMsg.conn.connectionId; var strkey = MsgType.MsgTypeToString(MsgType.PeerType);
-        //    if (!peerinfo.ContainsKey(connid))
-        //    {
-        //        peerinfo[connid] = new Dictionary<string, object>();
-        //    }
-        //    peerinfo[connid][strkey] = pt;
-
-        //    if (pt == PeerType.Environment)
-        //    {
-        //        envconnid.Add(connid);
-        //        uicontroller.SyncCurrentDisplayCLUT(new List<NetworkConnection> { netMsg.conn });
-        //    }
-
-        //    // if there are VLabAnalysis already connected, then VLabAnalysisManager is already there
-        //    // and server will automatically spwan scene and network objects(including VLabAnalysisManager) to 
-        //    // newly conneted client. if not, then this is the first time a VLabAnalysis client connected,
-        //    // so we need to create a new instance of VLabAnalysisManager and spwan to all clients,
-        //    // this may include VLabEnvironment, but since they doesn't register for the VLabAnalysisManager prefab,
-        //    // they will spawn nothing.
-        //    if ((pt == PeerType.Analysis) && (uicontroller.alsmanager == null))
-        //    {
-        //        SpwanVLAnalysisManager();
-        //    }
-        //}
-
-        //public void SpwanVLAnalysisManager()
-        //{
-        //    GameObject go = Instantiate(vlabanalysismanagerprefab);
-        //    var am = go.GetComponent<AnalysisManager>();
-        //    am.uicontroller = uicontroller;
-        //    uicontroller.alsmanager = am;
-        //    go.name = "VLAnalysisManager";
-        //    go.transform.SetParent(transform, false);
-
-        //    NetworkServer.Spawn(go);
-        //}
-
-        //public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
-        //{
-        //    GameObject go = Instantiate(Resources.Load<GameObject>("VLControlManager"));
-        //    var ctrl = go.GetComponent<ControlManager>();
-        //    ctrl.uicontroller = uicontroller;
-        //    uicontroller.ctrlmanager = ctrl;
-        //    go.name = "VLControlManager";
-        //    go.transform.SetParent(transform, false);
-
-        //    NetworkServer.AddPlayerForConnection(conn, go, playerControllerId);
-        //}
-
-        //void AspectRatioHandler(NetworkMessage netMsg)
-        //{
-        //    //var r = netMsg.ReadMessage<FloatMessage>().value;
-        //    var r = float.Parse(netMsg.ReadMessage<StringMessage>().value);
-        //    if (LogFilter.logDebug)
-        //    {
-        //        Debug.Log("Receive AspectRatio Message: " + r.ToString());
-        //    }
-        //    var connid = netMsg.conn.connectionId; var strkey = MsgType.MsgTypeToString(MsgType.AspectRatio);
-        //    if (!peerinfo.ContainsKey(connid))
-        //    {
-        //        peerinfo[connid] = new Dictionary<string, object>();
-        //    }
-        //    peerinfo[connid][strkey] = r;
-        //    uicontroller.OnAspectRatioMessage(r);
-        //}
-
-        ///// <summary>
-        ///// send BeginSyncFrame Msg before lateupdate where syncvars being batched by UNET
-        ///// </summary>
-        //public void BeginSyncFrame()
-        //{
-        //    if (envconnid.Count > 0)
-        //    {
-        //        foreach (var id in envconnid)
-        //        {
-        //            NetworkServer.SendToClient(id, MsgType.BeginSyncFrame, new EmptyMessage());
-        //        }
-        //        // mark task in SyncFrameManager lateupdate(of which the script execution order later than UNET) to end SyncFrame Msg structure
-        //        uicontroller.syncmanager.endingsyncframe = true;
-        //    }
-        //}
-
-        //public void EndSyncFrame()
-        //{
-        //    if (envconnid.Count > 0)
-        //    {
-        //        nenvsyncframe = envconnid.Count;
-        //        foreach (var id in envconnid)
-        //        {
-        //            NetworkServer.SendToClient(id, MsgType.EndSyncFrame, new EmptyMessage());
-        //        }
-        //        uicontroller.exmanager.el.issyncingframe = true;
-        //        uicontroller.exmanager.el.SyncFrameOnTime = Time.realtimeSinceStartupAsDouble;
-        //    }
+        //    appmgr.syncmanager.beginsyncframe = true;
+        //    appmgr.syncmanager.SyncFrameOnTime = Time.realtimeSinceStartupAsDouble;
         //}
 
         //void EndSyncFrameHandler(NetworkMessage netMsg)
         //{
-        //    nenvsyncframe--;
-        //    if (nenvsyncframe == 0)
+        //    appmgr.syncmanager.endingsyncframe = true;
+        //}
+
+        //public void OnFinishSyncFrame()
+        //{
+        //    client.Send(MsgType.EndSyncFrame, new EmptyMessage());
+        //}
+
+        //public override void OnClientConnect(NetworkConnection conn)
+        //{
+        //    if (LogFilter.logDebug)
         //    {
-        //        uicontroller.exmanager.el.issyncingframe = false;
+        //        Debug.Log("Send PeerType Message.");
         //    }
+        //    client.Send(MsgType.PeerType, new IntegerMessage((int)PeerType.Environment));
+        //    if (LogFilter.logDebug)
+        //    {
+        //        Debug.Log("Send AspectRatio Message.");
+        //    }
+        //    //client.Send(MsgType.AspectRatio, new FloatMessage() { value = uicontroller.GetAspectRatio() });
+        //    client.Send(MsgType.AspectRatio, new StringMessage(appmgr.GetAspectRatio().ToString()));
+
+        //    appmgr.OnClientConnect();
         //}
 
-        ///// <summary>
-        ///// Called on the server when a client disconnects. Removes the connections.
-        ///// </summary>
-        ///// <param name="conn">The connection to remove from the server</param>
-        //public override void OnServerDisconnect(NetworkConnection conn)
-        //{
-        //    base.OnServerDisconnect(conn);
-        //    peerinfo.Remove(conn.connectionId);
-        //    envconnid.Remove(conn.connectionId);
-        //}
+ 
 
-        //public override void OnServerReady(NetworkConnection conn)
-        //{
-        //    base.OnServerReady(conn);
-        //    // when a client loaded scene and been spawned, refresh all syncvars in the scene
-        //    uicontroller.ForcePushEnv();
-        //}
     }
     }

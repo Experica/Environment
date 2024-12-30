@@ -39,6 +39,8 @@ EditorBuildSettings:
     path: Assets/NetEnv/Scene/Plaid.unity
     guid: d3a898f140f95ad46bc1b8d1d6110fb2
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 9a20a2ed95007024b915cb48875c518c,
+      type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 8fbb3c3620faf7548a3f2b4b7d4e9040,
       type: 2}
   m_UseUCBPForAssetBundles: 0

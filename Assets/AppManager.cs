@@ -32,35 +32,49 @@ using System;
 using System.Linq;
 using System.IO;
 using UnityEngine.InputSystem;
+using System.Collections;
+
 
 namespace Experica.Environment
 {
     public class AppManager : MonoBehaviour
     {
         public ConfigManager<EnvironmentConfig> cfgmgr = ConfigManager<EnvironmentConfig>.Load(Base.EnvironmentConfigManagerPath);
+        public UI ui;
 
-        public InputField serveraddress;
-        public Toggle clientconnect, autoconn;
-        public Text autoconntext, version;
         public NetworkController networkcontroller;
         public SyncFrameManager syncmanager;
-        public GameObject canvas;
         public Volume postprocessing;
 
-        bool isautoconn, isconnect;
-        int autoconncountdown;
-        float lastautoconntime;
-        int lastwindowwidth = 800, lastwindowheight = 600;
 
-        /// <summary>
-        /// Because the unorderly manner unity Awake monobehaviors, we need to set ApplicationManager
-        /// as the first to Awake in unity project setting(Script Order), so that application wide 
-        /// configuration will be ready for all other objects to use.
-        /// </summary>
         void Awake()
         {
             Application.wantsToQuit += Application_wantsToQuit;
-            Application.runInBackground = true;
+        }
+
+        void Start()
+        {
+            TryAutoConnect();
+        }
+
+        Coroutine autoconnect;
+        public void TryAutoConnect()
+        {
+            if (cfgmgr.config.AutoConnect) { autoconnect = StartCoroutine(AutoConnect(cfgmgr.config.AutoConnectTimeOut)); }
+        }
+
+        IEnumerator AutoConnect(float waittime_s)
+        {
+            var waituntiltime = Time.realtimeSinceStartup + waittime_s;
+            while (Time.realtimeSinceStartup < waituntiltime)
+            {
+                ui.client.label = $"Connect in {Mathf.CeilToInt(waituntiltime - Time.realtimeSinceStartup)}s";
+                yield return null;
+            }
+            if (NetworkManager.Singleton != null && !NetworkManager.Singleton.IsListening)
+            {
+                ui.client.value = true;
+            }
         }
 
         bool Application_wantsToQuit()
@@ -69,6 +83,8 @@ namespace Experica.Environment
             return true;
         }
 
+
+
         public float GetAspectRatio()
         {
             return Screen.width.Convert<float>() / Screen.height.Convert<float>();
@@ -76,11 +92,11 @@ namespace Experica.Environment
 
         public void OnWindowChange()
         {
-            if (isconnect)
-            {
-                //netmanager.client.Send(MsgType.AspectRatio, new FloatMessage() { value = GetAspectRatio() });
-                //networkcontroller.client.Send(MsgType.AspectRatio, new StringMessage(GetAspectRatio().ToString()));
-            }
+            //if (isconnect)
+            //{
+            //    netmanager.client.Send(MsgType.AspectRatio, new FloatMessage() { value = GetAspectRatio() });
+            //    networkcontroller.client.Send(MsgType.AspectRatio, new StringMessage(GetAspectRatio().ToString()));
+            //}
         }
 
         //public void SetCLUT(CLUTMessage msg)
@@ -94,130 +110,88 @@ namespace Experica.Environment
         //    }
         //}
 
-        public void OnToggleClientConnect(bool isconn)
+
+        #region Environment Action Callback
+        public void OnToggleClientAction(InputAction.CallbackContext context)
         {
-            //if (isconn)
-            //{
-            //    networkcontroller.networkAddress = serveraddress.text;
-            //    networkcontroller.StartClient();
-            //}
-            //else
-            //{
-            //    networkcontroller.StopClient();
-            //    OnClientDisconnect();
-            //}
+            if (context.performed) { ui.client.value = !ui.client.value; }
         }
 
-        public void OnServerAddressEndEdit(string v)
+        public void OnToggleFullViewportAction(InputAction.CallbackContext context)
         {
-            //config.ServerAddress = v;
+            if (context.performed) { FullViewport = !FullViewport; }
         }
 
-        public void OnToggleAutoConnect(bool ison)
+        public bool FullViewport
         {
-            //config.AutoConnect = ison;
-            ResetAutoConnect();
-        }
-
-        public void ResetAutoConnect()
-        {
-            //autoconncountdown = config.AutoConnectTimeOut;
-            //isautoconn = config.AutoConnect;
-            if (!isautoconn)
-            {
-                autoconntext.text = "Auto Connect OFF";
-            }
-            autoconn.isOn = isautoconn;
-        }
-
-        void Start()
-        {
-            //version.text = $"Version {Application.version}\nUnity {Application.unityVersion}";
-            //serveraddress.text = config.ServerAddress;
-            //ResetAutoConnect();
-        }
-
-        void Update()
-        {
-            //if (!isconnect)
-            //{
-            //    if (isautoconn)
-            //    {
-            //        if (Time.unscaledTime - lastautoconntime >= 1)
-            //        {
-            //            autoconncountdown--;
-            //            if (autoconncountdown > 0)
-            //            {
-            //                lastautoconntime = Time.unscaledTime;
-            //                autoconntext.text = "Auto Connect " + autoconncountdown + "s";
-            //            }
-            //            else
-            //            {
-            //                clientconnect.isOn = true;
-            //                clientconnect.onValueChanged.Invoke(true);
-            //                autoconntext.text = "Connecting ...";
-            //                isautoconn = false;
-            //            }
-            //        }
-            //    }
-            //}
-        }
-
-        public void OnQuitAction(InputAction.CallbackContext context)
-        {
-            if (!isconnect && context.performed) { Application.Quit(); }
+            get => !ui.uidoc.rootVisualElement.visible;
+            set => ui.uidoc.rootVisualElement.visible = !value;
         }
 
         public void OnToggleFullScreenAction(InputAction.CallbackContext context)
         {
-            if (!isconnect && context.performed)
+            if (context.performed) { FullScreen = !FullScreen; }
+        }
+
+        int lastwindowwidth = 800, lastwindowheight = 600;
+        public bool FullScreen
+        {
+            get { return Screen.fullScreen; }
+            set
             {
-                if (Screen.fullScreen)
+                if (Screen.fullScreen == value) { return; }
+                if (value)
                 {
-                    Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
+                    lastwindowwidth = Math.Max(400, Screen.width);
+                    lastwindowheight = Math.Max(300, Screen.height);
+                    Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, cfgmgr.config.FullScreenMode);
                 }
                 else
                 {
-                    lastwindowwidth = Math.Max(800, Screen.width);
-                    lastwindowheight = Math.Max(600, Screen.height);
-                    Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, cfgmgr.config.FullScreenMode);
+                    Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
                 }
             }
         }
 
-        public void OnClientConnect()
+        public void OnToggleCursor(InputAction.CallbackContext context)
         {
-            //isconnect = true;
-            //autoconntext.text = "Connected";
-            //// Environment is to present final stimuli, so we may want to hide UI and Cursor when connected to Command.
-            //canvas.SetActive(!config.HideUIWhenConnected);
-            //Cursor.visible = !config.HideCursorWhenConnected;
-            //// When connected to Command, we need to make sure Environment present fastest and best quality stimuli.
-            //QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
-            //QualitySettings.vSyncCount = config.VSyncCount;
-            //QualitySettings.maxQueuedFrames = config.MaxQueuedFrames;
-            //Time.fixedDeltaTime = config.FixedDeltaTime;
-
-            //Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
-            //Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Highest;
-            //GCSettings.LatencyMode = GCLatencyMode.SustainedLowLatency;
-            //GC.Collect();
+            if (context.performed) { Cursor.visible = !Cursor.visible; }
         }
 
-        public void OnClientDisconnect()
+        public void OnQuitAction(InputAction.CallbackContext context)
         {
-            isconnect = false;
-            ResetAutoConnect();
+            if (context.performed) { Application.Quit(); }
+        }
+        #endregion
 
-            var callback = clientconnect.onValueChanged;
-            clientconnect.onValueChanged = new Toggle.ToggleEvent();
-            clientconnect.isOn = false;
-            clientconnect.onValueChanged = callback;
 
-            // When disconnected, we should turn on UI and Cursor.
-            canvas.SetActive(true);
+        bool isboosted;
+        public void Boost()
+        {
+            if (isboosted) { return; }
+            // We may want to hide UI and Cursor when connected to Server.
+            FullViewport = cfgmgr.config.HideUIWhenConnected;
+            Cursor.visible = !cfgmgr.config.HideCursorWhenConnected;
+            // We need to present fastest and best quality virtual reality environment when connected to Server.
+            QualitySettings.anisotropicFiltering = AnisotropicFiltering.Enable;
+            QualitySettings.vSyncCount = cfgmgr.config.VSyncCount;
+            QualitySettings.maxQueuedFrames = cfgmgr.config.MaxQueuedFrames;
+            Time.fixedDeltaTime = cfgmgr.config.FixedDeltaTime;
+
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+            Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Highest;
+            GCSettings.LatencyMode = GCLatencyMode.SustainedLowLatency;
+            GC.Collect();
+            isboosted = true;
+        }
+
+        public void UnBoost()
+        {
+            if (!isboosted) { return; }
+            // We should turn on UI and Cursor when disconnected to Server.
+            FullViewport = false;
             Cursor.visible = true;
-            // Return normal when disconnected
+            // Return to normal quality state when disconnected to Server.
             QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
             QualitySettings.vSyncCount = 1;
             QualitySettings.maxQueuedFrames = 2;
@@ -227,16 +201,24 @@ namespace Experica.Environment
             Thread.CurrentThread.Priority = System.Threading.ThreadPriority.Normal;
             GCSettings.LatencyMode = GCLatencyMode.Interactive;
             GC.Collect();
+            isboosted = false;
         }
 
-        void OnApplicationQuit()
+        public void OnClientChanged(bool newValue)
         {
-            //if (networkcontroller.IsClientConnected())
-            //{
-            //    networkcontroller.StopClient();
-            //}
-            //configpath.WriteYamlFile(config);
+            if (newValue)
+            {
+                // stop auto connect before connect, coroutine may still in waiting, or this call is triggered at the end of coroutine(just stop the already stopped)
+                StopCoroutine(autoconnect);
+                networkcontroller.StartClient();
+            }
+            else
+            {
+                networkcontroller.Shutdown();
+                // try auto connect when caused directly by UI disconnect from connecting/connected state, or indirectly by server/network disconnect
+                TryAutoConnect();
+            }
+            ui.client.label = newValue ? "Shutdown" : "Connect";
         }
-
     }
 }
