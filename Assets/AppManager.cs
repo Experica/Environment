@@ -33,6 +33,7 @@ using System.Linq;
 using System.IO;
 using UnityEngine.InputSystem;
 using System.Collections;
+using Experica.NetEnv;
 
 
 namespace Experica.Environment
@@ -83,20 +84,18 @@ namespace Experica.Environment
             return true;
         }
 
-
-
-        public float GetAspectRatio()
+        void OnScreenSizeChanged()
         {
-            return Screen.width.Convert<float>() / Screen.height.Convert<float>();
-        }
-
-        public void OnWindowChange()
-        {
-            //if (isconnect)
-            //{
-            //    netmanager.client.Send(MsgType.AspectRatio, new FloatMessage() { value = GetAspectRatio() });
-            //    networkcontroller.client.Send(MsgType.AspectRatio, new StringMessage(GetAspectRatio().ToString()));
-            //}
+            var nm = NetworkManager.Singleton;
+            if (nm != null && nm.IsListening)
+            {
+                var mcgo = GameObject.FindWithTag("MainCamera");
+                if (mcgo != null)
+                {
+                    var mc = mcgo.GetComponent<INetEnvCamera>();
+                    mc.ReportRpc("ScreenAspect", Base.ScreenAspect);
+                }
+            }
         }
 
         //public void SetCLUT(CLUTMessage msg)
@@ -150,6 +149,7 @@ namespace Experica.Environment
                 {
                     Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
                 }
+                OnScreenSizeChanged();
             }
         }
 

@@ -25,12 +25,10 @@ namespace Experica.Environment
 {
     public class UICanvas : UIBehaviour
     {
-        public AppManager uicontroller;
-
         protected override void OnRectTransformDimensionsChange()
         {
             base.OnRectTransformDimensionsChange();
-            uicontroller.OnWindowChange();
+            //OnScreenSizeChanged();
         }
     }
 }

@@ -50,18 +50,17 @@ namespace Experica.Environment
 
         public bool StartClient()
         {
-            var isstarted = false;
+            var isstart = false;
             var nm = NetworkManager.Singleton;
-            if (nm != null)
+            if (nm != null && !nm.IsListening)
             {
-                isstarted = nm.StartClient();
+                isstart = nm.StartClient();
             }
-            return isstarted;
+            return isstart;
         }
 
         void OnClientDisconnectCallback(ulong obj)
         {
-            Debug.Log("onDisconnect");
             // when caused by self disconnect throught UI, NetworkManager has shutdown in UI OnValueChanged, then disconnect-event lead to this callback, and now set UI will not raise OnValueChanged again,
             // when triggered by ConnectingFailed/Server/Network disconnect-event, set UI will raise OnValueChanged in which NetworkManager will shutdown, but no extra disconnect-event to trigger this callback again.
             appmgr.ui.client.value = false;
@@ -70,7 +69,6 @@ namespace Experica.Environment
 
         void OnClientConnectedCallback(ulong obj)
         {
-            Debug.Log("onConnect");
             appmgr.Boost();
         }
 
@@ -79,7 +77,6 @@ namespace Experica.Environment
             var nm = NetworkManager.Singleton;
             if (nm!=null && nm.IsListening)
             {
-                Debug.Log("shutdown");
                 nm.Shutdown();
                 if (cleanscene)
                 {
