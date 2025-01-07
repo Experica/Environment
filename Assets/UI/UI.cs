@@ -49,6 +49,7 @@ namespace Experica.Environment
         void OnEnable()
         {
             root = uidoc.rootVisualElement;
+            root.RegisterCallback<GeometryChangedEvent>(e => appmgr.OnScreenSizeChanged());
             mainmenu = root.Q("MainMenu");
             maincontent = root.Q("MainContent");
             // Main Menu
@@ -67,10 +68,10 @@ namespace Experica.Environment
             w.Q<Button>("Close").RegisterCallback<ClickEvent>(e => parent.Remove(w));
 
             w.style.position = Position.Absolute;
-            w.style.top = Length.Percent(33);
-            w.style.left = Length.Percent(33);
-            w.style.width = Length.Percent(33);
-            w.style.height = Length.Percent(33);
+            w.style.top = Length.Percent(25);
+            w.style.left = Length.Percent(25);
+            w.style.width = Length.Percent(50);
+            w.style.height = Length.Percent(50);
             parent.Add(w);
         }
 

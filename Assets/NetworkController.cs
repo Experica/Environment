@@ -59,7 +59,7 @@ namespace Experica.Environment
             return isstart;
         }
 
-        void OnClientDisconnectCallback(ulong obj)
+        void OnClientDisconnectCallback(ulong clientid)
         {
             // when caused by self disconnect throught UI, NetworkManager has shutdown in UI OnValueChanged, then disconnect-event lead to this callback, and now set UI will not raise OnValueChanged again,
             // when triggered by ConnectingFailed/Server/Network disconnect-event, set UI will raise OnValueChanged in which NetworkManager will shutdown, but no extra disconnect-event to trigger this callback again.
@@ -67,8 +67,9 @@ namespace Experica.Environment
             appmgr.UnBoost();
         }
 
-        void OnClientConnectedCallback(ulong obj)
+        void OnClientConnectedCallback(ulong clientid)
         {
+            appmgr.ui.client.label += $" {clientid}";
             appmgr.Boost();
         }
 
@@ -113,23 +114,6 @@ namespace Experica.Environment
         //public void OnFinishSyncFrame()
         //{
         //    client.Send(MsgType.EndSyncFrame, new EmptyMessage());
-        //}
-
-        //public override void OnClientConnect(NetworkConnection conn)
-        //{
-        //    if (LogFilter.logDebug)
-        //    {
-        //        Debug.Log("Send PeerType Message.");
-        //    }
-        //    client.Send(MsgType.PeerType, new IntegerMessage((int)PeerType.Environment));
-        //    if (LogFilter.logDebug)
-        //    {
-        //        Debug.Log("Send AspectRatio Message.");
-        //    }
-        //    //client.Send(MsgType.AspectRatio, new FloatMessage() { value = uicontroller.GetAspectRatio() });
-        //    client.Send(MsgType.AspectRatio, new StringMessage(appmgr.GetAspectRatio().ToString()));
-
-        //    appmgr.OnClientConnect();
         //}
 
  

@@ -84,7 +84,7 @@ namespace Experica.Environment
             return true;
         }
 
-        void OnScreenSizeChanged()
+        public void OnScreenSizeChanged()
         {
             var nm = NetworkManager.Singleton;
             if (nm != null && nm.IsListening)
@@ -149,7 +149,6 @@ namespace Experica.Environment
                 {
                     Screen.SetResolution(lastwindowwidth, lastwindowheight, false);
                 }
-                OnScreenSizeChanged();
             }
         }
 
