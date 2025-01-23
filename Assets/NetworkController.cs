@@ -24,9 +24,7 @@ using UnityEngine.SceneManagement;
 using Unity.Netcode;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using Experica.NetEnv;
-using System.Drawing.Drawing2D;
 using System;
 
 namespace Experica.Environment
@@ -41,7 +39,7 @@ namespace Experica.Environment
         /// </summary>
         void Start()
         {
-            if(NetworkManager.Singleton!=null)
+            if (NetworkManager.Singleton != null)
             {
                 NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
                 NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
@@ -73,10 +71,10 @@ namespace Experica.Environment
             appmgr.Boost();
         }
 
-        public void Shutdown(bool cleanscene=true)
+        public void Shutdown(bool cleanscene = true)
         {
             var nm = NetworkManager.Singleton;
-            if (nm!=null && nm.IsListening)
+            if (nm != null && nm.IsListening)
             {
                 nm.Shutdown();
                 if (cleanscene)
@@ -87,36 +85,6 @@ namespace Experica.Environment
             }
         }
 
-        //public override void OnStartClient(NetworkClient client)
-        //{
-        //    base.OnStartClient(client);
-        //    client.RegisterHandler(MsgType.BeginSyncFrame, new NetworkMessageDelegate(BeginSyncFrameHandler));
-        //    client.RegisterHandler(MsgType.EndSyncFrame, new NetworkMessageDelegate(EndSyncFrameHandler));
-        //    client.RegisterHandler(MsgType.CLUT, new NetworkMessageDelegate(CLUTHandler));
-        //}
-
-        //void CLUTHandler(NetworkMessage netMsg)
-        //{
-        //    appmgr.SetCLUT(netMsg.ReadMessage<CLUTMessage>());
-        //}
-
-        //void BeginSyncFrameHandler(NetworkMessage netMsg)
-        //{
-        //    appmgr.syncmanager.beginsyncframe = true;
-        //    appmgr.syncmanager.SyncFrameOnTime = Time.realtimeSinceStartupAsDouble;
-        //}
-
-        //void EndSyncFrameHandler(NetworkMessage netMsg)
-        //{
-        //    appmgr.syncmanager.endingsyncframe = true;
-        //}
-
-        //public void OnFinishSyncFrame()
-        //{
-        //    client.Send(MsgType.EndSyncFrame, new EmptyMessage());
-        //}
-
- 
 
     }
-    }
+}

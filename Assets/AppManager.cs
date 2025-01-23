@@ -44,7 +44,6 @@ namespace Experica.Environment
         public UI ui;
 
         public NetworkController networkcontroller;
-        public SyncFrameManager syncmanager;
         public Volume postprocessing;
 
 
