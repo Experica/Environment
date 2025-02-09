@@ -24,12 +24,10 @@ using System.Collections.Generic;
 using Fasterflect;
 using System;
 using Unity.Netcode;
-using System.Reflection;
 using UnityEngine.Rendering.HighDefinition;
 using Unity.Properties;
 using UnityEngine.UIElements;
 using System.Runtime.CompilerServices;
-using System.Reflection.Emit;
 using System.Linq;
 
 namespace Experica.NetEnv
@@ -196,7 +194,7 @@ namespace Experica.NetEnv
         public void ReportRpc(string name, float value);
     }
 
-    public interface INetEnvCamera:INetEnvPlayer
+    public interface INetEnvCamera : INetEnvPlayer
     {
         public GameObject gameObject { get; }
         public float Height { get; }
@@ -207,6 +205,13 @@ namespace Experica.NetEnv
         public Action<INetEnvCamera> OnCameraChange { get; set; }
         public Camera Camera { get; }
         public HDAdditionalCameraData CameraHD { get; }
+    }
+
+    public enum NetVisibility
+    {
+        None,
+        Single,
+        All
     }
 
     public static class NetEnvBase
@@ -238,14 +243,6 @@ namespace Experica.NetEnv
                 return count == nm.ConnectedClientsIds.Count;
             }
             return false;
-        }
-
-        public static bool IsNetworkHideFrom(this NetworkObject no, ulong clientid)
-        {
-            bool ishide = true;
-            var obs = no.GetObservers();
-            while (obs.MoveNext()) { if (obs.Current == clientid) { ishide = false; break; } }
-            return ishide;
         }
 
         public static void NetworkShowHideOnly(this NetworkObject no, ulong clientid, bool isshow)
