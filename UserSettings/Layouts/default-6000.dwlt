@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
-    width: 2560
-    height: 1357
+    x: 8
+    y: 597
+    width: 2544
+    height: 795
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2560
-    height: 1357
+    width: 2544
+    height: 795
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2560
+    width: 2544
     height: 36
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1337
-    width: 2560
+    y: 775
+    width: 2544
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 36
-    width: 2560
-    height: 1301
+    width: 2544
+    height: 739
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 79
+  controlID: 39
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -140,12 +140,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1743
-    height: 1301
+    width: 1732
+    height: 739
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 40
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -166,12 +166,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1743
-    height: 1034
+    width: 1732
+    height: 587
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17
+  controlID: 41
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -190,8 +190,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 335
-    height: 1034
+    width: 333
+    height: 587
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 18}
@@ -209,18 +209,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: BuildProfileWindow
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 335
+    x: 333
     y: 0
-    width: 1408
-    height: 1034
-  m_MinSize: {x: 727, y: 426}
+    width: 1399
+    height: 587
+  m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
@@ -232,8 +232,8 @@ MonoBehaviour:
   - {fileID: 16}
   - {fileID: 14}
   - {fileID: 13}
-  m_Selected: 6
-  m_LastSelected: 3
+  m_Selected: 2
+  m_LastSelected: 6
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,9 +250,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1034
-    width: 1743
-    height: 267
+    y: 587
+    width: 1732
+    height: 152
   m_MinSize: {x: 101, y: 126}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 24}
@@ -276,10 +276,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1743
+    x: 1732
     y: 0
-    width: 817
-    height: 1301
+    width: 812
+    height: 739
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 25}
@@ -308,8 +308,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Build Profiles\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 335
-    y: 79
+    x: 480
+    y: 269
     width: 1406
     height: 1008
   m_SerializedDataModeController:
@@ -415,9 +415,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -434,9 +435,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 16.3.0
@@ -557,9 +559,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -576,9 +579,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 2.1.1
@@ -669,9 +673,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -688,9 +693,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 11.1.0
@@ -955,9 +961,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -974,9 +981,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 14.2.0
@@ -1243,9 +1251,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -1262,9 +1271,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 3.1.0
@@ -1345,9 +1355,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -1364,9 +1375,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 1.0.0
@@ -1433,9 +1445,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -1452,9 +1465,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 1.6.23
@@ -1561,9 +1575,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -1580,9 +1595,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 2.1.4
@@ -1667,9 +1683,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -1686,9 +1703,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 9.0.3
@@ -1774,9 +1792,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -1793,9 +1812,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 6.0.0
@@ -1876,9 +1896,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -1895,9 +1916,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 1.0.916
@@ -2107,9 +2129,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -2126,9 +2149,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 2.2.9
@@ -2240,9 +2264,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -2259,9 +2284,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 2.5.1
@@ -2415,9 +2441,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -2434,9 +2461,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 7.0.0
@@ -2532,9 +2560,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -2551,9 +2580,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 2.0.0
@@ -2629,9 +2659,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -2648,9 +2679,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 3.0.0
@@ -2724,9 +2756,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -2743,9 +2776,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 5.0.0
@@ -2874,9 +2908,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -2893,9 +2928,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 3.1.1
@@ -3051,9 +3087,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -3070,9 +3107,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 3.1.1
@@ -3169,9 +3207,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -3188,9 +3227,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 3.1.1
@@ -3301,9 +3341,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -3320,9 +3361,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 9.0.0
@@ -3396,9 +3438,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -3415,9 +3458,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 17.12.6
@@ -3499,9 +3543,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -3518,9 +3563,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 9.0.0
@@ -3612,9 +3658,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -3631,9 +3678,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 6.1.0
@@ -3717,9 +3765,10 @@ MonoBehaviour:
         <Name>k__BackingField: 
         <SavedPath>k__BackingField: 
         <SavedProtocolVersion>k__BackingField: 
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 0
       versions: []
     packageV3:
@@ -3736,9 +3785,10 @@ MonoBehaviour:
         <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
         <SavedProtocolVersion>k__BackingField: 
         <UpdateSearchBatchSize>k__BackingField: 20
-        <UserName>k__BackingField: 
+        <SavedUserName>k__BackingField: 
         <SavedPassword>k__BackingField: 
         <CredentialsStoredInExternalFile>k__BackingField: 0
+        <EnableCredentialProvider>k__BackingField: 0
         <IsEnabled>k__BackingField: 1
       <Versions>k__BackingField:
       - <FullVersion>k__BackingField: 16.3.0
@@ -4731,7 +4781,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 88b60000
     m_LastClickedID: 46728
-    m_ExpandedIDs: 0000000080b8000082b80000
+    m_ExpandedIDs: 0000000050bd000052bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4760,7 +4810,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000080b8000082b80000
+    m_ExpandedIDs: 0000000050bd000052bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4840,10 +4890,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 79
-    width: 334
-    height: 1008
+    x: 8
+    y: 633
+    width: 332
+    height: 561
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4858,9 +4908,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 0efbffff
+      m_SelectedIDs: 22bb0000
+      m_LastClickedID: 47906
+      m_ExpandedIDs: 08fbffff6ebb0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -5561,10 +5611,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Package Manager\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 251
+    x: 335
     y: 79
-    width: 1054
-    height: 722
+    width: 1406
+    height: 1008
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -5598,10 +5648,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1343
-    y: 87
-    width: 759
-    height: 995
+    x: 341
+    y: 633
+    width: 1397
+    height: 561
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -5619,7 +5669,7 @@ MonoBehaviour:
   m_ShowGizmos: 1
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 759, y: 974}
+  m_TargetSize: {x: 1397, y: 540}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -5634,10 +5684,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -379.5
-    m_HBaseRangeMax: 379.5
-    m_VBaseRangeMin: -487
-    m_VBaseRangeMax: 487
+    m_HBaseRangeMin: -698.5
+    m_HBaseRangeMax: 698.5
+    m_VBaseRangeMin: -270
+    m_VBaseRangeMax: 270
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -5646,7 +5696,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -5655,23 +5705,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 759
-      height: 974
+      width: 1397
+      height: 540
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 379.5, y: 487}
+    m_Translation: {x: 698.5, y: 270}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -379.5
-      y: -487
-      width: 759
-      height: 974
+      x: -698.5
+      y: -270
+      width: 1397
+      height: 540
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 759, y: 995}
+  m_LastWindowPixelSize: {x: 1397, y: 561}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -5718,7 +5768,7 @@ MonoBehaviour:
   m_PosLeft: {x: 0, y: 0}
   m_PosRight: {x: 0, y: 0}
   m_Scope: 0
-  m_SplitterFlex: 0.101131074
+  m_SplitterPos: 0
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
@@ -5783,13 +5833,13 @@ MonoBehaviour:
   m_PosLeft: {x: 0, y: 0}
   m_PosRight: {x: 0, y: 0}
   m_Scope: 1
-  m_SplitterFlex: 0.101131074
+  m_SplitterPos: 0
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 53336be2
     m_LastClickedID: -496290989
-    m_ExpandedIDs: 18b30496d7dddea253336be2000000007f0eae07e594f01a
+    m_ExpandedIDs: 18b30496d7dddea253336be2000000007f0eae07e594f01ac53aba5a
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5830,10 +5880,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Console\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 1113
-    width: 1742
-    height: 241
+    x: 8
+    y: 1220
+    width: 1731
+    height: 126
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -5867,10 +5917,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1743
-    y: 79
-    width: 816
-    height: 1275
+    x: 1740
+    y: 633
+    width: 811
+    height: 713
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
