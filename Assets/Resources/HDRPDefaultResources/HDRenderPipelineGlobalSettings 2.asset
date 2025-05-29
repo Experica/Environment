@@ -194,6 +194,7 @@ MonoBehaviour:
       - rid: 2583654528463405245
       - rid: 6900619787937251328
       - rid: 6900619787937251329
+      - rid: 3764029166678704128
     m_RuntimeSettings:
       m_List:
       - rid: 1662534710546661447
@@ -213,6 +214,7 @@ MonoBehaviour:
       - rid: 1662534710546661470
       - rid: 1662534710546661473
       - rid: 6900619787937251328
+      - rid: 6900619787937251329
   renderingLayerNames:
   - Light Layer default
   - Light Layer 1
@@ -1173,6 +1175,15 @@ MonoBehaviour:
         m_setupCS: {fileID: 7200000, guid: 33be2e9a5506b2843bdb2bdff9cad5e1, type: 3}
         m_preTaaCS: {fileID: 7200000, guid: a679dba8ec4d9ce45884a270b0e22dda, type: 3}
         m_taaCS: {fileID: 7200000, guid: 3923900e2b41b5e47bc25bfdcbcdc9e6, type: 3}
+    - rid: 3764029166678704128
+      type: {class: RenderingDebuggerRuntimeResources, ns: UnityEngine.Rendering,
+        asm: Unity.RenderPipelines.Core.Runtime}
+      data:
+        m_version: 0
+        m_DebugUIHandlerCanvasPrefab: {fileID: 1153602445894428, guid: cf6cbdd672089a84796e55a21fed1cbe,
+          type: 3}
+        m_DebugUIPersistentCanvasPrefab: {fileID: 1822588063230394, guid: f6b1a0fe75d5009449cf55ae76220e2b,
+          type: 3}
     - rid: 6900619787937251328
       type: {class: VrsRenderPipelineRuntimeResources, ns: UnityEngine.Rendering,
         asm: Unity.RenderPipelines.Core.Runtime}
