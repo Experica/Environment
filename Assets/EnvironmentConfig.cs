@@ -29,7 +29,8 @@ namespace Experica.Environment
     {
         public bool AutoConnect { get; set; } = true;
         public int AutoConnectTimeOut { get; set; } = 10;
-        public string ServerAddress { get; set; } = "LocalHost";
+        public string ServerAddress { get; set; } = "127.0.0.1";
+        public ushort ServerPort { get; set; } = 8800;
         public bool HideUIWhenConnected { get; set; } = true;
         public bool HideCursorWhenConnected { get; set; } = true;
         public int VSyncCount { get; set; } = 1;

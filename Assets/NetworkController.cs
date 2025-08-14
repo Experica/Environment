@@ -24,8 +24,8 @@ using UnityEngine.SceneManagement;
 using Unity.Netcode;
 using System.Collections.Generic;
 using System.Linq;
-using Experica.NetEnv;
 using System;
+using Unity.Netcode.Transports.UTP;
 
 namespace Experica.Environment
 {
@@ -52,7 +52,15 @@ namespace Experica.Environment
             var nm = NetworkManager.Singleton;
             if (nm != null && !nm.IsListening)
             {
+                var utp = nm.GetComponent<UnityTransport>();
+                var address = appmgr.cfgmgr.config.ServerAddress;
+                var port = appmgr.cfgmgr.config.ServerPort;
+                utp.SetConnectionData(address, port);
                 isstart = nm.StartClient();
+                if (!isstart)
+                {
+                    Debug.LogError($"Failed Connect To: {address}:{port}");
+                }
             }
             return isstart;
         }

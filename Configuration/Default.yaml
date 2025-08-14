@@ -1,6 +1,7 @@
 AutoConnect: true
 AutoConnectTimeOut: 10
-ServerAddress: localhost
+ServerAddress: 127.0.0.1
+ServerPort: 8800
 HideUIWhenConnected: true
 HideCursorWhenConnected: true
 VSyncCount: 1

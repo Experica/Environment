@@ -51,4 +51,6 @@ EditorBuildSettings:
       type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7acda033ec556854c8a395f53cb78153,
       type: 3}
+    com.unity.renderstreaming.settings: {fileID: 11400000, guid: ce7fb20da71e34d43b38f005fd579ec9,
+      type: 2}
   m_UseUCBPForAssetBundles: 0

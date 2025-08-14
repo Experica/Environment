@@ -210,6 +210,7 @@ MonoBehaviour:
       - rid: 1662534710546661457
       - rid: 1662534710546661458
       - rid: 1662534710546661462
+      - rid: 2583654528463405239
       - rid: 1662534710546661466
       - rid: 1662534710546661470
       - rid: 1662534710546661473
@@ -1180,10 +1181,6 @@ MonoBehaviour:
         asm: Unity.RenderPipelines.Core.Runtime}
       data:
         m_version: 0
-        m_DebugUIHandlerCanvasPrefab: {fileID: 1153602445894428, guid: cf6cbdd672089a84796e55a21fed1cbe,
-          type: 3}
-        m_DebugUIPersistentCanvasPrefab: {fileID: 1822588063230394, guid: f6b1a0fe75d5009449cf55ae76220e2b,
-          type: 3}
     - rid: 6900619787937251328
       type: {class: VrsRenderPipelineRuntimeResources, ns: UnityEngine.Rendering,
         asm: Unity.RenderPipelines.Core.Runtime}
